@@ -1,0 +1,9 @@
+C:\Users\asus\Source\Repos\BD\BD\bin\Debug\BD.exe.config
+C:\Users\asus\Source\Repos\BD\BD\bin\Debug\BD.exe
+C:\Users\asus\Source\Repos\BD\BD\bin\Debug\BD.pdb
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.csprojAssemblyReference.cache
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.Form1.resources
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.Properties.Resources.resources
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.csproj.GenerateResource.cache
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.exe
+C:\Users\asus\Source\Repos\BD\BD\obj\Debug\BD.pdb
