@@ -16,8 +16,8 @@ namespace BD
         bool loginAdmin = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\asus\source\repos\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BD\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\loginy.txt";
+        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
@@ -93,7 +93,7 @@ namespace BD
             {
                 MessageBox.Show("nope");
                 this.Refresh();
-                // this.Close();
+                
                 //ponowne załadowanie? okna/ odświeżenie
             }
         }
