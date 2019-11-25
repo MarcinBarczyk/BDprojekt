@@ -23,7 +23,7 @@ namespace BD
             InitializeComponent();
         }
 
-       
+       // kosa
 
         private void textBox_login_TextChanged(object sender, EventArgs e)
         {
