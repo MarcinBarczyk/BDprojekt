@@ -16,14 +16,14 @@ namespace BD
         bool loginAdmin = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
         }
 
-       // kosa
+       
 
         private void textBox_login_TextChanged(object sender, EventArgs e)
         {
@@ -83,6 +83,8 @@ namespace BD
             if ((loginAdmin == true) && (password == true))
             {
                 MessageBox.Show("zalogowany admin");
+                admin_window okno = new admin_window();
+                okno.Show();
             }
             else if ((login == true) && (password == true))
             {
@@ -92,8 +94,6 @@ namespace BD
             else
             {
                 MessageBox.Show("nope");
-                this.Refresh();
-                
                 //ponowne załadowanie? okna/ odświeżenie
             }
         }
