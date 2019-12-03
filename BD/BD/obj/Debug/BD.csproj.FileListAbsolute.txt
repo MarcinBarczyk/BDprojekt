@@ -17,3 +17,4 @@ C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.csproj.GenerateResource.
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.exe
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.pdb
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.admin_window.resources
+C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.user_window.resources

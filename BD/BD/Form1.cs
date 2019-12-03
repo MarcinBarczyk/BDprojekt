@@ -15,6 +15,7 @@ namespace BD
         bool login = false;
         bool loginAdmin = false;
         bool password = false;
+        bool passwordAdmin = false;
         int counterLogin;
         string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
         string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
@@ -70,7 +71,11 @@ namespace BD
                 {
                     System.Console.WriteLine(line);
                     PasswordPlik = line;
-                    if (PasswordOkno == PasswordPlik)
+                    if ((PasswordOkno == PasswordPlik) && (PasswordPlik=="admin"))
+                    {
+                        passwordAdmin = true;
+                    }
+                    else if (PasswordOkno == PasswordPlik)
                     {
                         password = true;
                     }
@@ -80,16 +85,22 @@ namespace BD
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if ((loginAdmin == true) && (password == true))
+            if ((loginAdmin == true) && (passwordAdmin == true))
             {
                 MessageBox.Show("zalogowany admin");
-                admin_window okno = new admin_window();
-                okno.Show();
+                admin_window okno_admin = new admin_window();
+                okno_admin.Show();
+                loginAdmin = false;
+                passwordAdmin = false;
             }
             else if ((login == true) && (password == true))
             {
                 MessageBox.Show("zalogowany");
+                user_window okno_user = new user_window();
+                okno_user.Show();
+                login = false;
                 //zwykły użytkownik
+                //dodać błędne hasło lub login
             }
             else
             {

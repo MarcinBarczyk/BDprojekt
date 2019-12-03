@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_window.Designer.cs">
+      <DependentUpon>user_window.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +83,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="user_window.resx">
+      <DependentUpon>user_window.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

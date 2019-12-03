@@ -84,11 +84,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(155, 46);
+            this.label3.Location = new System.Drawing.Point(213, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 25);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Administracja budynków";
+            this.label3.Text = "Logowanie";
             // 
             // Form1
             // 
@@ -102,7 +102,7 @@
             this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.LoginButton);
             this.Name = "Form1";
-            this.Text = "Administracja";
+            this.Text = "Administracja budynków";
             this.ResumeLayout(false);
             this.PerformLayout();
 
