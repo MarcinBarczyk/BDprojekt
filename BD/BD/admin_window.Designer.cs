@@ -39,7 +39,10 @@
             this.Data = new System.Windows.Forms.Button();
             this.Zgloszenia = new System.Windows.Forms.Button();
             this.Realizacja = new System.Windows.Forms.Button();
+            this.zyski_zakres = new System.Windows.Forms.DataGridView();
+            this.zyski = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Budynek_dane)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zyski_zakres)).BeginInit();
             this.SuspendLayout();
             // 
             // Budynki
@@ -147,11 +150,32 @@
             this.Realizacja.UseVisualStyleBackColor = true;
             this.Realizacja.Click += new System.EventHandler(this.Realizacja_Click);
             // 
+            // zyski_zakres
+            // 
+            this.zyski_zakres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.zyski_zakres.Location = new System.Drawing.Point(296, 387);
+            this.zyski_zakres.Name = "zyski_zakres";
+            this.zyski_zakres.RowHeadersWidth = 51;
+            this.zyski_zakres.RowTemplate.Height = 24;
+            this.zyski_zakres.Size = new System.Drawing.Size(313, 148);
+            this.zyski_zakres.TabIndex = 13;
+            // 
+            // zyski
+            // 
+            this.zyski.AutoSize = true;
+            this.zyski.Location = new System.Drawing.Point(364, 356);
+            this.zyski.Name = "zyski";
+            this.zyski.Size = new System.Drawing.Size(173, 17);
+            this.zyski.TabIndex = 14;
+            this.zyski.Text = "Zyski w podanym zakresie";
+            // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 549);
+            this.Controls.Add(this.zyski);
+            this.Controls.Add(this.zyski_zakres);
             this.Controls.Add(this.Realizacja);
             this.Controls.Add(this.Zgloszenia);
             this.Controls.Add(this.Data);
@@ -166,6 +190,7 @@
             this.Name = "admin_window";
             this.Text = "admin_window";
             ((System.ComponentModel.ISupportInitialize)(this.Budynek_dane)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zyski_zakres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +209,7 @@
         private System.Windows.Forms.Button Data;
         private System.Windows.Forms.Button Zgloszenia;
         private System.Windows.Forms.Button Realizacja;
+        private System.Windows.Forms.DataGridView zyski_zakres;
+        private System.Windows.Forms.Label zyski;
     }
 }
