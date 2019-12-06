@@ -18,3 +18,15 @@ C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.exe
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.pdb
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.admin_window.resources
 C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.user_window.resources
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\bin\Debug\BD.exe.config
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\bin\Debug\BD.exe
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\bin\Debug\BD.pdb
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.csprojAssemblyReference.cache
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.admin_window.resources
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.Form1.resources
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.Properties.Resources.resources
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.user_window.resources
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.csproj.GenerateResource.cache
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.exe
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.pdb
+C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.add_user_window.resources

@@ -63,6 +63,12 @@ namespace BD
         {
             //dodawane są po wybraniu z wyższego checkboxa
         }
+
+        private void dodawanie_Click(object sender, EventArgs e)
+        {
+            add_user_window okno_add = new add_user_window();
+            okno_add.Show();
+        }
     }
 }
 

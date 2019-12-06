@@ -1,2 +1,6 @@
 admin
 user
+adam
+darek
+jozek
+wojtek

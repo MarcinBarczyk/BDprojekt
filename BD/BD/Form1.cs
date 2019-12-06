@@ -16,8 +16,8 @@ namespace BD
         bool loginAdmin = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +52,7 @@ namespace BD
                 counter++;
             }
             counterLogin = counter;
+            file.Close();
         }
 
         private void textBox_haslo_TextChanged(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace BD
                 }
                 counter++;
             }
+            file.Close();
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -86,7 +88,9 @@ namespace BD
                 MessageBox.Show("zalogowany admin");
                 admin_window okno_admin = new admin_window();
                 okno_admin.Show();
+                loginAdmin = false;
                 
+
             }
             else if ((login == true) && (password == true))
             {
@@ -108,5 +112,9 @@ namespace BD
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

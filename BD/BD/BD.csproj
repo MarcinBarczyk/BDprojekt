@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_user_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_user_window.Designer.cs">
+      <DependentUpon>add_user_window.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="user_window.Designer.cs">
       <DependentUpon>user_window.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="add_user_window.resx">
+      <DependentUpon>add_user_window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
     </EmbeddedResource>
