@@ -29,16 +29,23 @@
         private void InitializeComponent()
         {
             this.Budynki = new System.Windows.Forms.ListBox();
-            this.Usterki_remonty = new System.Windows.Forms.CheckedListBox();
-            this.W_realizacji = new System.Windows.Forms.CheckedListBox();
+            this.remonty_dla_admina = new System.Windows.Forms.CheckedListBox();
             this.Data_poczatkowa = new System.Windows.Forms.DateTimePicker();
             this.Data_koncowa = new System.Windows.Forms.DateTimePicker();
             this.Data_p = new System.Windows.Forms.Label();
             this.Data_k = new System.Windows.Forms.Label();
             this.Data = new System.Windows.Forms.Button();
             this.Zgloszenia = new System.Windows.Forms.Button();
-            this.Realizacja = new System.Windows.Forms.Button();
             this.dodawanie = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.wszystkie_zgloszenia = new System.Windows.Forms.ListView();
+            this.realizowane_remonty = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.potwierdzenie_realizacji = new System.Windows.Forms.Button();
+            this.dodawanie_uzytkownika = new System.Windows.Forms.RadioButton();
+            this.dodawanie_budynku = new System.Windows.Forms.RadioButton();
+            this.dodawanie_umowy = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // Budynki
@@ -49,44 +56,34 @@
             "Budynek beta",
             "Budynek gamma"});
             this.Budynki.Location = new System.Drawing.Point(9, 10);
-            this.Budynki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Budynki.Margin = new System.Windows.Forms.Padding(2);
             this.Budynki.Name = "Budynki";
             this.Budynki.Size = new System.Drawing.Size(175, 30);
             this.Budynki.TabIndex = 0;
             this.Budynki.SelectedIndexChanged += new System.EventHandler(this.Budynki_SelectedIndexChanged);
             // 
-            // Usterki_remonty
+            // remonty_dla_admina
             // 
-            this.Usterki_remonty.FormattingEnabled = true;
-            this.Usterki_remonty.Location = new System.Drawing.Point(9, 82);
-            this.Usterki_remonty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Usterki_remonty.Name = "Usterki_remonty";
-            this.Usterki_remonty.Size = new System.Drawing.Size(191, 49);
-            this.Usterki_remonty.TabIndex = 2;
-            this.Usterki_remonty.SelectedIndexChanged += new System.EventHandler(this.Usterki_remonty_SelectedIndexChanged);
-            // 
-            // W_realizacji
-            // 
-            this.W_realizacji.FormattingEnabled = true;
-            this.W_realizacji.Location = new System.Drawing.Point(9, 144);
-            this.W_realizacji.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.W_realizacji.Name = "W_realizacji";
-            this.W_realizacji.Size = new System.Drawing.Size(191, 49);
-            this.W_realizacji.TabIndex = 4;
-            this.W_realizacji.SelectedIndexChanged += new System.EventHandler(this.W_realizacji_SelectedIndexChanged);
+            this.remonty_dla_admina.FormattingEnabled = true;
+            this.remonty_dla_admina.Location = new System.Drawing.Point(9, 168);
+            this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(2);
+            this.remonty_dla_admina.Name = "remonty_dla_admina";
+            this.remonty_dla_admina.Size = new System.Drawing.Size(191, 49);
+            this.remonty_dla_admina.TabIndex = 4;
+            this.remonty_dla_admina.SelectedIndexChanged += new System.EventHandler(this.W_realizacji_SelectedIndexChanged);
             // 
             // Data_poczatkowa
             // 
-            this.Data_poczatkowa.Location = new System.Drawing.Point(9, 270);
-            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data_poczatkowa.Location = new System.Drawing.Point(818, 305);
+            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(2);
             this.Data_poczatkowa.Name = "Data_poczatkowa";
             this.Data_poczatkowa.Size = new System.Drawing.Size(191, 20);
             this.Data_poczatkowa.TabIndex = 6;
             // 
             // Data_koncowa
             // 
-            this.Data_koncowa.Location = new System.Drawing.Point(9, 331);
-            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data_koncowa.Location = new System.Drawing.Point(818, 366);
+            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(2);
             this.Data_koncowa.Name = "Data_koncowa";
             this.Data_koncowa.Size = new System.Drawing.Size(191, 20);
             this.Data_koncowa.TabIndex = 7;
@@ -94,7 +91,7 @@
             // Data_p
             // 
             this.Data_p.AutoSize = true;
-            this.Data_p.Location = new System.Drawing.Point(9, 254);
+            this.Data_p.Location = new System.Drawing.Point(818, 289);
             this.Data_p.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Data_p.Name = "Data_p";
             this.Data_p.Size = new System.Drawing.Size(156, 13);
@@ -104,7 +101,7 @@
             // Data_k
             // 
             this.Data_k.AutoSize = true;
-            this.Data_k.Location = new System.Drawing.Point(7, 314);
+            this.Data_k.Location = new System.Drawing.Point(816, 349);
             this.Data_k.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Data_k.Name = "Data_k";
             this.Data_k.Size = new System.Drawing.Size(142, 13);
@@ -113,8 +110,8 @@
             // 
             // Data
             // 
-            this.Data.Location = new System.Drawing.Point(9, 370);
-            this.Data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data.Location = new System.Drawing.Point(818, 405);
+            this.Data.Margin = new System.Windows.Forms.Padding(2);
             this.Data.Name = "Data";
             this.Data.Size = new System.Drawing.Size(68, 28);
             this.Data.TabIndex = 10;
@@ -124,8 +121,8 @@
             // 
             // Zgloszenia
             // 
-            this.Zgloszenia.Location = new System.Drawing.Point(222, 82);
-            this.Zgloszenia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Zgloszenia.Location = new System.Drawing.Point(222, 168);
+            this.Zgloszenia.Margin = new System.Windows.Forms.Padding(2);
             this.Zgloszenia.Name = "Zgloszenia";
             this.Zgloszenia.Size = new System.Drawing.Size(86, 49);
             this.Zgloszenia.TabIndex = 11;
@@ -133,46 +130,129 @@
             this.Zgloszenia.UseVisualStyleBackColor = true;
             this.Zgloszenia.Click += new System.EventHandler(this.Zgloszenia_Click);
             // 
-            // Realizacja
-            // 
-            this.Realizacja.Location = new System.Drawing.Point(222, 144);
-            this.Realizacja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Realizacja.Name = "Realizacja";
-            this.Realizacja.Size = new System.Drawing.Size(86, 49);
-            this.Realizacja.TabIndex = 12;
-            this.Realizacja.Text = "Potwierdź zrealizowanie";
-            this.Realizacja.UseVisualStyleBackColor = true;
-            this.Realizacja.Click += new System.EventHandler(this.Realizacja_Click);
-            // 
             // dodawanie
             // 
-            this.dodawanie.Location = new System.Drawing.Point(865, 12);
+            this.dodawanie.Location = new System.Drawing.Point(865, 116);
             this.dodawanie.Name = "dodawanie";
             this.dodawanie.Size = new System.Drawing.Size(138, 46);
             this.dodawanie.TabIndex = 14;
-            this.dodawanie.Text = "Dodaj użytkownika";
+            this.dodawanie.Text = "Dodaj";
             this.dodawanie.UseVisualStyleBackColor = true;
             this.dodawanie.Click += new System.EventHandler(this.dodawanie_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Wszystkie zgłoszone usterki i remonty";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Zgłoszone remonty";
+            // 
+            // wszystkie_zgloszenia
+            // 
+            this.wszystkie_zgloszenia.HideSelection = false;
+            this.wszystkie_zgloszenia.Location = new System.Drawing.Point(9, 78);
+            this.wszystkie_zgloszenia.Name = "wszystkie_zgloszenia";
+            this.wszystkie_zgloszenia.Size = new System.Drawing.Size(191, 50);
+            this.wszystkie_zgloszenia.TabIndex = 17;
+            this.wszystkie_zgloszenia.UseCompatibleStateImageBehavior = false;
+            // 
+            // realizowane_remonty
+            // 
+            this.realizowane_remonty.FormattingEnabled = true;
+            this.realizowane_remonty.Location = new System.Drawing.Point(9, 262);
+            this.realizowane_remonty.Name = "realizowane_remonty";
+            this.realizowane_remonty.Size = new System.Drawing.Size(191, 49);
+            this.realizowane_remonty.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Remonty w trakcie realizacji";
+            // 
+            // potwierdzenie_realizacji
+            // 
+            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(222, 262);
+            this.potwierdzenie_realizacji.Name = "potwierdzenie_realizacji";
+            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(86, 49);
+            this.potwierdzenie_realizacji.TabIndex = 21;
+            this.potwierdzenie_realizacji.Text = "Potwierdź zrealizowanie";
+            this.potwierdzenie_realizacji.UseVisualStyleBackColor = true;
+            // 
+            // dodawanie_uzytkownika
+            // 
+            this.dodawanie_uzytkownika.AutoSize = true;
+            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(859, 10);
+            this.dodawanie_uzytkownika.Name = "dodawanie_uzytkownika";
+            this.dodawanie_uzytkownika.Size = new System.Drawing.Size(115, 17);
+            this.dodawanie_uzytkownika.TabIndex = 22;
+            this.dodawanie_uzytkownika.TabStop = true;
+            this.dodawanie_uzytkownika.Text = "Dodaj użytkownika";
+            this.dodawanie_uzytkownika.UseVisualStyleBackColor = true;
+            this.dodawanie_uzytkownika.CheckedChanged += new System.EventHandler(this.dodawanie_uzytkownika_CheckedChanged);
+            // 
+            // dodawanie_budynku
+            // 
+            this.dodawanie_budynku.AutoSize = true;
+            this.dodawanie_budynku.Location = new System.Drawing.Point(859, 56);
+            this.dodawanie_budynku.Name = "dodawanie_budynku";
+            this.dodawanie_budynku.Size = new System.Drawing.Size(97, 17);
+            this.dodawanie_budynku.TabIndex = 23;
+            this.dodawanie_budynku.TabStop = true;
+            this.dodawanie_budynku.Text = "Dodaj budynek";
+            this.dodawanie_budynku.UseVisualStyleBackColor = true;
+            // 
+            // dodawanie_umowy
+            // 
+            this.dodawanie_umowy.AutoSize = true;
+            this.dodawanie_umowy.Location = new System.Drawing.Point(859, 33);
+            this.dodawanie_umowy.Name = "dodawanie_umowy";
+            this.dodawanie_umowy.Size = new System.Drawing.Size(90, 17);
+            this.dodawanie_umowy.TabIndex = 24;
+            this.dodawanie_umowy.TabStop = true;
+            this.dodawanie_umowy.Text = "Dodaj umowę";
+            this.dodawanie_umowy.UseVisualStyleBackColor = true;
             // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 446);
+            this.Controls.Add(this.dodawanie_umowy);
+            this.Controls.Add(this.dodawanie_budynku);
+            this.Controls.Add(this.dodawanie_uzytkownika);
+            this.Controls.Add(this.potwierdzenie_realizacji);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.realizowane_remonty);
+            this.Controls.Add(this.wszystkie_zgloszenia);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dodawanie);
-            this.Controls.Add(this.Realizacja);
             this.Controls.Add(this.Zgloszenia);
             this.Controls.Add(this.Data);
             this.Controls.Add(this.Data_k);
             this.Controls.Add(this.Data_p);
             this.Controls.Add(this.Data_koncowa);
             this.Controls.Add(this.Data_poczatkowa);
-            this.Controls.Add(this.W_realizacji);
-            this.Controls.Add(this.Usterki_remonty);
+            this.Controls.Add(this.remonty_dla_admina);
             this.Controls.Add(this.Budynki);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admin_window";
-            this.Text = "admin_window";
+            this.Text = "Administrator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,15 +261,22 @@
         #endregion
 
         private System.Windows.Forms.ListBox Budynki;
-        private System.Windows.Forms.CheckedListBox Usterki_remonty;
-        private System.Windows.Forms.CheckedListBox W_realizacji;
+        private System.Windows.Forms.CheckedListBox remonty_dla_admina;
         private System.Windows.Forms.DateTimePicker Data_poczatkowa;
         private System.Windows.Forms.DateTimePicker Data_koncowa;
         private System.Windows.Forms.Label Data_p;
         private System.Windows.Forms.Label Data_k;
         private System.Windows.Forms.Button Data;
         private System.Windows.Forms.Button Zgloszenia;
-        private System.Windows.Forms.Button Realizacja;
         private System.Windows.Forms.Button dodawanie;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView wszystkie_zgloszenia;
+        private System.Windows.Forms.CheckedListBox realizowane_remonty;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button potwierdzenie_realizacji;
+        private System.Windows.Forms.RadioButton dodawanie_uzytkownika;
+        private System.Windows.Forms.RadioButton dodawanie_budynku;
+        private System.Windows.Forms.RadioButton dodawanie_umowy;
     }
 }

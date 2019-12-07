@@ -41,7 +41,7 @@ namespace BD
 
         private void Zgloszenia_Click(object sender, EventArgs e)
         {
-            //po wybraniu z checkboxa zgłoszonych usterek i remontow dodaje je do listy "w realizacji"
+            //po wybraniu z checkboxa zgłoszonych usterek i remontow dodaje je do listy "w realizacji" oraz pokazuje okno gdzie mozna uzupelnic jaka firma bedzie sie tym zajmowac
         }
 
         private void Realizacja_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace BD
 
         private void Data_Click(object sender, EventArgs e)
         {
-            //po wybraniu dat pokazuje zyski z tych okresow// jakies zapytanie sql pewnie
+            //po wybraniu dat pokazuje zyski z tych okresow
         }
 
         private void Usterki_remonty_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,8 +66,16 @@ namespace BD
 
         private void dodawanie_Click(object sender, EventArgs e)
         {
-            add_user_window okno_add = new add_user_window();
-            okno_add.Show();
+            if (dodawanie_uzytkownika.Checked)
+            {
+                add_user_window okno_add = new add_user_window();
+                okno_add.Show();
+            }
+        }
+
+        private void dodawanie_uzytkownika_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
