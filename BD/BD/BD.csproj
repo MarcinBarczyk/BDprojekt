@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_user_window.cs">
+    <Compile Include="nowe_budynki_window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_user_window.Designer.cs">
-      <DependentUpon>add_user_window.cs</DependentUpon>
+    <Compile Include="nowe_budynki_window.Designer.cs">
+      <DependentUpon>nowe_budynki_window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nowe_lokale_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nowe_lokale_window.Designer.cs">
+      <DependentUpon>nowe_lokale_window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nowy_uzytkownik_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nowy_uzytkownik_window.Designer.cs">
+      <DependentUpon>nowy_uzytkownik_window.cs</DependentUpon>
     </Compile>
     <Compile Include="admin_window.cs">
       <SubType>Form</SubType>
@@ -79,14 +91,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="nowe_umowy_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nowe_umowy_window.Designer.cs">
+      <DependentUpon>nowe_umowy_window.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_window.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="user_window.Designer.cs">
       <DependentUpon>user_window.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="add_user_window.resx">
-      <DependentUpon>add_user_window.cs</DependentUpon>
+    <EmbeddedResource Include="nowe_budynki_window.resx">
+      <DependentUpon>nowe_budynki_window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nowe_lokale_window.resx">
+      <DependentUpon>nowe_lokale_window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nowy_uzytkownik_window.resx">
+      <DependentUpon>nowy_uzytkownik_window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
@@ -110,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="nowe_umowy_window.resx">
+      <DependentUpon>nowe_umowy_window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_window.resx">
       <DependentUpon>user_window.cs</DependentUpon>
     </EmbeddedResource>

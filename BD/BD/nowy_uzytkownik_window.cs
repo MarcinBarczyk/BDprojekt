@@ -13,11 +13,11 @@ using System.IO;
 namespace BD
 {
    
-    public partial class add_user_window : Form
+    public partial class nowy_uzytkownik_window : Form
     {
         string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
         string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
-        public add_user_window()
+        public nowy_uzytkownik_window()
         {
             InitializeComponent();
         }

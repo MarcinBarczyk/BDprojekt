@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.firma_nazwa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.data_zlecenia = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // textBox1
+            // firma_nazwa
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 22);
-            this.textBox1.TabIndex = 0;
+            this.firma_nazwa.Location = new System.Drawing.Point(37, 55);
+            this.firma_nazwa.Name = "firma_nazwa";
+            this.firma_nazwa.Size = new System.Drawing.Size(130, 22);
+            this.firma_nazwa.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,22 +59,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Data zlecenia";
             // 
-            // dateTimePicker1
+            // data_zlecenia
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(37, 136);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(264, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.data_zlecenia.Location = new System.Drawing.Point(37, 136);
+            this.data_zlecenia.Name = "data_zlecenia";
+            this.data_zlecenia.Size = new System.Drawing.Size(264, 22);
+            this.data_zlecenia.TabIndex = 3;
             // 
             // podwykonawca_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.data_zlecenia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.firma_nazwa);
             this.Name = "podwykonawca_window";
             this.Text = "Podwykonawca";
             this.ResumeLayout(false);
@@ -84,9 +84,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox firma_nazwa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker data_zlecenia;
     }
 }

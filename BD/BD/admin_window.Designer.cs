@@ -46,6 +46,7 @@
             this.dodawanie_uzytkownika = new System.Windows.Forms.RadioButton();
             this.dodawanie_budynku = new System.Windows.Forms.RadioButton();
             this.dodawanie_umowy = new System.Windows.Forms.RadioButton();
+            this.dodawanie_lokali = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // Budynki
@@ -132,7 +133,7 @@
             // dodawanie
             // 
             this.dodawanie.Location = new System.Drawing.Point(1153, 143);
-            this.dodawanie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dodawanie.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie.Name = "dodawanie";
             this.dodawanie.Size = new System.Drawing.Size(184, 57);
             this.dodawanie.TabIndex = 14;
@@ -146,9 +147,9 @@
             this.label1.Location = new System.Drawing.Point(8, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 17);
+            this.label1.Size = new System.Drawing.Size(142, 17);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Wszystkie zgłoszone usterki i remonty";
+            this.label1.Text = "Wszystkie zgłoszenia";
             // 
             // label2
             // 
@@ -164,7 +165,7 @@
             // 
             this.wszystkie_zgloszenia.HideSelection = false;
             this.wszystkie_zgloszenia.Location = new System.Drawing.Point(12, 96);
-            this.wszystkie_zgloszenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wszystkie_zgloszenia.Margin = new System.Windows.Forms.Padding(4);
             this.wszystkie_zgloszenia.Name = "wszystkie_zgloszenia";
             this.wszystkie_zgloszenia.Size = new System.Drawing.Size(253, 61);
             this.wszystkie_zgloszenia.TabIndex = 17;
@@ -174,7 +175,7 @@
             // 
             this.realizowane_remonty.FormattingEnabled = true;
             this.realizowane_remonty.Location = new System.Drawing.Point(12, 322);
-            this.realizowane_remonty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.realizowane_remonty.Margin = new System.Windows.Forms.Padding(4);
             this.realizowane_remonty.Name = "realizowane_remonty";
             this.realizowane_remonty.Size = new System.Drawing.Size(253, 55);
             this.realizowane_remonty.TabIndex = 19;
@@ -192,7 +193,7 @@
             // potwierdzenie_realizacji
             // 
             this.potwierdzenie_realizacji.Location = new System.Drawing.Point(296, 322);
-            this.potwierdzenie_realizacji.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.potwierdzenie_realizacji.Margin = new System.Windows.Forms.Padding(4);
             this.potwierdzenie_realizacji.Name = "potwierdzenie_realizacji";
             this.potwierdzenie_realizacji.Size = new System.Drawing.Size(115, 60);
             this.potwierdzenie_realizacji.TabIndex = 21;
@@ -203,7 +204,7 @@
             // 
             this.dodawanie_uzytkownika.AutoSize = true;
             this.dodawanie_uzytkownika.Location = new System.Drawing.Point(1145, 12);
-            this.dodawanie_uzytkownika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dodawanie_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_uzytkownika.Name = "dodawanie_uzytkownika";
             this.dodawanie_uzytkownika.Size = new System.Drawing.Size(146, 21);
             this.dodawanie_uzytkownika.TabIndex = 22;
@@ -216,7 +217,7 @@
             // 
             this.dodawanie_budynku.AutoSize = true;
             this.dodawanie_budynku.Location = new System.Drawing.Point(1145, 69);
-            this.dodawanie_budynku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dodawanie_budynku.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_budynku.Name = "dodawanie_budynku";
             this.dodawanie_budynku.Size = new System.Drawing.Size(124, 21);
             this.dodawanie_budynku.TabIndex = 23;
@@ -228,19 +229,32 @@
             // 
             this.dodawanie_umowy.AutoSize = true;
             this.dodawanie_umowy.Location = new System.Drawing.Point(1145, 41);
-            this.dodawanie_umowy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dodawanie_umowy.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_umowy.Name = "dodawanie_umowy";
             this.dodawanie_umowy.Size = new System.Drawing.Size(114, 21);
             this.dodawanie_umowy.TabIndex = 24;
             this.dodawanie_umowy.TabStop = true;
             this.dodawanie_umowy.Text = "Dodaj umowę";
             this.dodawanie_umowy.UseVisualStyleBackColor = true;
+            this.dodawanie_umowy.CheckedChanged += new System.EventHandler(this.dodawanie_umowy_CheckedChanged);
+            // 
+            // dodawanie_lokali
+            // 
+            this.dodawanie_lokali.AutoSize = true;
+            this.dodawanie_lokali.Location = new System.Drawing.Point(1145, 97);
+            this.dodawanie_lokali.Name = "dodawanie_lokali";
+            this.dodawanie_lokali.Size = new System.Drawing.Size(107, 21);
+            this.dodawanie_lokali.TabIndex = 25;
+            this.dodawanie_lokali.TabStop = true;
+            this.dodawanie_lokali.Text = "Dodaj lokale";
+            this.dodawanie_lokali.UseVisualStyleBackColor = true;
             // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 549);
+            this.Controls.Add(this.dodawanie_lokali);
             this.Controls.Add(this.dodawanie_umowy);
             this.Controls.Add(this.dodawanie_budynku);
             this.Controls.Add(this.dodawanie_uzytkownika);
@@ -262,6 +276,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "admin_window";
             this.Text = "Administrator";
+            this.Load += new System.EventHandler(this.admin_window_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +302,6 @@
         private System.Windows.Forms.RadioButton dodawanie_uzytkownika;
         private System.Windows.Forms.RadioButton dodawanie_budynku;
         private System.Windows.Forms.RadioButton dodawanie_umowy;
+        private System.Windows.Forms.RadioButton dodawanie_lokali;
     }
 }

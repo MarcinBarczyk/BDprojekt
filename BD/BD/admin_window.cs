@@ -70,12 +70,37 @@ namespace BD
         {
             if (dodawanie_uzytkownika.Checked)
             {
-                add_user_window okno_add = new add_user_window();
+                nowy_uzytkownik_window okno_add = new nowy_uzytkownik_window();
                 okno_add.Show();
+            }
+            if (dodawanie_umowy.Checked)
+            {
+                nowe_umowy_window okno_umo = new nowe_umowy_window();
+                okno_umo.Show();
+            }
+            if (dodawanie_budynku.Checked)
+            {
+                nowe_budynki_window okno_budo = new nowe_budynki_window();
+                okno_budo.Show();
+            }
+            if (dodawanie_lokali.Checked)
+            {
+                nowe_lokale_window okno_lokal = new nowe_lokale_window();
+                okno_lokal.Show();
             }
         }
 
         private void dodawanie_uzytkownika_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dodawanie_umowy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_window_Load(object sender, EventArgs e)
         {
 
         }

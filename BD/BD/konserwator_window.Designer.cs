@@ -33,7 +33,7 @@
             this.dodaj_do_konserwacji = new System.Windows.Forms.Button();
             this.w_konserwacji = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.data_wykonania = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.potwierdz_konserwacje = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -81,12 +81,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Aktualnie w konserwacji";
             // 
-            // dateTimePicker1
+            // data_wykonania
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 260);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(243, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.data_wykonania.Location = new System.Drawing.Point(12, 260);
+            this.data_wykonania.Name = "data_wykonania";
+            this.data_wykonania.Size = new System.Drawing.Size(243, 22);
+            this.data_wykonania.TabIndex = 5;
             // 
             // label3
             // 
@@ -113,7 +113,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.potwierdz_konserwacje);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.data_wykonania);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.w_konserwacji);
             this.Controls.Add(this.dodaj_do_konserwacji);
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Button dodaj_do_konserwacji;
         private System.Windows.Forms.CheckedListBox w_konserwacji;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker data_wykonania;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button potwierdz_konserwacje;
     }
