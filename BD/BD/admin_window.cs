@@ -41,6 +41,8 @@ namespace BD
 
         private void Zgloszenia_Click(object sender, EventArgs e)
         {
+            podwykonawca_window okno_podw = new podwykonawca_window();
+            okno_podw.Show();
             //po wybraniu z checkboxa zgłoszonych usterek i remontow dodaje je do listy "w realizacji" oraz pokazuje okno gdzie mozna uzupelnic jaka firma bedzie sie tym zajmowac
         }
 

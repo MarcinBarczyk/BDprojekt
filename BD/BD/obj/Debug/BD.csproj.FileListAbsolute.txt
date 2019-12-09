@@ -30,3 +30,6 @@ C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.csproj.GenerateResourc
 C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.exe
 C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.pdb
 C:\Users\Marcin\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.add_user_window.resources
+C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.add_user_window.resources
+C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.konserwator_window.resources
+C:\Users\asus\Source\Repos\BDprojekt\BD\BD\obj\Debug\BD.podwykonawca_window.resources

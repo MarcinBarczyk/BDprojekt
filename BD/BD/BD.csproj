@@ -65,6 +65,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="konserwator_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="konserwator_window.Designer.cs">
+      <DependentUpon>konserwator_window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="podwykonawca_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="podwykonawca_window.Designer.cs">
+      <DependentUpon>podwykonawca_window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="user_window.cs">
@@ -81,6 +93,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konserwator_window.resx">
+      <DependentUpon>konserwator_window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="podwykonawca_window.resx">
+      <DependentUpon>podwykonawca_window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

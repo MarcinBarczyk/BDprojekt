@@ -14,10 +14,11 @@ namespace BD
     {
         bool login = false;
         bool loginAdmin = false;
+        bool loginKons = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +43,11 @@ namespace BD
                 if ((loginOkno == loginPlik) && (loginPlik == "admin"))
                 {
                     loginAdmin = true;
+                    break;
+                }
+                else if ((loginOkno == loginPlik) && (loginPlik == "konserwator"))
+                {
+                    loginKons = true;
                     break;
                 }
                 else if (loginOkno == loginPlik)
@@ -89,8 +95,13 @@ namespace BD
                 admin_window okno_admin = new admin_window();
                 okno_admin.Show();
                 loginAdmin = false;
-                
-
+            }
+            else if ((loginKons == true) && (password == true))
+            {
+                MessageBox.Show("zalogowany konserwator");
+                konserwator_window okno_kons = new konserwator_window();
+                okno_kons.Show();
+                loginKons = false;
             }
             else if ((login == true) && (password == true))
             {
