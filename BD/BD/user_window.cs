@@ -16,5 +16,10 @@ namespace BD
         {
             InitializeComponent();
         }
+
+        private void user_window_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
