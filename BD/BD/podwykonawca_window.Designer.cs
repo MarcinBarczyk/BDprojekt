@@ -43,7 +43,7 @@
             // firma_nazwa
             // 
             this.firma_nazwa.Location = new System.Drawing.Point(28, 45);
-            this.firma_nazwa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firma_nazwa.Margin = new System.Windows.Forms.Padding(2);
             this.firma_nazwa.Name = "firma_nazwa";
             this.firma_nazwa.Size = new System.Drawing.Size(98, 20);
             this.firma_nazwa.TabIndex = 0;
@@ -71,7 +71,7 @@
             // data_zlecenia
             // 
             this.data_zlecenia.Location = new System.Drawing.Point(28, 110);
-            this.data_zlecenia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_zlecenia.Margin = new System.Windows.Forms.Padding(2);
             this.data_zlecenia.Name = "data_zlecenia";
             this.data_zlecenia.Size = new System.Drawing.Size(199, 20);
             this.data_zlecenia.TabIndex = 3;
@@ -88,21 +88,21 @@
             // wykonywane_przez_firme
             // 
             this.wykonywane_przez_firme.FormattingEnabled = true;
-            this.wykonywane_przez_firme.Location = new System.Drawing.Point(376, 45);
+            this.wykonywane_przez_firme.Location = new System.Drawing.Point(362, 45);
             this.wykonywane_przez_firme.Name = "wykonywane_przez_firme";
             this.wykonywane_przez_firme.Size = new System.Drawing.Size(208, 64);
             this.wykonywane_przez_firme.TabIndex = 5;
             // 
             // data_zakonczenia
             // 
-            this.data_zakonczenia.Location = new System.Drawing.Point(376, 156);
+            this.data_zakonczenia.Location = new System.Drawing.Point(362, 156);
             this.data_zakonczenia.Name = "data_zakonczenia";
             this.data_zakonczenia.Size = new System.Drawing.Size(222, 20);
             this.data_zakonczenia.TabIndex = 6;
             // 
             // zakoncz_realizacje
             // 
-            this.zakoncz_realizacje.Location = new System.Drawing.Point(376, 199);
+            this.zakoncz_realizacje.Location = new System.Drawing.Point(396, 195);
             this.zakoncz_realizacje.Name = "zakoncz_realizacje";
             this.zakoncz_realizacje.Size = new System.Drawing.Size(138, 36);
             this.zakoncz_realizacje.TabIndex = 7;
@@ -112,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(373, 9);
+            this.label3.Location = new System.Drawing.Point(359, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 13);
             this.label3.TabIndex = 8;
@@ -121,7 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(373, 130);
+            this.label4.Location = new System.Drawing.Point(359, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 9;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firma_nazwa);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "podwykonawca_window";
             this.Text = "Podwykonawca";
             this.ResumeLayout(false);
