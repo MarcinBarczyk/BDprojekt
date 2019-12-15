@@ -17,16 +17,27 @@ namespace BD
         bool loginKons = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
+        //string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
+        //string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void textBox_login_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void textBox_haslo_TextChanged(object sender, EventArgs e)
+        {
+            textBox_haslo.PasswordChar = '*';
+            textBox_haslo.MaxLength = 10;
+            
+        }
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             String loginOkno;
             String loginPlik;
@@ -59,56 +70,61 @@ namespace BD
             }
             counterLogin = counter;
             file.Close();
-        }
 
-        private void textBox_haslo_TextChanged(object sender, EventArgs e)
-        {
-            textBox_haslo.PasswordChar = '*';
-            textBox_haslo.MaxLength = 10;
+            counter = 0;
             String PasswordOkno;
             String PasswordPlik;
-            String line;
-            int counter = 0;
+            String linehaslo;
             PasswordOkno = textBox_haslo.Text.ToString();
-            System.IO.StreamReader file = new System.IO.StreamReader(pathhasla);
-            while ((line = file.ReadLine()) != null)
+            System.IO.StreamReader filehasla = new System.IO.StreamReader(pathhasla);
+            while ((linehaslo = filehasla.ReadLine()) != null)
             {
                 if (counter == counterLogin)
                 {
-                    System.Console.WriteLine(line);
-                    PasswordPlik = line;
-                    if ((PasswordOkno == PasswordPlik) )
+                    System.Console.WriteLine(linehaslo);
+                    PasswordPlik = linehaslo;
+                    if ((PasswordOkno == PasswordPlik))
                     {
                         password = true;
                     }
-                    
+
                 }
                 counter++;
             }
-            file.Close();
-        }
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
+            filehasla.Close();
+
+
             if ((loginAdmin == true) && (password == true))
             {
                 MessageBox.Show("zalogowany admin");
                 admin_window okno_admin = new admin_window();
                 okno_admin.Show();
+                login = false;
                 loginAdmin = false;
+                loginKons = false;
+                password = false;
+
             }
             else if ((loginKons == true) && (password == true))
             {
+                //trzeba by wychwycić jaki konserwator do pozniejszych zadan//chyba ze przyjmiemy ze jest jeden
                 MessageBox.Show("zalogowany konserwator");
                 konserwator_window okno_kons = new konserwator_window();
                 okno_kons.Show();
+                login = false;
+                loginAdmin = false;
                 loginKons = false;
+                password = false;
             }
             else if ((login == true) && (password == true))
             {
                 MessageBox.Show("zalogowany");
                 user_window okno_user = new user_window();
                 okno_user.Show();
-               
+                login = false;
+                loginAdmin = false;
+                loginKons = false;
+                password = false;
                 //zwykły użytkownik
                 //dodać błędne hasło lub login
             }
@@ -116,11 +132,12 @@ namespace BD
             else
             {
                 MessageBox.Show("błędne dane, proszę wpisać ponownie");
-                loginAdmin = false;
-                password = false;
                 login = false;
+                loginAdmin = false;
+                loginKons = false;
+                password = false;
             }
-            
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

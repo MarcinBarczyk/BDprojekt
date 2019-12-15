@@ -104,6 +104,12 @@ namespace BD
         {
 
         }
+
+        private void potwierdzenie_realizacji_Click(object sender, EventArgs e)
+        {
+            podwykonawca_window okno_podw = new podwykonawca_window();
+            okno_podw.Show();
+        }
     }
 }
 

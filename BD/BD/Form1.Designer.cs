@@ -39,7 +39,7 @@
             // LoginButton
             // 
             this.LoginButton.Location = new System.Drawing.Point(159, 176);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(81, 37);
             this.LoginButton.TabIndex = 0;
@@ -50,7 +50,7 @@
             // textBox_login
             // 
             this.textBox_login.Location = new System.Drawing.Point(149, 97);
-            this.textBox_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_login.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.Size = new System.Drawing.Size(92, 20);
             this.textBox_login.TabIndex = 1;
@@ -79,7 +79,7 @@
             // textBox_haslo
             // 
             this.textBox_haslo.Location = new System.Drawing.Point(149, 128);
-            this.textBox_haslo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_haslo.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_haslo.Name = "textBox_haslo";
             this.textBox_haslo.Size = new System.Drawing.Size(92, 20);
             this.textBox_haslo.TabIndex = 5;
@@ -107,9 +107,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.LoginButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Administracja budynków";
+            this.Text = "Logowanie";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
