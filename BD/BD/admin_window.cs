@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BD
 {
     public partial class admin_window : Form
     {
+        private string connectionString = "Data Source=157.158.161.178,1433;Initial Catalog=AdministracjaBudynkami;Persist Security Info=True;User ID=admin007;Password=qwerty123";
         public admin_window()
         {
             InitializeComponent();
@@ -19,19 +21,7 @@ namespace BD
 
         private void Budynki_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string curItem = Budynki.SelectedItem.ToString();
-            if(curItem=="Budynek alfa") //pobrac z jakies pliku czy jakis case zrobic 
-            {
-                MessageBox.Show("alfa"); //pokazanie bazy dla danego budynku. mieszkancy, platnosci, zgloszone usterki
-            }
-            if (curItem == "Budynek beta")
-            {
-                MessageBox.Show("beta");
-            }
-            if (curItem == "Budynek gamma")
-            {
-                MessageBox.Show("gamma");
-            }
+            
         }
 
         private void Budynek_dane_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +92,10 @@ namespace BD
 
         private void admin_window_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet1.budynek' . Możesz go przenieść lub usunąć.
+            this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet1.budynek);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.zgłoszenie' . Możesz go przenieść lub usunąć.
+            this.zgłoszenieTableAdapter.Fill(this.administracjaBudynkamiDataSet.zgłoszenie);
 
         }
 
@@ -109,6 +103,26 @@ namespace BD
         {
             podwykonawca_window okno_podw = new podwykonawca_window();
             okno_podw.Show();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String SQL = "SELECT id_budynku FROM budynek";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            SqlDataReader r = null;
+            con.Open();
+            r = cmd.ExecuteReader();
+            while(r.Read())
+            {
+                listBox1.Items.Add(r["id_budynku"]);
+            }
+            con.Close();
         }
     }
 }

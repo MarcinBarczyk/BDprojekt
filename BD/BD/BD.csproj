@@ -47,6 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministracjaBudynkamiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracjaBudynkamiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="nowe_budynki_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +150,28 @@
     <EmbeddedResource Include="user_window.resx">
       <DependentUpon>user_window.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AdministracjaBudynkamiDataSet.xsc">
+      <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdministracjaBudynkamiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdministracjaBudynkamiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdministracjaBudynkamiDataSet.xss">
+      <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdministracjaBudynkamiDataSet1.xsc">
+      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AdministracjaBudynkamiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdministracjaBudynkamiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdministracjaBudynkamiDataSet1.xss">
+      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

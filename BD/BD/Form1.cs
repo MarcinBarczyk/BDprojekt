@@ -17,10 +17,10 @@ namespace BD
         bool loginKons = false;
         bool password = false;
         int counterLogin;
-        //string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
-        //string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
-        string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
+        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
+        //string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
+        //string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
         public Form1()
         {
             InitializeComponent();
