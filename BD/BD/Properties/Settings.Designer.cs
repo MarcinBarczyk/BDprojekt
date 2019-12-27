@@ -33,5 +33,16 @@ namespace BD.Properties {
                 return ((string)(this["AdministracjaBudynkamiConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Int" +
+            "egrated Security=True")]
+        public string AdministracjaBudynkamiConnectionString1 {
+            get {
+                return ((string)(this["AdministracjaBudynkamiConnectionString1"]));
+            }
+        }
     }
 }

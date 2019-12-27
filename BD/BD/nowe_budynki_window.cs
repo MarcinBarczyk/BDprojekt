@@ -21,5 +21,10 @@ namespace BD
         {
 
         }
+
+        private void nowe_budynki_window_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

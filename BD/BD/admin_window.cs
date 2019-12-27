@@ -13,7 +13,8 @@ namespace BD
 {
     public partial class admin_window : Form
     {
-        private string connectionString = "Data Source=157.158.161.178,1433;Initial Catalog=AdministracjaBudynkami;Persist Security Info=True;User ID=admin007;Password=qwerty123";
+        private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
+        List<string> list = new List<string>();
         public admin_window()
         {
             InitializeComponent();
@@ -93,7 +94,7 @@ namespace BD
         private void admin_window_Load(object sender, EventArgs e)
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet1.budynek' . Możesz go przenieść lub usunąć.
-            this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet1.budynek);
+            this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet.budynek);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.zgłoszenie' . Możesz go przenieść lub usunąć.
             this.zgłoszenieTableAdapter.Fill(this.administracjaBudynkamiDataSet.zgłoszenie);
 
@@ -105,24 +106,40 @@ namespace BD
             okno_podw.Show();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
             String SQL = "SELECT id_budynku FROM budynek";
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
             SqlDataReader r = null;
             con.Open();
             r = cmd.ExecuteReader();
-            while(r.Read())
+            
+            while (r.Read())
             {
                 listBox1.Items.Add(r["id_budynku"]);
+           }
+            foreach (var item in listBox1.Items)
+            {
+                list.Add(item.ToString());
             }
             con.Close();
+        }
+
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            int i = 0;
+            string text = listBox1.GetItemText(listBox1.SelectedItem); //text jako globalny zeby odczytac dalej
+            foreach (var item in listBox1.Items)
+            {
+                if (text == list[i])
+                {
+                    MessageBox.Show("wybrano " + list[i]);
+                }
+                i++;
+            }
         }
     }
 }

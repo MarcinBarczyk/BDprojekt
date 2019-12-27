@@ -57,9 +57,9 @@
             this.zgłoszenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
             this.zgłoszenieTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.zgłoszenieTableAdapter();
-            this.administracjaBudynkamiDataSet1 = new BD.AdministracjaBudynkamiDataSet1();
+            this.administracjaBudynkamiDataSet1 = new BD.AdministracjaBudynkamiDataSet();
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSet1TableAdapters.budynekTableAdapter();
+            this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
@@ -261,11 +261,11 @@
             this.idlokaluDataGridViewTextBoxColumn,
             this.idużytkownikaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zgłoszenieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 97);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(399, 140);
+            this.dataGridView1.Size = new System.Drawing.Size(681, 161);
             this.dataGridView1.TabIndex = 26;
             // 
             // idzgłoszeniaDataGridViewTextBoxColumn
@@ -360,6 +360,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(222, 52);
             this.listBox1.TabIndex = 27;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // button1
             // 
@@ -445,9 +446,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idbudynkuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idlokaluDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idużytkownikaDataGridViewTextBoxColumn;
-        private AdministracjaBudynkamiDataSet1 administracjaBudynkamiDataSet1;
+        private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet1;
         private System.Windows.Forms.BindingSource budynekBindingSource;
-        private AdministracjaBudynkamiDataSet1TableAdapters.budynekTableAdapter budynekTableAdapter;
+        private AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter budynekTableAdapter;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet2;
