@@ -60,9 +60,10 @@
             this.administracjaBudynkamiDataSet1 = new BD.AdministracjaBudynkamiDataSet();
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lista_budynkow = new System.Windows.Forms.ListBox();
+            this.wyswietl_budynki = new System.Windows.Forms.Button();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
@@ -74,10 +75,10 @@
             // remonty_dla_admina
             // 
             this.remonty_dla_admina.FormattingEnabled = true;
-            this.remonty_dla_admina.Location = new System.Drawing.Point(12, 286);
+            this.remonty_dla_admina.Location = new System.Drawing.Point(12, 328);
             this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.remonty_dla_admina.Name = "remonty_dla_admina";
-            this.remonty_dla_admina.Size = new System.Drawing.Size(253, 55);
+            this.remonty_dla_admina.Size = new System.Drawing.Size(353, 72);
             this.remonty_dla_admina.TabIndex = 4;
             this.remonty_dla_admina.SelectedIndexChanged += new System.EventHandler(this.W_realizacji_SelectedIndexChanged);
             // 
@@ -128,10 +129,10 @@
             // 
             // do_realizacji
             // 
-            this.do_realizacji.Location = new System.Drawing.Point(296, 286);
+            this.do_realizacji.Location = new System.Drawing.Point(396, 328);
             this.do_realizacji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.do_realizacji.Name = "do_realizacji";
-            this.do_realizacji.Size = new System.Drawing.Size(115, 60);
+            this.do_realizacji.Size = new System.Drawing.Size(115, 72);
             this.do_realizacji.TabIndex = 11;
             this.do_realizacji.Text = "Dodaj do realizacji";
             this.do_realizacji.UseVisualStyleBackColor = true;
@@ -139,7 +140,7 @@
             // 
             // dodawanie
             // 
-            this.dodawanie.Location = new System.Drawing.Point(752, 127);
+            this.dodawanie.Location = new System.Drawing.Point(822, 120);
             this.dodawanie.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie.Name = "dodawanie";
             this.dodawanie.Size = new System.Drawing.Size(184, 57);
@@ -151,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 76);
+            this.label1.Location = new System.Drawing.Point(7, 110);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 17);
@@ -161,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 262);
+            this.label2.Location = new System.Drawing.Point(9, 304);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 17);
@@ -171,16 +172,16 @@
             // realizowane_remonty
             // 
             this.realizowane_remonty.FormattingEnabled = true;
-            this.realizowane_remonty.Location = new System.Drawing.Point(12, 401);
+            this.realizowane_remonty.Location = new System.Drawing.Point(10, 465);
             this.realizowane_remonty.Margin = new System.Windows.Forms.Padding(4);
             this.realizowane_remonty.Name = "realizowane_remonty";
-            this.realizowane_remonty.Size = new System.Drawing.Size(253, 55);
+            this.realizowane_remonty.Size = new System.Drawing.Size(354, 72);
             this.realizowane_remonty.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 378);
+            this.label3.Location = new System.Drawing.Point(7, 437);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 17);
@@ -189,10 +190,10 @@
             // 
             // potwierdzenie_realizacji
             // 
-            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(296, 401);
+            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(396, 465);
             this.potwierdzenie_realizacji.Margin = new System.Windows.Forms.Padding(4);
             this.potwierdzenie_realizacji.Name = "potwierdzenie_realizacji";
-            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(115, 60);
+            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(115, 70);
             this.potwierdzenie_realizacji.TabIndex = 21;
             this.potwierdzenie_realizacji.Text = "Potwierdź zrealizowanie";
             this.potwierdzenie_realizacji.UseVisualStyleBackColor = true;
@@ -201,7 +202,7 @@
             // dodawanie_uzytkownika
             // 
             this.dodawanie_uzytkownika.AutoSize = true;
-            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(752, 15);
+            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(822, 8);
             this.dodawanie_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_uzytkownika.Name = "dodawanie_uzytkownika";
             this.dodawanie_uzytkownika.Size = new System.Drawing.Size(146, 21);
@@ -214,7 +215,7 @@
             // dodawanie_budynku
             // 
             this.dodawanie_budynku.AutoSize = true;
-            this.dodawanie_budynku.Location = new System.Drawing.Point(752, 71);
+            this.dodawanie_budynku.Location = new System.Drawing.Point(822, 64);
             this.dodawanie_budynku.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_budynku.Name = "dodawanie_budynku";
             this.dodawanie_budynku.Size = new System.Drawing.Size(124, 21);
@@ -226,7 +227,7 @@
             // dodawanie_umowy
             // 
             this.dodawanie_umowy.AutoSize = true;
-            this.dodawanie_umowy.Location = new System.Drawing.Point(752, 43);
+            this.dodawanie_umowy.Location = new System.Drawing.Point(822, 36);
             this.dodawanie_umowy.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_umowy.Name = "dodawanie_umowy";
             this.dodawanie_umowy.Size = new System.Drawing.Size(114, 21);
@@ -239,7 +240,7 @@
             // dodawanie_lokali
             // 
             this.dodawanie_lokali.AutoSize = true;
-            this.dodawanie_lokali.Location = new System.Drawing.Point(752, 100);
+            this.dodawanie_lokali.Location = new System.Drawing.Point(822, 93);
             this.dodawanie_lokali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dodawanie_lokali.Name = "dodawanie_lokali";
             this.dodawanie_lokali.Size = new System.Drawing.Size(99, 21);
@@ -261,11 +262,11 @@
             this.idlokaluDataGridViewTextBoxColumn,
             this.idużytkownikaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zgłoszenieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 131);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(681, 161);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 169);
             this.dataGridView1.TabIndex = 26;
             // 
             // idzgłoszeniaDataGridViewTextBoxColumn
@@ -352,38 +353,48 @@
             // 
             this.budynekTableAdapter.ClearBeforeFill = true;
             // 
-            // listBox1
+            // lista_budynkow
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(11, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(222, 52);
-            this.listBox1.TabIndex = 27;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
+            this.lista_budynkow.FormattingEnabled = true;
+            this.lista_budynkow.ItemHeight = 16;
+            this.lista_budynkow.Location = new System.Drawing.Point(10, 30);
+            this.lista_budynkow.Name = "lista_budynkow";
+            this.lista_budynkow.Size = new System.Drawing.Size(128, 68);
+            this.lista_budynkow.TabIndex = 27;
+            this.lista_budynkow.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
-            // button1
+            // wyswietl_budynki
             // 
-            this.button1.Location = new System.Drawing.Point(277, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 25);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.wyswietl_budynki.Location = new System.Drawing.Point(181, 33);
+            this.wyswietl_budynki.Name = "wyswietl_budynki";
+            this.wyswietl_budynki.Size = new System.Drawing.Size(134, 68);
+            this.wyswietl_budynki.TabIndex = 28;
+            this.wyswietl_budynki.Text = "Wyświetl identyfokatory budynków";
+            this.wyswietl_budynki.UseVisualStyleBackColor = true;
+            this.wyswietl_budynki.Click += new System.EventHandler(this.button1_Click);
             // 
             // administracjaBudynkamiDataSet2
             // 
             this.administracjaBudynkamiDataSet2.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 17);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Identyfikator budynku";
+            // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 549);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.wyswietl_budynki);
+            this.Controls.Add(this.lista_budynkow);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dodawanie_lokali);
             this.Controls.Add(this.dodawanie_umowy);
@@ -449,8 +460,9 @@
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet1;
         private System.Windows.Forms.BindingSource budynekBindingSource;
         private AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter budynekTableAdapter;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox lista_budynkow;
+        private System.Windows.Forms.Button wyswietl_budynki;
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet2;
+        private System.Windows.Forms.Label label4;
     }
 }
