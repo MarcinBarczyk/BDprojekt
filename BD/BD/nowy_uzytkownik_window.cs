@@ -16,8 +16,9 @@ namespace BD
    
     public partial class nowy_uzytkownik_window : Form
     {
-        string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
+        private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
+        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
         public nowy_uzytkownik_window()
         {
             InitializeComponent();
@@ -59,14 +60,34 @@ namespace BD
             haslo_okno = new_pass.Text;
             File.AppendAllText(pathhasla, haslo_okno + Environment.NewLine);
 
-            //----------------------------------------------------------------------------------------------//
-            String imie, nazwisko, id_naj, typ;
+            //----------------------------dodawanie użytkownika do bazy---------------------------------------//
+            //ale trzeba przerobić. ponieważ żeby się zgadzało najpierw trzeba wypełnić wynajem poźniej najemce i na koniec użytkownika
+            // także zrobić przy oknie do wynajmu i najmcy . I przy najemcy wpisywać od razu do użytkownika i powinno być git :)
+            String imie, nazwisko, typ;
             imie = nowy_imie.Text;
             nazwisko = nowy_nazwisko.Text;
-            id_naj = nowy_id.Text;
+            int id_naje;
+            id_naje = Convert.ToInt32(nowy_id.Text);
+            typ = String.Empty;
+            if (typy_uzytkownika.CheckedItems.Count == 1)
+            {
+                foreach (object itemchecked in typy_uzytkownika.CheckedItems)
+                {
+                    typ = itemchecked.ToString();
+                }
+                String SQL = "INSERT INTO użytkownik (id_najemca, typ_użytkownika, imię, nazwisko) VALUES (@id, @typ, @imie, @nazwisko)";
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(SQL, con);
+                cmd.Parameters.AddWithValue("@id", id_naje);
+                cmd.Parameters.AddWithValue("@typ",typ);
+                cmd.Parameters.AddWithValue("@imie", imie);
+                cmd.Parameters.AddWithValue("@nazwisko", nazwisko);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
 
-
-
+            //----------------------------------------------------------------------------------------------//
         }
 
         private void nowy_uzytkownik_window_Load(object sender, EventArgs e)

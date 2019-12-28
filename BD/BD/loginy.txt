@@ -5,3 +5,6 @@ darek
 jozek
 wojtek
 konserwator
+adamek
+przyby
+adamnowak
