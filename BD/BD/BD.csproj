@@ -76,11 +76,11 @@
     <Compile Include="admin_window.Designer.cs">
       <DependentUpon>admin_window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="login_window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="login_window.Designer.cs">
+      <DependentUpon>login_window.cs</DependentUpon>
     </Compile>
     <Compile Include="konserwator_window.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="login_window.resx">
+      <DependentUpon>login_window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="konserwator_window.resx">
       <DependentUpon>konserwator_window.cs</DependentUpon>
