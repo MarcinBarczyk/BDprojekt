@@ -39,7 +39,6 @@
             this.dodawanie = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.realizowane_remonty = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.potwierdzenie_realizacji = new System.Windows.Forms.Button();
             this.dodawanie_uzytkownika = new System.Windows.Forms.RadioButton();
@@ -64,6 +63,7 @@
             this.wyswietl_budynki = new System.Windows.Forms.Button();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
             this.label4 = new System.Windows.Forms.Label();
+            this.w_realizacji = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
@@ -168,15 +168,6 @@
             this.label2.Size = new System.Drawing.Size(129, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Zgłoszone remonty";
-            // 
-            // realizowane_remonty
-            // 
-            this.realizowane_remonty.FormattingEnabled = true;
-            this.realizowane_remonty.Location = new System.Drawing.Point(10, 465);
-            this.realizowane_remonty.Margin = new System.Windows.Forms.Padding(4);
-            this.realizowane_remonty.Name = "realizowane_remonty";
-            this.realizowane_remonty.Size = new System.Drawing.Size(354, 72);
-            this.realizowane_remonty.TabIndex = 19;
             // 
             // label3
             // 
@@ -387,11 +378,21 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Identyfikator budynku";
             // 
+            // w_realizacji
+            // 
+            this.w_realizacji.FormattingEnabled = true;
+            this.w_realizacji.ItemHeight = 16;
+            this.w_realizacji.Location = new System.Drawing.Point(11, 465);
+            this.w_realizacji.Name = "w_realizacji";
+            this.w_realizacji.Size = new System.Drawing.Size(354, 68);
+            this.w_realizacji.TabIndex = 30;
+            // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 549);
+            this.Controls.Add(this.w_realizacji);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wyswietl_budynki);
             this.Controls.Add(this.lista_budynkow);
@@ -402,7 +403,6 @@
             this.Controls.Add(this.dodawanie_uzytkownika);
             this.Controls.Add(this.potwierdzenie_realizacji);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.realizowane_remonty);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dodawanie);
@@ -439,7 +439,6 @@
         private System.Windows.Forms.Button dodawanie;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckedListBox realizowane_remonty;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button potwierdzenie_realizacji;
         private System.Windows.Forms.RadioButton dodawanie_uzytkownika;
@@ -464,5 +463,6 @@
         private System.Windows.Forms.Button wyswietl_budynki;
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox w_realizacji;
     }
 }

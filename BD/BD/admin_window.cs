@@ -42,7 +42,7 @@ namespace BD
                 okno_podw.Show();
                 lista_budynkow.Items.Clear();
                 remonty_dla_admina.Items.Clear();
-                realizowane_remonty.Items.Clear();
+                w_realizacji.Items.Clear();
                 //----------------------------------------------------------------------------------------------//
             }
 
@@ -149,7 +149,7 @@ namespace BD
         {
             //-------------------------sprawdzanie wyboru budynku-------------------------------------------//
             remonty_dla_admina.Items.Clear();
-            realizowane_remonty.Items.Clear();
+            w_realizacji.Items.Clear();
             string wartosci;
             int i = 0;
             string text = lista_budynkow.GetItemText(lista_budynkow.SelectedItem);
@@ -190,10 +190,12 @@ namespace BD
             while (r.Read())
             {
                 wartosci = r[0] + " Data zlecenia :" + r[1];
-                realizowane_remonty.Items.Add(wartosci, false);
+                w_realizacji.Items.Add(wartosci);
             }
             con.Close();
             //----------------------------------------------------------------------------------------------//
+
+            
         }
     }
 }

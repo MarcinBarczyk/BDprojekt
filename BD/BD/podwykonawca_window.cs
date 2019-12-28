@@ -21,15 +21,27 @@ namespace BD
 
         private void podwykonawca_window_Load(object sender, EventArgs e)
         {
-
+            string wartosci;
+            //wykonywane_przez_firme
+            String SQL = "SELECT id_usterki, nazwa_firmy, data_zlecenia FROM podwykonawca WHERE data_wykonania IS NULL";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            SqlDataReader r = null;
+            con.Open();
+            r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                wartosci = "Usterka: " + r[0] + " Firma: " + r[1] + " Data zlecenia: " + r[2];
+                wykonywane_przez_firme.Items.Add(wartosci);
+            }
         }
 
         private void do_realizacji_Click(object sender, EventArgs e)
         {
 
             //-------------------------załadowanie wybranego zgłoszenia do usterek--------------------------//
-            String SQL = null;
-            SQL = "INSERT INTO usterka (id_zgłoszenia, typ_usterki, data_zlecenia) VALUES (@id_z, @zgloszenie, @data)";
+            
+            String SQL = "INSERT INTO usterka (id_zgłoszenia, typ_usterki, data_zlecenia) VALUES (@id_z, @zgloszenie, @data)";
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand(SQL, con);
