@@ -79,7 +79,7 @@
             // do_realizacji
             // 
             this.do_realizacji.Location = new System.Drawing.Point(37, 186);
-            this.do_realizacji.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.do_realizacji.Margin = new System.Windows.Forms.Padding(4);
             this.do_realizacji.Name = "do_realizacji";
             this.do_realizacji.Size = new System.Drawing.Size(160, 42);
             this.do_realizacji.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.wykonywane_przez_firme.FormattingEnabled = true;
             this.wykonywane_przez_firme.Location = new System.Drawing.Point(483, 55);
-            this.wykonywane_przez_firme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wykonywane_przez_firme.Margin = new System.Windows.Forms.Padding(4);
             this.wykonywane_przez_firme.Name = "wykonywane_przez_firme";
             this.wykonywane_przez_firme.Size = new System.Drawing.Size(276, 72);
             this.wykonywane_przez_firme.TabIndex = 5;
@@ -99,20 +99,22 @@
             // data_zakonczenia
             // 
             this.data_zakonczenia.Location = new System.Drawing.Point(483, 192);
-            this.data_zakonczenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.data_zakonczenia.Margin = new System.Windows.Forms.Padding(4);
             this.data_zakonczenia.Name = "data_zakonczenia";
             this.data_zakonczenia.Size = new System.Drawing.Size(295, 22);
             this.data_zakonczenia.TabIndex = 6;
+            this.data_zakonczenia.ValueChanged += new System.EventHandler(this.data_zakonczenia_ValueChanged);
             // 
             // zakoncz_realizacje
             // 
             this.zakoncz_realizacje.Location = new System.Drawing.Point(540, 235);
-            this.zakoncz_realizacje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zakoncz_realizacje.Margin = new System.Windows.Forms.Padding(4);
             this.zakoncz_realizacje.Name = "zakoncz_realizacje";
             this.zakoncz_realizacje.Size = new System.Drawing.Size(184, 44);
             this.zakoncz_realizacje.TabIndex = 7;
             this.zakoncz_realizacje.Text = "Zakończ";
             this.zakoncz_realizacje.UseVisualStyleBackColor = true;
+            this.zakoncz_realizacje.Click += new System.EventHandler(this.zakoncz_realizacje_Click);
             // 
             // label3
             // 

@@ -17,7 +17,8 @@ namespace BD
         public static string zgloszenie;
         public static int id_zg;
         private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
-        List<string> list = new List<string>();
+        public static List<string> list = new List<string>();
+        public static int numerek;
         public admin_window()
         {
             InitializeComponent();
@@ -158,9 +159,11 @@ namespace BD
                 if (text == list[i])
                 {
                     MessageBox.Show("Wybrano budynek " + list[i]);
+                    break;
                 }
                 i++;
             }
+            numerek = i;
             //----------------------------------------------------------------------------------------------//
 
             //------------------------załadowanie aktualnych zgłoszeń przeznaczonych dla admina-------------//

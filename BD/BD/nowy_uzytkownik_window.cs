@@ -59,5 +59,12 @@ namespace BD
             File.AppendAllText(pathhasla, haslo_okno + Environment.NewLine);
            
         }
+
+        private void nowy_uzytkownik_window_Load(object sender, EventArgs e)
+        {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
+            this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
+
+        }
     }
 }
