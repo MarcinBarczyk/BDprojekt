@@ -42,9 +42,6 @@
             this.dodaj_lokal = new System.Windows.Forms.Button();
             this.administracjaBudynkamiDataSet1 = new BD.AdministracjaBudynkamiDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
-            this.lokalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lokalTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.lokalTableAdapter();
             this.idbudynkuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idlokaluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrlokaluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,10 +49,13 @@
             this.powierzchniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.liczbapokoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cenazam2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lokalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
+            this.lokalTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.lokalTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,9 +139,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 267);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 17);
+            this.label5.Size = new System.Drawing.Size(154, 17);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Cena za m2 [tyś]";
+            this.label5.Text = "Cena za m2 na miesiąc";
             // 
             // dodaj_lokal
             // 
@@ -178,20 +178,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(384, 327);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // administracjaBudynkamiDataSet
-            // 
-            this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
-            this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lokalBindingSource
-            // 
-            this.lokalBindingSource.DataMember = "lokal";
-            this.lokalBindingSource.DataSource = this.administracjaBudynkamiDataSet;
-            // 
-            // lokalTableAdapter
-            // 
-            this.lokalTableAdapter.ClearBeforeFill = true;
             // 
             // idbudynkuDataGridViewTextBoxColumn
             // 
@@ -249,6 +235,20 @@
             this.cenazam2DataGridViewTextBoxColumn.Name = "cenazam2DataGridViewTextBoxColumn";
             this.cenazam2DataGridViewTextBoxColumn.Width = 125;
             // 
+            // lokalBindingSource
+            // 
+            this.lokalBindingSource.DataMember = "lokal";
+            this.lokalBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
+            // administracjaBudynkamiDataSet
+            // 
+            this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
+            this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lokalTableAdapter
+            // 
+            this.lokalTableAdapter.ClearBeforeFill = true;
+            // 
             // nowe_lokale_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,8 +272,8 @@
             this.Load += new System.EventHandler(this.nowe_lokale_window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
