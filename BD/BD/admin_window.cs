@@ -69,6 +69,16 @@ namespace BD
 
         private void W_realizacji_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string checkedItem = string.Empty;
+            foreach (object item in remonty_dla_admina.CheckedItems)
+            {
+                checkedItem = item.ToString();
+            }
+            if (remonty_dla_admina.CheckedItems.Count == 1)
+            {
+                id_zg = Convert.ToInt32(checkedItem.Substring(0, 2));
+                zgloszenie = checkedItem.Substring(2, 20);
+            }
             //dodawane są po wybraniu z wyższego checkboxa
         }
 
@@ -177,10 +187,8 @@ namespace BD
             r = cmd.ExecuteReader();
             while (r.Read())
             {
-                wartosci = r[1] + " Użytkownik:" + r[2];
+                wartosci = r[0] +" "+ r[1] + " Użytkownik:" + r[2];
                 remonty_dla_admina.Items.Add(wartosci, false);
-                zgloszenie = Convert.ToString(r[1]);
-                id_zg = Convert.ToInt32(r[0]);
             }
             con.Close();
             //----------------------------------------------------------------------------------------------//
@@ -201,6 +209,11 @@ namespace BD
             //----------------------------------------------------------------------------------------------//
 
             
+        }
+
+        private void w_realizacji_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

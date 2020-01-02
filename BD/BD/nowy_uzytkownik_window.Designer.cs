@@ -40,27 +40,41 @@
             this.label2 = new System.Windows.Forms.Label();
             this.typy_uzytkownika = new System.Windows.Forms.CheckedListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
-            this.użytkownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.użytkownikTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.użytkownikTableAdapter();
             this.idużytkownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idnajemcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typużytkownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imięDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.użytkownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
+            this.użytkownikTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.użytkownikTableAdapter();
             this.nowy_nazwisko = new System.Windows.Forms.TextBox();
             this.nowy_imie = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.najemcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.najemcaTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.najemcaTableAdapter();
+            this.idwynajmuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idnajemcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imięDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwiskoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peselDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.użytkownikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // new_login
             // 
             this.new_login.Location = new System.Drawing.Point(82, 55);
-            this.new_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_login.Margin = new System.Windows.Forms.Padding(4);
             this.new_login.Name = "new_login";
             this.new_login.Size = new System.Drawing.Size(163, 22);
             this.new_login.TabIndex = 0;
@@ -69,7 +83,7 @@
             // new_pass
             // 
             this.new_pass.Location = new System.Drawing.Point(82, 103);
-            this.new_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_pass.Margin = new System.Windows.Forms.Padding(4);
             this.new_pass.Name = "new_pass";
             this.new_pass.Size = new System.Drawing.Size(163, 22);
             this.new_pass.TabIndex = 1;
@@ -108,7 +122,7 @@
             // add_user
             // 
             this.add_user.Location = new System.Drawing.Point(158, 426);
-            this.add_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add_user.Margin = new System.Windows.Forms.Padding(4);
             this.add_user.Name = "add_user";
             this.add_user.Size = new System.Drawing.Size(163, 46);
             this.add_user.TabIndex = 5;
@@ -119,7 +133,7 @@
             // nowy_id
             // 
             this.nowy_id.Location = new System.Drawing.Point(158, 292);
-            this.nowy_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nowy_id.Margin = new System.Windows.Forms.Padding(4);
             this.nowy_id.Name = "nowy_id";
             this.nowy_id.Size = new System.Drawing.Size(163, 22);
             this.nowy_id.TabIndex = 6;
@@ -149,7 +163,7 @@
             // 
             this.typy_uzytkownika.FormattingEnabled = true;
             this.typy_uzytkownika.Location = new System.Drawing.Point(158, 335);
-            this.typy_uzytkownika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typy_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
             this.typy_uzytkownika.Name = "typy_uzytkownika";
             this.typy_uzytkownika.Size = new System.Drawing.Size(163, 72);
             this.typy_uzytkownika.TabIndex = 9;
@@ -166,26 +180,12 @@
             this.imięDataGridViewTextBoxColumn,
             this.nazwiskoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.użytkownikBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(329, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(328, 42);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(425, 443);
+            this.dataGridView1.Size = new System.Drawing.Size(425, 218);
             this.dataGridView1.TabIndex = 10;
-            // 
-            // administracjaBudynkamiDataSet
-            // 
-            this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
-            this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // użytkownikBindingSource
-            // 
-            this.użytkownikBindingSource.DataMember = "użytkownik";
-            this.użytkownikBindingSource.DataSource = this.administracjaBudynkamiDataSet;
-            // 
-            // użytkownikTableAdapter
-            // 
-            this.użytkownikTableAdapter.ClearBeforeFill = true;
             // 
             // idużytkownikaDataGridViewTextBoxColumn
             // 
@@ -228,6 +228,20 @@
             this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
             this.nazwiskoDataGridViewTextBoxColumn.Width = 125;
             // 
+            // użytkownikBindingSource
+            // 
+            this.użytkownikBindingSource.DataMember = "użytkownik";
+            this.użytkownikBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
+            // administracjaBudynkamiDataSet
+            // 
+            this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
+            this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // użytkownikTableAdapter
+            // 
+            this.użytkownikTableAdapter.ClearBeforeFill = true;
+            // 
             // nowy_nazwisko
             // 
             this.nowy_nazwisko.Location = new System.Drawing.Point(158, 243);
@@ -260,11 +274,118 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Nazwisko";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(325, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Użytkownicy";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idwynajmuDataGridViewTextBoxColumn,
+            this.idnajemcaDataGridViewTextBoxColumn1,
+            this.imięDataGridViewTextBoxColumn1,
+            this.nazwiskoDataGridViewTextBoxColumn1,
+            this.peselDataGridViewTextBoxColumn,
+            this.nrdokumentuDataGridViewTextBoxColumn,
+            this.typdokumentuDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.najemcaBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(328, 311);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(425, 180);
+            this.dataGridView2.TabIndex = 16;
+            // 
+            // najemcaBindingSource
+            // 
+            this.najemcaBindingSource.DataMember = "najemca";
+            this.najemcaBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
+            // najemcaTableAdapter
+            // 
+            this.najemcaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idwynajmuDataGridViewTextBoxColumn
+            // 
+            this.idwynajmuDataGridViewTextBoxColumn.DataPropertyName = "id_wynajmu";
+            this.idwynajmuDataGridViewTextBoxColumn.HeaderText = "id_wynajmu";
+            this.idwynajmuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idwynajmuDataGridViewTextBoxColumn.Name = "idwynajmuDataGridViewTextBoxColumn";
+            this.idwynajmuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idnajemcaDataGridViewTextBoxColumn1
+            // 
+            this.idnajemcaDataGridViewTextBoxColumn1.DataPropertyName = "id_najemca";
+            this.idnajemcaDataGridViewTextBoxColumn1.HeaderText = "id_najemca";
+            this.idnajemcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idnajemcaDataGridViewTextBoxColumn1.Name = "idnajemcaDataGridViewTextBoxColumn1";
+            this.idnajemcaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idnajemcaDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // imięDataGridViewTextBoxColumn1
+            // 
+            this.imięDataGridViewTextBoxColumn1.DataPropertyName = "imię";
+            this.imięDataGridViewTextBoxColumn1.HeaderText = "imię";
+            this.imięDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.imięDataGridViewTextBoxColumn1.Name = "imięDataGridViewTextBoxColumn1";
+            this.imięDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // nazwiskoDataGridViewTextBoxColumn1
+            // 
+            this.nazwiskoDataGridViewTextBoxColumn1.DataPropertyName = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn1.HeaderText = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nazwiskoDataGridViewTextBoxColumn1.Name = "nazwiskoDataGridViewTextBoxColumn1";
+            this.nazwiskoDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // peselDataGridViewTextBoxColumn
+            // 
+            this.peselDataGridViewTextBoxColumn.DataPropertyName = "pesel";
+            this.peselDataGridViewTextBoxColumn.HeaderText = "pesel";
+            this.peselDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.peselDataGridViewTextBoxColumn.Name = "peselDataGridViewTextBoxColumn";
+            this.peselDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nrdokumentuDataGridViewTextBoxColumn
+            // 
+            this.nrdokumentuDataGridViewTextBoxColumn.DataPropertyName = "nr_dokumentu";
+            this.nrdokumentuDataGridViewTextBoxColumn.HeaderText = "nr_dokumentu";
+            this.nrdokumentuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nrdokumentuDataGridViewTextBoxColumn.Name = "nrdokumentuDataGridViewTextBoxColumn";
+            this.nrdokumentuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typdokumentuDataGridViewTextBoxColumn
+            // 
+            this.typdokumentuDataGridViewTextBoxColumn.DataPropertyName = "typ_dokumentu";
+            this.typdokumentuDataGridViewTextBoxColumn.HeaderText = "typ_dokumentu";
+            this.typdokumentuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typdokumentuDataGridViewTextBoxColumn.Name = "typdokumentuDataGridViewTextBoxColumn";
+            this.typdokumentuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(325, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Najemcy";
+            // 
             // nowy_uzytkownik_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 519);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nowy_imie);
@@ -280,13 +401,15 @@
             this.Controls.Add(this.dane);
             this.Controls.Add(this.new_pass);
             this.Controls.Add(this.new_login);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "nowy_uzytkownik_window";
             this.Text = "add_user_window";
             this.Load += new System.EventHandler(this.nowy_uzytkownik_window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.użytkownikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +440,17 @@
         private System.Windows.Forms.TextBox nowy_imie;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource najemcaBindingSource;
+        private AdministracjaBudynkamiDataSetTableAdapters.najemcaTableAdapter najemcaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idwynajmuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idnajemcaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imięDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peselDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrdokumentuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typdokumentuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
     }
 }

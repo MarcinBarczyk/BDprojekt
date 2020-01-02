@@ -47,7 +47,17 @@ namespace BD
             cmd.ExecuteNonQuery();
             con.Close();
             //dodać do wszytskich dodwań poprawność insertu, żeby pokazywało messagebox po poprawnym wykonaniu działania
+            //--------------------------------------------------------------------------------------//
+
+            //---------------------------czyszczenie wpisanych wartosci i update tabeli-------------//
+            nr_lokalu.Clear();
+            nr_pietra.Clear();
+            powierzchnia.Clear();
+            liczba_pokoi.Clear();
+            cena_m2.Clear();
+            this.lokalTableAdapter.Fill(this.administracjaBudynkamiDataSet.lokal);
+            //--------------------------------------------------------------------------------------//
         }
-        //--------------------------------------------------------------------------------------//
+
     }
 }

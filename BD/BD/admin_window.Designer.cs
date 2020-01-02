@@ -46,10 +46,6 @@
             this.dodawanie_umowy = new System.Windows.Forms.RadioButton();
             this.dodawanie_lokali = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lista_budynkow = new System.Windows.Forms.ListBox();
-            this.wyswietl_budynki = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.w_realizacji = new System.Windows.Forms.ListBox();
             this.idzgłoszeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typzgłoszeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datazgłoszeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +55,10 @@
             this.idużytkownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zgłoszenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
+            this.lista_budynkow = new System.Windows.Forms.ListBox();
+            this.wyswietl_budynki = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.w_realizacji = new System.Windows.Forms.ListBox();
             this.zgłoszenieTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.zgłoszenieTableAdapter();
             this.administracjaBudynkamiDataSet1 = new BD.AdministracjaBudynkamiDataSet();
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -260,44 +260,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(775, 169);
             this.dataGridView1.TabIndex = 26;
             // 
-            // lista_budynkow
-            // 
-            this.lista_budynkow.FormattingEnabled = true;
-            this.lista_budynkow.ItemHeight = 16;
-            this.lista_budynkow.Location = new System.Drawing.Point(10, 30);
-            this.lista_budynkow.Name = "lista_budynkow";
-            this.lista_budynkow.Size = new System.Drawing.Size(128, 68);
-            this.lista_budynkow.TabIndex = 27;
-            this.lista_budynkow.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
-            // 
-            // wyswietl_budynki
-            // 
-            this.wyswietl_budynki.Location = new System.Drawing.Point(181, 33);
-            this.wyswietl_budynki.Name = "wyswietl_budynki";
-            this.wyswietl_budynki.Size = new System.Drawing.Size(134, 68);
-            this.wyswietl_budynki.TabIndex = 28;
-            this.wyswietl_budynki.Text = "Wyświetl identyfokatory budynków";
-            this.wyswietl_budynki.UseVisualStyleBackColor = true;
-            this.wyswietl_budynki.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 17);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Identyfikator budynku";
-            // 
-            // w_realizacji
-            // 
-            this.w_realizacji.FormattingEnabled = true;
-            this.w_realizacji.ItemHeight = 16;
-            this.w_realizacji.Location = new System.Drawing.Point(11, 465);
-            this.w_realizacji.Name = "w_realizacji";
-            this.w_realizacji.Size = new System.Drawing.Size(354, 68);
-            this.w_realizacji.TabIndex = 30;
-            // 
             // idzgłoszeniaDataGridViewTextBoxColumn
             // 
             this.idzgłoszeniaDataGridViewTextBoxColumn.DataPropertyName = "id_zgłoszenia";
@@ -363,6 +325,45 @@
             // 
             this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lista_budynkow
+            // 
+            this.lista_budynkow.FormattingEnabled = true;
+            this.lista_budynkow.ItemHeight = 16;
+            this.lista_budynkow.Location = new System.Drawing.Point(10, 30);
+            this.lista_budynkow.Name = "lista_budynkow";
+            this.lista_budynkow.Size = new System.Drawing.Size(128, 68);
+            this.lista_budynkow.TabIndex = 27;
+            this.lista_budynkow.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
+            // 
+            // wyswietl_budynki
+            // 
+            this.wyswietl_budynki.Location = new System.Drawing.Point(181, 33);
+            this.wyswietl_budynki.Name = "wyswietl_budynki";
+            this.wyswietl_budynki.Size = new System.Drawing.Size(134, 68);
+            this.wyswietl_budynki.TabIndex = 28;
+            this.wyswietl_budynki.Text = "Wyświetl identyfokatory budynków";
+            this.wyswietl_budynki.UseVisualStyleBackColor = true;
+            this.wyswietl_budynki.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 17);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Identyfikator budynku";
+            // 
+            // w_realizacji
+            // 
+            this.w_realizacji.FormattingEnabled = true;
+            this.w_realizacji.ItemHeight = 16;
+            this.w_realizacji.Location = new System.Drawing.Point(11, 465);
+            this.w_realizacji.Name = "w_realizacji";
+            this.w_realizacji.Size = new System.Drawing.Size(354, 68);
+            this.w_realizacji.TabIndex = 30;
+            this.w_realizacji.SelectedIndexChanged += new System.EventHandler(this.w_realizacji_SelectedIndexChanged_1);
             // 
             // zgłoszenieTableAdapter
             // 

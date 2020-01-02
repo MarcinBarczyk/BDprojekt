@@ -83,7 +83,7 @@
             this.do_realizacji.Name = "do_realizacji";
             this.do_realizacji.Size = new System.Drawing.Size(160, 42);
             this.do_realizacji.TabIndex = 4;
-            this.do_realizacji.Text = "Dodaj";
+            this.do_realizacji.Text = "Dodaj do realizacji";
             this.do_realizacji.UseVisualStyleBackColor = true;
             this.do_realizacji.Click += new System.EventHandler(this.do_realizacji_Click);
             // 

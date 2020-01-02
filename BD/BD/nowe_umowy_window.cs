@@ -25,6 +25,8 @@ namespace BD
 
         private void nowe_umowy_window_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.wynajem' . Możesz go przenieść lub usunąć.
+            this.wynajemTableAdapter.Fill(this.administracjaBudynkamiDataSet.wynajem);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.najemca' . Możesz go przenieść lub usunąć.
             this.najemcaTableAdapter.Fill(this.administracjaBudynkamiDataSet.najemca);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.lokal' . Możesz go przenieść lub usunąć.
@@ -81,7 +83,11 @@ namespace BD
             con.Close();
             //--------------------------------------------------------------------------------------//
 
-
+            //--------------------czyszczenie wartości i update tabeli------------------------------//
+            czynsz_msc.Clear();
+            id_lokalu_do_wynajecia.Clear();
+            this.wynajemTableAdapter.Fill(this.administracjaBudynkamiDataSet.wynajem);
+            //--------------------------------------------------------------------------------------//
 
         }
 
@@ -121,6 +127,14 @@ namespace BD
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
+            //--------------------------------------------------------------------------------------//
+
+            //--------------------czyszczenie wpisów i update tabeli--------------------------------//
+            imie_najemca.Clear();
+            nazwisko_najemca.Clear();
+            pesel_najemca.Clear();
+            nr_dokumentu_najemca.Clear();
+            this.najemcaTableAdapter.Fill(this.administracjaBudynkamiDataSet.najemca);
             //--------------------------------------------------------------------------------------//
         }
     }

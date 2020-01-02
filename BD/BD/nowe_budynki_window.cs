@@ -20,7 +20,7 @@ namespace BD
         public nowe_budynki_window()
         {
             InitializeComponent();
-            con.ConnectionString = "Data Source=RUDY\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
+            con.ConnectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
 
         }
 
@@ -42,15 +42,22 @@ namespace BD
         }
         private void dodaj_budynek_Click(object sender, EventArgs e)
         {
-
+            //-------------------dodawanie budynku przez insert-------------------------------------//
             con.Open();
-
             com.Connection = con;
             com.CommandText = "insert into budynek(id_budynku, miejscowość, ulica, nr_budynku, liczba_pięter) values('" + nazwa.Text + "','" + miejscowosc.Text + "','" + ulica.Text + "','" + nr_budynku.Text + "','" + liczba_pieter.Text + "')";
             com.ExecuteNonQuery();
-
             con.Close();
-            
+            //--------------------------------------------------------------------------------------//
+
+            //-------------------czyszczenie wpisanych wartosci i update tabeli---------------------//
+            nazwa.Clear();
+            miejscowosc.Clear();
+            ulica.Clear();
+            nr_budynku.Clear();
+            liczba_pieter.Clear();
+            this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet.budynek);
+            //--------------------------------------------------------------------------------------//
             //this.dataGridView1.DataBindings();
         }
     }

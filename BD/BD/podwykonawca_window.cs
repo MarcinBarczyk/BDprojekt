@@ -29,7 +29,6 @@ namespace BD
         {
 
             //-------------------------załadowanie wybranego zgłoszenia do usterek--------------------------//
-            
             String SQL = "INSERT INTO usterka (id_zgłoszenia, typ_usterki, data_zlecenia) VALUES (@id_z, @zgloszenie, @data)";
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
@@ -95,7 +94,7 @@ namespace BD
             }
 
             string id_u = checkedItem.Substring(0, 2); //numer usterki
-            string id_z=string.Empty; //numer zgłoszenia
+            string id_z = string.Empty; //numer zgłoszenia
             //----------------------------------------------------------------------------------------------//
 
             //-------------------------------pobranie numeru zgłoszenia potrzebne pozniej-------------------//

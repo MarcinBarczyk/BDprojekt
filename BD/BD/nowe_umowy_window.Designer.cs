@@ -83,11 +83,25 @@
             this.czynsz_msc = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.termin_platnosci = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.wynajemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wynajemTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.wynajemTableAdapter();
+            this.idlokaluDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idwynajmuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cenamiesiącDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datazawarciaumowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminpłatnościDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datazamieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datakońcaumowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wynajemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_zawarcia_umowy
@@ -246,12 +260,12 @@
             this.liczbapokoiDataGridViewTextBoxColumn,
             this.cenazam2DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lokalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(697, 332);
+            this.dataGridView1.Location = new System.Drawing.Point(697, 197);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(515, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(515, 141);
             this.dataGridView1.TabIndex = 17;
             // 
             // idbudynkuDataGridViewTextBoxColumn
@@ -425,7 +439,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(515, 256);
+            this.dataGridView2.Size = new System.Drawing.Size(515, 137);
             this.dataGridView2.TabIndex = 27;
             // 
             // idwynajmuDataGridViewTextBoxColumn
@@ -532,7 +546,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(702, 312);
+            this.label15.Location = new System.Drawing.Point(694, 176);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 17);
             this.label15.TabIndex = 31;
@@ -571,11 +585,117 @@
             this.termin_platnosci.Size = new System.Drawing.Size(306, 22);
             this.termin_platnosci.TabIndex = 35;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(694, 356);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(66, 17);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "Wynajem";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idlokaluDataGridViewTextBoxColumn1,
+            this.idwynajmuDataGridViewTextBoxColumn1,
+            this.cenamiesiącDataGridViewTextBoxColumn,
+            this.datazawarciaumowyDataGridViewTextBoxColumn,
+            this.terminpłatnościDataGridViewTextBoxColumn,
+            this.datazamieszkaniaDataGridViewTextBoxColumn,
+            this.datakońcaumowyDataGridViewTextBoxColumn,
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.wynajemBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(697, 395);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(515, 157);
+            this.dataGridView3.TabIndex = 37;
+            // 
+            // wynajemBindingSource
+            // 
+            this.wynajemBindingSource.DataMember = "wynajem";
+            this.wynajemBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
+            // wynajemTableAdapter
+            // 
+            this.wynajemTableAdapter.ClearBeforeFill = true;
+            // 
+            // idlokaluDataGridViewTextBoxColumn1
+            // 
+            this.idlokaluDataGridViewTextBoxColumn1.DataPropertyName = "id_lokalu";
+            this.idlokaluDataGridViewTextBoxColumn1.HeaderText = "id_lokalu";
+            this.idlokaluDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idlokaluDataGridViewTextBoxColumn1.Name = "idlokaluDataGridViewTextBoxColumn1";
+            this.idlokaluDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // idwynajmuDataGridViewTextBoxColumn1
+            // 
+            this.idwynajmuDataGridViewTextBoxColumn1.DataPropertyName = "id_wynajmu";
+            this.idwynajmuDataGridViewTextBoxColumn1.HeaderText = "id_wynajmu";
+            this.idwynajmuDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idwynajmuDataGridViewTextBoxColumn1.Name = "idwynajmuDataGridViewTextBoxColumn1";
+            this.idwynajmuDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idwynajmuDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // cenamiesiącDataGridViewTextBoxColumn
+            // 
+            this.cenamiesiącDataGridViewTextBoxColumn.DataPropertyName = "cena_miesiąc";
+            this.cenamiesiącDataGridViewTextBoxColumn.HeaderText = "cena_miesiąc";
+            this.cenamiesiącDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cenamiesiącDataGridViewTextBoxColumn.Name = "cenamiesiącDataGridViewTextBoxColumn";
+            this.cenamiesiącDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datazawarciaumowyDataGridViewTextBoxColumn
+            // 
+            this.datazawarciaumowyDataGridViewTextBoxColumn.DataPropertyName = "data_zawarcia_umowy";
+            this.datazawarciaumowyDataGridViewTextBoxColumn.HeaderText = "data_zawarcia_umowy";
+            this.datazawarciaumowyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datazawarciaumowyDataGridViewTextBoxColumn.Name = "datazawarciaumowyDataGridViewTextBoxColumn";
+            this.datazawarciaumowyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // terminpłatnościDataGridViewTextBoxColumn
+            // 
+            this.terminpłatnościDataGridViewTextBoxColumn.DataPropertyName = "termin_płatności";
+            this.terminpłatnościDataGridViewTextBoxColumn.HeaderText = "termin_płatności";
+            this.terminpłatnościDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.terminpłatnościDataGridViewTextBoxColumn.Name = "terminpłatnościDataGridViewTextBoxColumn";
+            this.terminpłatnościDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datazamieszkaniaDataGridViewTextBoxColumn
+            // 
+            this.datazamieszkaniaDataGridViewTextBoxColumn.DataPropertyName = "data_zamieszkania";
+            this.datazamieszkaniaDataGridViewTextBoxColumn.HeaderText = "data_zamieszkania";
+            this.datazamieszkaniaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datazamieszkaniaDataGridViewTextBoxColumn.Name = "datazamieszkaniaDataGridViewTextBoxColumn";
+            this.datazamieszkaniaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datakońcaumowyDataGridViewTextBoxColumn
+            // 
+            this.datakońcaumowyDataGridViewTextBoxColumn.DataPropertyName = "data_końca_umowy";
+            this.datakońcaumowyDataGridViewTextBoxColumn.HeaderText = "data_końca_umowy";
+            this.datakońcaumowyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datakońcaumowyDataGridViewTextBoxColumn.Name = "datakońcaumowyDataGridViewTextBoxColumn";
+            this.datakońcaumowyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datakońcazamieszkaniaDataGridViewTextBoxColumn
+            // 
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn.DataPropertyName = "data_końca_zamieszkania";
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn.HeaderText = "data_końca_zamieszkania";
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn.Name = "datakońcazamieszkaniaDataGridViewTextBoxColumn";
+            this.datakońcazamieszkaniaDataGridViewTextBoxColumn.Width = 125;
+            // 
             // nowe_umowy_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 564);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.termin_platnosci);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.czynsz_msc);
@@ -620,6 +740,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wynajemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,5 +803,17 @@
         private System.Windows.Forms.TextBox czynsz_msc;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker termin_platnosci;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.BindingSource wynajemBindingSource;
+        private AdministracjaBudynkamiDataSetTableAdapters.wynajemTableAdapter wynajemTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlokaluDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idwynajmuDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cenamiesiącDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datazawarciaumowyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn terminpłatnościDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datazamieszkaniaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datakońcaumowyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datakońcazamieszkaniaDataGridViewTextBoxColumn;
     }
 }

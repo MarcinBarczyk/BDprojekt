@@ -61,8 +61,6 @@ namespace BD
             File.AppendAllText(pathhasla, haslo_okno + Environment.NewLine);
 
             //----------------------------dodawanie użytkownika do bazy---------------------------------------//
-            //ale trzeba przerobić. ponieważ żeby się zgadzało najpierw trzeba wypełnić wynajem poźniej najemce i na koniec użytkownika
-            // także zrobić przy oknie do wynajmu i najmcy . I przy najemcy wpisywać od razu do użytkownika i powinno być git :)
             String imie, nazwisko, typ;
             imie = nowy_imie.Text;
             nazwisko = nowy_nazwisko.Text;
@@ -86,12 +84,24 @@ namespace BD
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
             //----------------------------------------------------------------------------------------------//
+
+            //------------------------czyszczenie wpisanych wartosci i update tabeli------------------------//
+            new_login.Clear();
+            new_pass.Clear();
+            nowy_imie.Clear();
+            nowy_nazwisko.Clear();
+            nowy_id.Clear();
+            this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
+            //----------------------------------------------------------------------------------------------//
+
+
         }
 
         private void nowy_uzytkownik_window_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.najemca' . Możesz go przenieść lub usunąć.
+            this.najemcaTableAdapter.Fill(this.administracjaBudynkamiDataSet.najemca);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
             this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
 
