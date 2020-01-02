@@ -50,6 +50,7 @@ namespace BD
             cmd.Parameters.AddWithValue("@data", SqlDbType.DateTime).Value = data_zlecenia.Value.Date;
             cmd.ExecuteScalar();
             con.Close();
+            firma_nazwa.Clear();
             //----------------------------------------------------------------------------------------------//
         }
 

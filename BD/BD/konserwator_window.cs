@@ -195,6 +195,7 @@ namespace BD
             }
 
             string id_u = checkedItem.Substring(0, 2); //numer usterki
+            string typ_zg = checkedItem.Substring(2, 20);
             string id_z = string.Empty; //numer zgłoszenia
             //----------------------------------------------------------------------------------------------//
 
@@ -216,6 +217,21 @@ namespace BD
 
 
 
+            //-------------------------uzupełnienie konserwacji---------------------------------------------//
+            SQL = "INSERT INTO konserwacja (id_zgłoszenia, typ_konserwacji, data_wykonania, os_odpowiedzialna) VALUES (@id_z, @zgloszenie, @data, @osoba)";
+            con = new SqlConnection(connectionString);
+            con.Open();
+            cmd = new SqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id_z", id_z);
+            cmd.Parameters.AddWithValue("@zgloszenie", typ_zg);
+            cmd.Parameters.AddWithValue("@data", SqlDbType.DateTime).Value = data_wykonania.Value.Date;
+            cmd.Parameters.AddWithValue("@osoba", osoba_odpowiedzialna.Text);
+            cmd.ExecuteScalar();
+            con.Close();
+            //----------------------------------------------------------------------------------------------//
+
+
+
 
             //---------------------------uzupełnienie usterki o datę wykonania------------------------------//
             SQL = "UPDATE usterka SET data_wykonania = @data WHERE id_usterki = @id ";
@@ -226,6 +242,7 @@ namespace BD
             cmd.Parameters.AddWithValue("@data", SqlDbType.DateTime).Value = data_wykonania.Value.Date;
             cmd.ExecuteNonQuery();
             con.Close();
+            osoba_odpowiedzialna.Clear();
             //----------------------------------------------------------------------------------------------//
 
 

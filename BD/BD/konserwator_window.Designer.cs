@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.data_rozpoczecia = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.osoba_odpowiedzialna = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // do_konserwacji
@@ -63,7 +65,7 @@
             // 
             // dodaj_do_konserwacji
             // 
-            this.dodaj_do_konserwacji.Location = new System.Drawing.Point(15, 356);
+            this.dodaj_do_konserwacji.Location = new System.Drawing.Point(12, 390);
             this.dodaj_do_konserwacji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dodaj_do_konserwacji.Name = "dodaj_do_konserwacji";
             this.dodaj_do_konserwacji.Size = new System.Drawing.Size(151, 49);
@@ -92,7 +94,7 @@
             // 
             // data_wykonania
             // 
-            this.data_wykonania.Location = new System.Drawing.Point(419, 240);
+            this.data_wykonania.Location = new System.Drawing.Point(419, 192);
             this.data_wykonania.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_wykonania.Name = "data_wykonania";
             this.data_wykonania.Size = new System.Drawing.Size(283, 22);
@@ -101,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 221);
+            this.label3.Location = new System.Drawing.Point(416, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 17);
             this.label3.TabIndex = 6;
@@ -155,11 +157,29 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Data rozpoczęcia";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(416, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Osoba odpowiedzialna";
+            // 
+            // osoba_odpowiedzialna
+            // 
+            this.osoba_odpowiedzialna.Location = new System.Drawing.Point(419, 259);
+            this.osoba_odpowiedzialna.Name = "osoba_odpowiedzialna";
+            this.osoba_odpowiedzialna.Size = new System.Drawing.Size(252, 22);
+            this.osoba_odpowiedzialna.TabIndex = 13;
+            // 
             // konserwator_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.osoba_odpowiedzialna);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.data_rozpoczecia);
             this.Controls.Add(this.label4);
@@ -195,5 +215,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker data_rozpoczecia;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox osoba_odpowiedzialna;
     }
 }

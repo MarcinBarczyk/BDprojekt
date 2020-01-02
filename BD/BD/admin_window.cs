@@ -178,6 +178,9 @@ namespace BD
             numerek = i;
             //----------------------------------------------------------------------------------------------//
 
+
+
+
             //------------------------załadowanie aktualnych zgłoszeń przeznaczonych dla admina-------------//
             String SQL = "SELECT zgłoszenie.id_zgłoszenia, zgłoszenie.typ_zgłoszenia, zgłoszenie.id_użytkownika FROM zgłoszenie, budynek WHERE zgłoszenie.id_budynku=budynek.id_budynku AND zgłoszenie.data_realizacji IS NULL AND zgłoszenie.typ_zgłoszenia LIKE 'R%' AND budynek.id_budynku ='" + text + "'AND zgłoszenie.id_zgłoszenia NOT IN(select u2.id_zgłoszenia from usterka u2 where u2.id_zgłoszenia=zgłoszenie.id_zgłoszenia)";
             SqlConnection con = new SqlConnection(connectionString);
@@ -192,6 +195,9 @@ namespace BD
             }
             con.Close();
             //----------------------------------------------------------------------------------------------//
+
+
+
 
             //----------------------------załadowanie aktualnie wykonywanych remontów-----------------------//
             SQL = "SELECT usterka.typ_usterki, podwykonawca.data_zlecenia FROM zgłoszenie, usterka, podwykonawca  WHERE zgłoszenie.id_budynku='" + text + "' AND zgłoszenie.id_zgłoszenia=usterka.id_zgłoszenia AND  usterka.id_usterki=podwykonawca.id_usterki AND podwykonawca.data_wykonania IS NULL";
