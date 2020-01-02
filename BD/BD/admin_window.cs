@@ -125,6 +125,21 @@ namespace BD
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.zgłoszenie' . Możesz go przenieść lub usunąć.
             this.zgłoszenieTableAdapter.Fill(this.administracjaBudynkamiDataSet.zgłoszenie);
 
+            string curMont = DateTime.Now.Month.ToString();
+            string curYear = DateTime.Now.Year.ToString();
+            string Date = curYear + "-" + curMont + "-" + "10" + " " + "00:00:00.000";
+
+            
+
+            String SQL = "UPDATE wynajem SET termin_płatności=@termin";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@termin",Date);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
         }
 
         private void potwierdzenie_realizacji_Click(object sender, EventArgs e)
