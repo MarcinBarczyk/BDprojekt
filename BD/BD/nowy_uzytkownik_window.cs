@@ -10,91 +10,77 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 
+using System.Security.Cryptography;
+
 
 namespace BD
 {
-   
+
     public partial class nowy_uzytkownik_window : Form
     {
-        private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
-        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+        SqlCommand com2 = new SqlCommand();
+
+        string pathLoginy = @"C:\Users\Rudini\source\repos\Projekt_BD\BD\BD\loginy.txt";
+        string pathhasla = @"C:\Users\Rudini\source\repos\Projekt_BD\BD\BD\hasla.txt";
         public nowy_uzytkownik_window()
         {
             InitializeComponent();
-        }
+            con.ConnectionString = "Data Source=RUDY\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
 
-        private void new_login_TextChanged(object sender, EventArgs e)
-        {
-            String line;
-            String okno;
-            String login_plik;
-            System.IO.StreamReader file = new System.IO.StreamReader(pathLoginy);
-            okno = new_login.Text;
-            while ((line = file.ReadLine()) != null)
-            {
-                System.Console.WriteLine(line);
-                login_plik = line;
-                if (okno == login_plik)
-                {
-                    MessageBox.Show("Podana nazwa już istanieje");
-                }
-            }
-            file.Close();
-        }
-
-        private void new_pass_TextChanged(object sender, EventArgs e)
-        {
-            new_pass.PasswordChar = '*';
-            new_pass.MaxLength = 10;
         }
 
         private void add_user_Click(object sender, EventArgs e)
         {
-            String login_okno;
-            login_okno = new_login.Text;
-            File.AppendAllText(pathLoginy, login_okno + Environment.NewLine);
-          
-
-            String haslo_okno;
-            haslo_okno = new_pass.Text;
-            File.AppendAllText(pathhasla, haslo_okno + Environment.NewLine);
-
-            //----------------------------dodawanie użytkownika do bazy---------------------------------------//
-            String imie, nazwisko, typ;
-            imie = nowy_imie.Text;
-            nazwisko = nowy_nazwisko.Text;
-            int id_naje;
-            id_naje = Convert.ToInt32(nowy_id.Text);
-            typ = String.Empty;
-            if (typy_uzytkownika.CheckedItems.Count == 1)
+            string hasło = hasło_text.Text;
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                foreach (object itemchecked in typy_uzytkownika.CheckedItems)
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
+                //byte[] hasło_hash = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
                 {
-                    typ = itemchecked.ToString();
+                    builder.Append(bytes[i].ToString("x2"));
                 }
-                String SQL = "INSERT INTO użytkownik (id_najemca, typ_użytkownika, imię, nazwisko) VALUES (@id, @typ, @imie, @nazwisko)";
-                SqlConnection con = new SqlConnection(connectionString);
-                SqlCommand cmd = new SqlCommand(SQL, con);
-                cmd.Parameters.AddWithValue("@id", id_naje);
-                cmd.Parameters.AddWithValue("@typ",typ);
-                cmd.Parameters.AddWithValue("@imie", imie);
-                cmd.Parameters.AddWithValue("@nazwisko", nazwisko);
+                string hasło_hash = builder.ToString();
+
+
+                 //----------------------------dodawanie użytkownika do bazy---------------------------------------//
+                if (id_najemcy.Text == "")
+                {
+                    //id_najemcy = null;
+
+                    con.Open();
+                    com.Connection = con;
+                    com.CommandText = "insert into użytkownik(id_użytkownika, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + typy_uzytkownika.Text + "','" + imię.Text + "','" + nazwisko.Text + "')";
+                    com.ExecuteNonQuery();
+                    con.Close();
+                }
+                else
+                {
+                    con.Open();
+                    com.Connection = con;
+                    com.CommandText = "insert into użytkownik(id_użytkownika, id_najemca, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + id_najemcy + "','" + typy_uzytkownika.Text + "','" + imię.Text + "','" + nazwisko.Text + "')";
+                    com.ExecuteNonQuery();
+                    con.Close();
+                }
+
                 con.Open();
-                cmd.ExecuteNonQuery();
+                com2.Connection = con;
+                com2.CommandText = "insert into zaloguj(id_użytkownika, login, hasło) values('" + id_użytkownika.Text + "','" + login_text.Text + "','" + hasło_hash + "')";
+                com2.ExecuteNonQuery();
                 con.Close();
+                //----------------------------------------------------------------------------------------------//
+
+                //------------------------czyszczenie wpisanych wartosci i update tabeli------------------------//
+                //new_login.Clear();
+
+                this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
+                //----------------------------------------------------------------------------------------------//
+
             }
-            //----------------------------------------------------------------------------------------------//
-
-            //------------------------czyszczenie wpisanych wartosci i update tabeli------------------------//
-            new_login.Clear();
-            new_pass.Clear();
-            nowy_imie.Clear();
-            nowy_nazwisko.Clear();
-            nowy_id.Clear();
-            this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
-            //----------------------------------------------------------------------------------------------//
-
 
         }
 
@@ -120,7 +106,32 @@ namespace BD
 
         private void typy_uzytkownika_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void login_text_TextChanged(object sender, EventArgs e)
+        {
+            String line;
+            String okno;
+            String login_plik;
+            System.IO.StreamReader file = new System.IO.StreamReader(pathLoginy);
+            okno = login_text.Text;
+            while ((line = file.ReadLine()) != null)
+            {
+                System.Console.WriteLine(line);
+                login_plik = line;
+                if (okno == login_plik)
+                {
+                    MessageBox.Show("Podana nazwa już istanieje");
+                }
+            }
+            file.Close();
+        }
+
+        private void hasło_text_TextChanged(object sender, EventArgs e)
+        {
+            hasło_text.PasswordChar = '*';
+            hasło_text.MaxLength = 10;
         }
     }
 }
