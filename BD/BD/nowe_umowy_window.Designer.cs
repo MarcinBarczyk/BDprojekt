@@ -85,8 +85,6 @@
             this.termin_platnosci = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.wynajemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wynajemTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.wynajemTableAdapter();
             this.idlokaluDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idwynajmuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cenamiesiącDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +93,10 @@
             this.datazamieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datakońcaumowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datakońcazamieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wynajemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wynajemTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.wynajemTableAdapter();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
@@ -124,7 +126,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(469, 8);
+            this.label3.Location = new System.Drawing.Point(469, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 4;
@@ -132,7 +134,7 @@
             // 
             // imie_najemca
             // 
-            this.imie_najemca.Location = new System.Drawing.Point(473, 49);
+            this.imie_najemca.Location = new System.Drawing.Point(473, 91);
             this.imie_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imie_najemca.Name = "imie_najemca";
             this.imie_najemca.Size = new System.Drawing.Size(163, 22);
@@ -140,7 +142,7 @@
             // 
             // nazwisko_najemca
             // 
-            this.nazwisko_najemca.Location = new System.Drawing.Point(473, 93);
+            this.nazwisko_najemca.Location = new System.Drawing.Point(473, 135);
             this.nazwisko_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nazwisko_najemca.Name = "nazwisko_najemca";
             this.nazwisko_najemca.Size = new System.Drawing.Size(163, 22);
@@ -148,7 +150,7 @@
             // 
             // pesel_najemca
             // 
-            this.pesel_najemca.Location = new System.Drawing.Point(473, 136);
+            this.pesel_najemca.Location = new System.Drawing.Point(473, 178);
             this.pesel_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pesel_najemca.Name = "pesel_najemca";
             this.pesel_najemca.Size = new System.Drawing.Size(163, 22);
@@ -156,7 +158,7 @@
             // 
             // nr_dokumentu_najemca
             // 
-            this.nr_dokumentu_najemca.Location = new System.Drawing.Point(473, 184);
+            this.nr_dokumentu_najemca.Location = new System.Drawing.Point(473, 226);
             this.nr_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nr_dokumentu_najemca.Name = "nr_dokumentu_najemca";
             this.nr_dokumentu_najemca.Size = new System.Drawing.Size(163, 22);
@@ -165,7 +167,7 @@
             // typ_dokumentu_najemca
             // 
             this.typ_dokumentu_najemca.FormattingEnabled = true;
-            this.typ_dokumentu_najemca.Location = new System.Drawing.Point(473, 224);
+            this.typ_dokumentu_najemca.Location = new System.Drawing.Point(473, 266);
             this.typ_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typ_dokumentu_najemca.Name = "typ_dokumentu_najemca";
             this.typ_dokumentu_najemca.Size = new System.Drawing.Size(208, 72);
@@ -174,7 +176,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 52);
+            this.label4.Location = new System.Drawing.Point(433, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 10;
@@ -183,7 +185,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(399, 96);
+            this.label5.Location = new System.Drawing.Point(399, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 11;
@@ -192,7 +194,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(414, 139);
+            this.label6.Location = new System.Drawing.Point(414, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 12;
@@ -201,7 +203,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(342, 186);
+            this.label7.Location = new System.Drawing.Point(342, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 17);
             this.label7.TabIndex = 13;
@@ -210,7 +212,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(361, 233);
+            this.label8.Location = new System.Drawing.Point(361, 275);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 17);
             this.label8.TabIndex = 14;
@@ -230,7 +232,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Location = new System.Drawing.Point(12, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 17);
             this.label2.TabIndex = 2;
@@ -239,7 +241,7 @@
             // cena_miesiac
             // 
             this.cena_miesiac.AutoSize = true;
-            this.cena_miesiac.Location = new System.Drawing.Point(55, 26);
+            this.cena_miesiac.Location = new System.Drawing.Point(55, 47);
             this.cena_miesiac.Name = "cena_miesiac";
             this.cena_miesiac.Size = new System.Drawing.Size(0, 17);
             this.cena_miesiac.TabIndex = 16;
@@ -347,7 +349,7 @@
             // 
             // id_lokalu_do_wynajecia
             // 
-            this.id_lokalu_do_wynajecia.Location = new System.Drawing.Point(15, 26);
+            this.id_lokalu_do_wynajecia.Location = new System.Drawing.Point(15, 47);
             this.id_lokalu_do_wynajecia.Name = "id_lokalu_do_wynajecia";
             this.id_lokalu_do_wynajecia.Size = new System.Drawing.Size(208, 22);
             this.id_lokalu_do_wynajecia.TabIndex = 18;
@@ -355,7 +357,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 6);
+            this.label9.Location = new System.Drawing.Point(12, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(211, 17);
             this.label9.TabIndex = 19;
@@ -364,7 +366,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 83);
+            this.label10.Location = new System.Drawing.Point(12, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(20, 17);
             this.label10.TabIndex = 20;
@@ -516,7 +518,7 @@
             // 
             // potwierdz_lokal
             // 
-            this.potwierdz_lokal.Location = new System.Drawing.Point(246, 26);
+            this.potwierdz_lokal.Location = new System.Drawing.Point(246, 47);
             this.potwierdz_lokal.Name = "potwierdz_lokal";
             this.potwierdz_lokal.Size = new System.Drawing.Size(98, 23);
             this.potwierdz_lokal.TabIndex = 28;
@@ -615,15 +617,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(515, 157);
             this.dataGridView3.TabIndex = 37;
             // 
-            // wynajemBindingSource
-            // 
-            this.wynajemBindingSource.DataMember = "wynajem";
-            this.wynajemBindingSource.DataSource = this.administracjaBudynkamiDataSet;
-            // 
-            // wynajemTableAdapter
-            // 
-            this.wynajemTableAdapter.ClearBeforeFill = true;
-            // 
             // idlokaluDataGridViewTextBoxColumn1
             // 
             this.idlokaluDataGridViewTextBoxColumn1.DataPropertyName = "id_lokalu";
@@ -689,11 +682,40 @@
             this.datakońcazamieszkaniaDataGridViewTextBoxColumn.Name = "datakońcazamieszkaniaDataGridViewTextBoxColumn";
             this.datakońcazamieszkaniaDataGridViewTextBoxColumn.Width = 125;
             // 
+            // wynajemBindingSource
+            // 
+            this.wynajemBindingSource.DataMember = "wynajem";
+            this.wynajemBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
+            // wynajemTableAdapter
+            // 
+            this.wynajemTableAdapter.ClearBeforeFill = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(149, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(16, 17);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "1";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(546, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(16, 17);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "2";
+            // 
             // nowe_umowy_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 564);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.termin_platnosci);
@@ -815,5 +837,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datazamieszkaniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datakońcaumowyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datakońcazamieszkaniaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

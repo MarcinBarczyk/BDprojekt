@@ -32,6 +32,7 @@ namespace BD
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.lokal' . Możesz go przenieść lub usunąć.
             this.lokalTableAdapter.Fill(this.administracjaBudynkamiDataSet.lokal);
 
+           
             //------------------------możliwe dokumenty do wyboru-----------------------------------//
             var items = typ_dokumentu_najemca.Items;
             items.Add("Paszport");
@@ -107,8 +108,22 @@ namespace BD
             con.Close();
             //--------------------------------------------------------------------------------------//
 
-            //------------------------jeśli rodzaj dokumentu jest wybrany to dodaj najemce----------//
-            if (typ_dokumentu_najemca.CheckedItems.Count == 1)
+            //------sprawdzenie ilości wynajmów i najemców aby później insert był poprawny----------//
+            Int32 count_wynajem, count_najemca; ;
+            SQL = "SELECT COUNT(id_wynajmu) FROM wynajem";
+            con = new SqlConnection(connectionString);
+            cmd = new SqlCommand(SQL, con);
+            con.Open();
+            count_wynajem = (Int32)cmd.ExecuteScalar();
+            SQL = "SELECT COUNT(id_najemca) FROM najemca";
+            cmd = new SqlCommand(SQL, con);
+            count_najemca = (Int32)cmd.ExecuteScalar();
+            con.Close();
+            //--------------------------------------------------------------------------------------//
+
+
+            //---jeśli rodzaj dokumentu jest wybrany i liczby sie zgadzają to dodaj najemce---------//
+            if ((typ_dokumentu_najemca.CheckedItems.Count == 1) && (count_wynajem>count_najemca))
             {
                 foreach (object itemchecked in typ_dokumentu_najemca.CheckedItems)
                 {
@@ -126,6 +141,10 @@ namespace BD
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Za mało wynajmów lub nie wybrano typu dokumentu");
             }
             //--------------------------------------------------------------------------------------//
 

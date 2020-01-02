@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace BD
 {
+        
     public partial class Form1 : Form
     {
+        public static int id_user; //do innego okna id użytkownika
         bool login = false;
         bool loginAdmin = false;
         bool loginKons = false;
@@ -42,6 +45,7 @@ namespace BD
             String loginOkno;
             String loginPlik;
             String line;
+            String id_u;
             int counter = 0;
 
             loginOkno = textBox_login.Text;
@@ -64,6 +68,8 @@ namespace BD
                 else if (loginOkno == loginPlik)
                 {
                     login = true;
+                    id_u = Regex.Match(loginOkno, @"\d+").Value;
+                    id_user = Int32.Parse(id_u);
                     break;
                 }
                 counter++;
