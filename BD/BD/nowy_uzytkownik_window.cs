@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 
+using GlobalVariables;
 using System.Security.Cryptography;
 
 
@@ -18,22 +19,25 @@ namespace BD
 
     public partial class nowy_uzytkownik_window : Form
     {
+
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlCommand com2 = new SqlCommand();
 
-        string pathLoginy = @"C:\Users\Rudini\source\repos\Projekt_BD\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\Rudini\source\repos\Projekt_BD\BD\BD\hasla.txt";
+        string pathLoginy = GlobalVar.path_login;
+        string pathhasla = GlobalVar.path_pass;
+
         public nowy_uzytkownik_window()
         {
             InitializeComponent();
-            con.ConnectionString = "Data Source=RUDY\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
-
+            con.ConnectionString = GlobalVar.con_str;
         }
 
         private void add_user_Click(object sender, EventArgs e)
         {
             string hasło = hasło_text.Text;
+
+            //----------------------------hash hasła---------------------------------------//
             using (SHA256 sha256Hash = SHA256.Create())
             {
                 byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
@@ -45,13 +49,11 @@ namespace BD
                     builder.Append(bytes[i].ToString("x2"));
                 }
                 string hasło_hash = builder.ToString();
+                //----------------------------------------------------------------------------------------------//
 
-
-                 //----------------------------dodawanie użytkownika do bazy---------------------------------------//
+                //----------------------------dodawanie użytkownika do bazy---------------------------------------//
                 if (id_najemcy.Text == "")
                 {
-                    //id_najemcy = null;
-
                     con.Open();
                     com.Connection = con;
                     com.CommandText = "insert into użytkownik(id_użytkownika, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + typy_uzytkownika.Text + "','" + imię.Text + "','" + nazwisko.Text + "')";
@@ -66,7 +68,6 @@ namespace BD
                     com.ExecuteNonQuery();
                     con.Close();
                 }
-
                 con.Open();
                 com2.Connection = con;
                 com2.CommandText = "insert into zaloguj(id_użytkownika, login, hasło) values('" + id_użytkownika.Text + "','" + login_text.Text + "','" + hasło_hash + "')";

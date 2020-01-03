@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
+
+using GlobalVariables;
+using System.Security.Cryptography;
 
 namespace BD
 {
@@ -20,17 +24,19 @@ namespace BD
         bool loginKons = false;
         bool password = false;
         int counterLogin;
-        string pathLoginy = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\loginy.txt";
-        string pathhasla = @"C:\Users\asus\source\repos\BDprojekt\BD\BD\hasla.txt";
-        //string pathLoginy = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\loginy.txt";
-        //string pathhasla = @"C:\Users\Marcin\source\repos\BDprojekt\BD\BD\hasla.txt";
+
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+
+        //int counterLogin;
+
+        //string pathLoginy = GlobalVar.path_login;
+        //string pathhasla = GlobalVar.path_pass;
         public Form1()
         {
             InitializeComponent();
+            con.ConnectionString = GlobalVar.con_str;
         }
-
-
-
         private void textBox_login_TextChanged(object sender, EventArgs e)
         {
         }
@@ -42,108 +48,144 @@ namespace BD
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            String loginOkno;
-            String loginPlik;
-            String line;
-            String id_u;
-            int counter = 0;
+            string my_login = textBox_login.Text;
+            string hasło = textBox_haslo.Text;
 
-            loginOkno = textBox_login.Text;
-
-            System.IO.StreamReader file = new System.IO.StreamReader(pathLoginy);
-            while ((line = file.ReadLine()) != null)
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "select hasło from zaloguj where login='" + my_login + "'";
+            using (SqlDataReader rdr = com.ExecuteReader())
             {
-                System.Console.WriteLine(line);
-                loginPlik = line;
-                if ((loginOkno == loginPlik) && (loginPlik == "admin"))
+                while (rdr.Read())
                 {
-                    loginAdmin = true;
-                    break;
-                }
-                else if ((loginOkno == loginPlik) && (loginPlik == "konserwator"))
-                {
-                    loginKons = true;
-                    break;
-                }
-                else if (loginOkno == loginPlik)
-                {
-                    login = true;
-                    id_u = Regex.Match(loginOkno, @"\d+").Value;
-                    id_user = Int32.Parse(id_u);
-                    break;
-                }
-                counter++;
-            }
-            counterLogin = counter;
-            file.Close();
-
-            counter = 0;
-            String PasswordOkno;
-            String PasswordPlik;
-            String linehaslo;
-            PasswordOkno = textBox_haslo.Text.ToString();
-            System.IO.StreamReader filehasla = new System.IO.StreamReader(pathhasla);
-            while ((linehaslo = filehasla.ReadLine()) != null)
-            {
-                if (counter == counterLogin)
-                {
-                    System.Console.WriteLine(linehaslo);
-                    PasswordPlik = linehaslo;
-                    if ((PasswordOkno == PasswordPlik))
+                    string db_hash_pass = rdr[0].ToString();
+                    //----------------------------hash hasła---------------------------------------//
+                    using (SHA256 sha256Hash = SHA256.Create())
                     {
-                        password = true;
+                        byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
+
+                        StringBuilder builder = new StringBuilder();
+                        for (int i = 0; i < bytes.Length; i++)
+                        {
+                            builder.Append(bytes[i].ToString("x2"));
+                        }
+                        string hash_pass = builder.ToString();
+                        //----------------------------------------------------------------------------------------------//
+
+                        if ((my_login == "admin") && (hash_pass == db_hash_pass))
+                        {
+                            MessageBox.Show("zalogowany admin");
+                            admin_window okno_admin = new admin_window();
+                            okno_admin.Show();
+                        }
                     }
+                }
+
+
+                /*
+                String loginOkno;
+                String loginPlik;
+                String line;
+                int counter = 0;
+
+                loginOkno = textBox_login.Text;
+
+                System.IO.StreamReader file = new System.IO.StreamReader(pathLoginy);
+                while ((line = file.ReadLine()) != null)
+                {
+                    System.Console.WriteLine(line);
+                    loginPlik = line;
+                    if ((loginOkno == loginPlik) && (loginPlik == "admin"))
+                    {
+                        loginAdmin = true;
+                        break;
+                    }
+                    else if ((loginOkno == loginPlik) && (loginPlik == "konserwator"))
+                    {
+                        loginKons = true;
+                        break;
+                    }
+                    else if (loginOkno == loginPlik)
+                    {
+                        login = true;
+                        break;
+                    }
+                    counter++;
+                }
+                counterLogin = counter;
+                file.Close();
+
+                counter = 0;
+                String PasswordOkno;
+                String PasswordPlik;
+                String linehaslo;
+                PasswordOkno = textBox_haslo.Text.ToString();
+                System.IO.StreamReader filehasla = new System.IO.StreamReader(pathhasla);
+                while ((linehaslo = filehasla.ReadLine()) != null)
+                {
+                    if (counter == counterLogin)
+                    {
+                        System.Console.WriteLine(linehaslo);
+                        PasswordPlik = linehaslo;
+                        if ((PasswordOkno == PasswordPlik))
+                        {
+                            password = true;
+                        }
+
+                    }
+                    counter++;
+                }
+                filehasla.Close();
+
+
+                if ((loginAdmin == true) && (password == true))
+                {
+                    MessageBox.Show("zalogowany admin");
+                    admin_window okno_admin = new admin_window();
+                    okno_admin.Show();
+                    login = false;
+                    loginAdmin = false;
+                    loginKons = false;
+                    password = false;
 
                 }
-                counter++;
-            }
-            filehasla.Close();
+                else if ((loginKons == true) && (password == true))
+                {
+                    //trzeba by wychwycić jaki konserwator do pozniejszych zadan//chyba ze przyjmiemy ze jest jeden
+                    MessageBox.Show("zalogowany konserwator");
+                    konserwator_window okno_kons = new konserwator_window();
+                    okno_kons.Show();
+                    login = false;
+                    loginAdmin = false;
+                    loginKons = false;
+                    password = false;
+                }
+                else if ((login == true) && (password == true))
+                {
+                    MessageBox.Show("zalogowany");
+                    user_window okno_user = new user_window();
+                    okno_user.Show();
+                    login = false;
+                    loginAdmin = false;
+                    loginKons = false;
+                    password = false;
+                    //zwykły użytkownik
+                    //dodać błędne hasło lub login
+                }
 
+                else
+                {
+                    MessageBox.Show("błędne dane, proszę wpisać ponownie");
+                    login = false;
+                    loginAdmin = false;
+                    loginKons = false;
+                    password = false;
+                }
+                */
 
-            if ((loginAdmin == true) && (password == true))
-            {
-                MessageBox.Show("zalogowany admin");
-                admin_window okno_admin = new admin_window();
-                okno_admin.Show();
-                login = false;
-                loginAdmin = false;
-                loginKons = false;
-                password = false;
+            }
 
-            }
-            else if ((loginKons == true) && (password == true))
-            {
-                //trzeba by wychwycić jaki konserwator do pozniejszych zadan//chyba ze przyjmiemy ze jest jeden
-                MessageBox.Show("zalogowany konserwator");
-                konserwator_window okno_kons = new konserwator_window();
-                okno_kons.Show();
-                login = false;
-                loginAdmin = false;
-                loginKons = false;
-                password = false;
-            }
-            else if ((login == true) && (password == true))
-            {
-                MessageBox.Show("zalogowany");
-                user_window okno_user = new user_window();
-                okno_user.Show();
-                login = false;
-                loginAdmin = false;
-                loginKons = false;
-                password = false;
-                //zwykły użytkownik
-                //dodać błędne hasło lub login
-            }
-            
-            else
-            {
-                MessageBox.Show("błędne dane, proszę wpisać ponownie");
-                login = false;
-                loginAdmin = false;
-                loginKons = false;
-                password = false;
-            }
-           
+            con.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
