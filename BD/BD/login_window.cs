@@ -23,7 +23,6 @@ namespace BD
 
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
-        Thread thr;
 
         public Form1()
         {
@@ -126,6 +125,7 @@ namespace BD
                 }
             }
             con.Close();
+            //Podniesienie flagi logowania powoduje wyłączenie okna
             if (logged == true)
                 Visible = false;
         }
