@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+using GlobalVariables;
+
+
 namespace BD
 {
     public partial class nowe_umowy_window : Form
@@ -17,7 +20,7 @@ namespace BD
         string lokal;
         string id_wyn;
         string typ;
-        private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
+        private string connectionString = GlobalVar.con_str;
         public nowe_umowy_window()
         {
             InitializeComponent();

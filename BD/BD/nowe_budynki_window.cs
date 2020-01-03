@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+using GlobalVariables;
+
 namespace BD
 {
     public partial class nowe_budynki_window : Form
@@ -20,7 +22,7 @@ namespace BD
         public nowe_budynki_window()
         {
             InitializeComponent();
-            con.ConnectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
+            con.ConnectionString = GlobalVar.con_str;
 
         }
 
