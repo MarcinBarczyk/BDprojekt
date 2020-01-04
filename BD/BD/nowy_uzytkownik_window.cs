@@ -39,10 +39,11 @@ namespace BD
             string cz1 = imię.Text;
             string cz2 = nazwisko.Text;
             string cz3 = id_użytkownika.Text;
-            string login_użytkownika = cz1.Substring(0, 4) + cz2.Substring(0, 2) + cz3;
+            string login_użytkownika = cz1.Substring(0, 2) + cz2.Substring(0, 2) + cz3;
+
+            login_text.AppendText(login_użytkownika);
 
             string hasło = hasło_text.Text;
-
             //----------------------------hash hasła---------------------------------------//
             using (SHA256 sha256Hash = SHA256.Create())
             {
@@ -85,6 +86,8 @@ namespace BD
                 //new_login.Clear();
 
                 this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
+                
+
                 //----------------------------------------------------------------------------------------------//
 
             }
@@ -93,6 +96,8 @@ namespace BD
 
         private void nowy_uzytkownik_window_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'administracjaBudynkamiDataSet.zaloguj' table. You can move, or remove it, as needed.
+            this.zalogujTableAdapter.Fill(this.administracjaBudynkamiDataSet.zaloguj);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
             this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
 
@@ -111,6 +116,8 @@ namespace BD
             ada.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+
+            login_text.ReadOnly = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -134,14 +141,5 @@ namespace BD
             hasło_text.MaxLength = 15;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
