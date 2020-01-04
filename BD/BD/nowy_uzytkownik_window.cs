@@ -27,6 +27,8 @@ namespace BD
         SqlCommand com3 = new SqlCommand();
         SqlDataAdapter ada = new SqlDataAdapter();
         DataTable dt = new DataTable();
+        BindingSource src = new BindingSource();
+
         public nowy_uzytkownik_window()
         {
             InitializeComponent();
@@ -86,7 +88,6 @@ namespace BD
                 //new_login.Clear();
 
                 this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
-                
 
                 //----------------------------------------------------------------------------------------------//
 
@@ -96,8 +97,6 @@ namespace BD
 
         private void nowy_uzytkownik_window_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'administracjaBudynkamiDataSet.zaloguj' table. You can move, or remove it, as needed.
-            this.zalogujTableAdapter.Fill(this.administracjaBudynkamiDataSet.zaloguj);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
             this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
 
@@ -107,11 +106,10 @@ namespace BD
             items.Add("Konserwator");
             //items.Add("Sprzątacz");
             items.Add("Mieszkaniec");
-
+ 
             con.Open();
             com3.Connection = con;
             com3.CommandText = "SELECT u.id_użytkownika, u.id_najemca, u.typ_użytkownika, u.imię, u.nazwisko, z.login FROM dbo.użytkownik u join dbo.zaloguj z on u.id_użytkownika = z.id_użytkownika";
-            com3.ExecuteNonQuery();
             ada.SelectCommand = com3;
             ada.Fill(dt);
             dataGridView1.DataSource = dt;
