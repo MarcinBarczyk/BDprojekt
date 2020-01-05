@@ -25,9 +25,6 @@ namespace BD
         SqlCommand com = new SqlCommand();
         SqlCommand com2 = new SqlCommand();
         SqlCommand com3 = new SqlCommand();
-        SqlDataAdapter ada = new SqlDataAdapter();
-        DataTable dt = new DataTable();
-        BindingSource src = new BindingSource();
 
         public nowy_uzytkownik_window()
         {
@@ -37,58 +34,110 @@ namespace BD
 
         private void add_user_Click(object sender, EventArgs e)
         {
+            
             //Generowanie loginu użytkownika
-            string cz1 = imię.Text;
-            string cz2 = nazwisko.Text;
-            string cz3 = id_użytkownika.Text;
-            string login_użytkownika = cz1.Substring(0, 2) + cz2.Substring(0, 2) + cz3;
-
+            string string_imie = imię.Text;
+            string string_nazwisko = nazwisko.Text;
+            string string_id = id_użytkownika.Text;
+            UppercaseFirst(string_imie);
+            UppercaseFirst(string_nazwisko);
+            string login_użytkownika = string_imie.Substring(0, 2) + string_nazwisko.Substring(0, 2) + string_id;
             login_text.AppendText(login_użytkownika);
 
+            //Sprawdzenie czy hasło spełnia warunki mocnego hasła
             string hasło = hasło_text.Text;
-            //----------------------------hash hasła---------------------------------------//
-            using (SHA256 sha256Hash = SHA256.Create())
+            if (hasło_text.Text.Length < 6)
             {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
-                //byte[] hasło_hash = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
+                MessageBox.Show("Hasło jest za krótkie!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                hasło_text.Focus();
+            }
+            else if(string_imie.Length <3)
+            {
+                MessageBox.Show("Pole Imię nie zostało uzupełnione poprawnie", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else if (string_nazwisko.Length < 3)
+            {
+                MessageBox.Show("Pole Nazwisko nie zostało uzupełnione poprawnie", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else if (String.IsNullOrEmpty(string_id))
+            {
+                MessageBox.Show("Pole ID jest puste", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else
+            {
 
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
+                //----------------------------hash hasła---------------------------------------//
+                using (SHA256 sha256Hash = SHA256.Create())
                 {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                string hasło_hash = builder.ToString();
-                //----------------------------------------------------------------------------------------------//
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
+                    //byte[] hasło_hash = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(hasło));
 
-                //----------------------------dodawanie użytkownika do bazy---------------------------------------//
-                if (id_najemcy.Text == "")
-                {
-                    con.Open();
-                    com.Connection = con;
-                    com.CommandText = "insert into użytkownik(id_użytkownika, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + typy_uzytkownika.Text + "','" + imię.Text + "','" + nazwisko.Text + "')";
-                    com.ExecuteNonQuery();
-                    con.Close();
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    string hasło_hash = builder.ToString();
+                    //----------------------------------------------------------------------------------------------//
+
+                    //----------------------------dodawanie użytkownika do bazy---------------------------------------//
+                    try
+                    {
+                        if (id_najemcy.Text == "")
+                        {
+                            con.Open();
+                            com.Connection = con;
+                            com.CommandText = "insert into użytkownik(id_użytkownika, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + typy_uzytkownika.Text + "','" + string_imie + "','" + string_nazwisko + "')";
+                            com.ExecuteNonQuery();
+                            con.Close();
+                        }
+                        else
+                        {
+                            con.Open();
+                            com.Connection = con;
+                            com.CommandText = "insert into użytkownik(id_użytkownika, id_najemca, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + id_najemcy.Text + "','" + typy_uzytkownika.Text + "','" + string_imie + "','" + string_nazwisko + "')";
+                            com.ExecuteNonQuery();
+                            con.Close();
+                        }
+
+                        con.Open();
+                        com2.Connection = con;
+                        com2.CommandText = "insert into zaloguj(id_użytkownika, login, hasło) values('" + id_użytkownika.Text + "','" + login_użytkownika + "','" + hasło_hash + "')";
+                        com2.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    catch (System.Data.SqlClient.SqlException)
+                    {
+                        MessageBox.Show("Nie można stworzyć użytkownika. Najemca o takim ID nie istnieje lub w bazie danych istnieje już użytkownik o tych danych", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+
                 }
-                else
-                {
-                    con.Open();
-                    com.Connection = con;
-                    com.CommandText = "insert into użytkownik(id_użytkownika, id_najemca, typ_użytkownika, imię, nazwisko) values('" + id_użytkownika.Text + "','" + id_najemcy.Text + "','" + typy_uzytkownika.Text + "','" + imię.Text + "','" + nazwisko.Text + "')";
-                    com.ExecuteNonQuery();
-                    con.Close();
-                }
-                con.Open();
-                com2.Connection = con;
-                com2.CommandText = "insert into zaloguj(id_użytkownika, login, hasło) values('" + id_użytkownika.Text + "','" + login_użytkownika + "','" + hasło_hash + "')";
-                com2.ExecuteNonQuery();
-                con.Close();
                 //----------------------------------------------------------------------------------------------//
 
                 //------------------------czyszczenie wpisanych wartosci i update tabeli------------------------//
-                //new_login.Clear();
+
 
                 this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
 
+                SqlDataAdapter ada = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                con.Open();
+                com3.Connection = con;
+                com3.CommandText = "SELECT u.id_użytkownika, u.id_najemca, u.typ_użytkownika, u.imię, u.nazwisko, z.login FROM dbo.użytkownik u join dbo.zaloguj z on u.id_użytkownika = z.id_użytkownika";
+                ada.SelectCommand = com3;
+                ada.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+                imię.Clear();
+                nazwisko.Clear();
+                id_użytkownika.Clear();
+                id_najemcy.Clear();
+                hasło_text.Clear();
                 //----------------------------------------------------------------------------------------------//
 
             }
@@ -97,16 +146,12 @@ namespace BD
 
         private void nowy_uzytkownik_window_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
+            // Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.użytkownik' . Możesz go przenieść lub usunąć.
             this.użytkownikTableAdapter.Fill(this.administracjaBudynkamiDataSet.użytkownik);
 
-
-            var items = typy_uzytkownika.Items;
-            items.Add("Administrator");
-            items.Add("Konserwator");
-            //items.Add("Sprzątacz");
-            items.Add("Mieszkaniec");
- 
+            // Ten wiersz kodu wczytuje dane do tabeli dataGridView1
+            SqlDataAdapter ada = new SqlDataAdapter();
+            DataTable dt = new DataTable();
             con.Open();
             com3.Connection = con;
             com3.CommandText = "SELECT u.id_użytkownika, u.id_najemca, u.typ_użytkownika, u.imię, u.nazwisko, z.login FROM dbo.użytkownik u join dbo.zaloguj z on u.id_użytkownika = z.id_użytkownika";
@@ -115,17 +160,25 @@ namespace BD
             dataGridView1.DataSource = dt;
             con.Close();
 
-            login_text.ReadOnly = true;
-        }
+            var items = typy_uzytkownika.Items;
+            items.Add("Administrator");
+            items.Add("Konserwator");
+            items.Add("Mieszkaniec");
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+            login_text.ReadOnly = true;
+            hasło_text.TabIndex = 1;
+            id_użytkownika.TabIndex = 2;
+            id_najemcy.TabIndex = 3;
+            typy_uzytkownika.TabIndex = 4;
+            imię.TabIndex = 5;
+            nazwisko.TabIndex = 6;
 
         }
 
         private void typy_uzytkownika_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            typy_uzytkownika.SelectionMode = SelectionMode.One;
         }
 
         private void login_text_TextChanged(object sender, EventArgs e)
@@ -137,7 +190,19 @@ namespace BD
         {
             hasło_text.PasswordChar = '*';
             hasło_text.MaxLength = 15;
+
         }
+        static string UppercaseFirst(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
+        }
+
 
     }
 }
