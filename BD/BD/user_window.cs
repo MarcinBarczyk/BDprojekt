@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+using GlobalVariables;
+
 namespace BD
 {
     public partial class user_window : Form
     {
-        private string connectionString = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
+        private string connectionString = GlobalVar.con_str;
         public static List<string> list = new List<string>();
         public static int id_u;
         public user_window()
