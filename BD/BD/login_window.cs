@@ -43,17 +43,19 @@ namespace BD
             string my_login = textBox_login.Text;
             string hasło = textBox_haslo.Text;
             bool logged = false;
+            bool using_done = false;
 
             con.Open();
             com.Connection = con;
             com.CommandText = "select z.hasło, u.typ_użytkownika from zaloguj z join użytkownik u on z.id_użytkownika = u.id_użytkownika where z.login='" + my_login + "'";
+
             using (SqlDataReader rdr = com.ExecuteReader())
             {
                 while (rdr.Read())
                 {
                     string db_hash_pass = rdr[0].ToString();
                     string db_user_type = rdr[1].ToString();
-
+                  
                     //----------------------------hash hasła---------------------------------------//
                     using (SHA256 sha256Hash = SHA256.Create())
                     {
@@ -118,16 +120,25 @@ namespace BD
                         {
                             MessageBox.Show("Podano błędne hasło lub login dla użytkownika", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
-                        else if ((db_hash_pass == " ")||(db_user_type == ""))
+                        else
                             MessageBox.Show("Podano błędne dane logowania", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        
+                        using_done = true;
                     }
                 }
             }
+
             con.Close();
-            //Podniesienie flagi logowania powoduje wyłączenie okna
+            //Podniesienie flagi logowania powoduje wyłączenie okna login_vindow; pusty pola: login, hasło lub niewykonanie
+            // się klauzuli using da błąd o złych danych
             if (logged == true)
+            {  
                 Visible = false;
+            }
+            else if((String.IsNullOrEmpty(my_login)) || (String.IsNullOrEmpty(hasło)) && (using_done == false))
+            {
+                MessageBox.Show("Podano błędne dane logowania", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            //
         }
 
         private void Form1_Load(object sender, EventArgs e)
