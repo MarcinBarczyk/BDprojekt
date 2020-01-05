@@ -27,7 +27,14 @@ namespace BD
         public Form1()
         {
             InitializeComponent();
-            con.ConnectionString = GlobalVar.con_str;
+            try
+            {
+                con.ConnectionString = GlobalVar.con_str;
+            }
+            catch
+            {
+                MessageBox.Show("Nie udało się połączyć z bazą danych", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
         private void textBox_login_TextChanged(object sender, EventArgs e)
         {
