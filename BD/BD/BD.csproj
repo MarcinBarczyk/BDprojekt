@@ -52,11 +52,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AdministracjaBudynkamiDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="nowe_budynki_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,11 +76,11 @@
     <Compile Include="admin_window.Designer.cs">
       <DependentUpon>admin_window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="login_window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="login_window.Designer.cs">
+      <DependentUpon>login_window.cs</DependentUpon>
     </Compile>
     <Compile Include="konserwator_window.cs">
       <SubType>Form</SubType>
@@ -125,8 +120,8 @@
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="login_window.resx">
+      <DependentUpon>login_window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="konserwator_window.resx">
       <DependentUpon>konserwator_window.cs</DependentUpon>
@@ -154,23 +149,12 @@
       <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
     </None>
     <None Include="AdministracjaBudynkamiDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AdministracjaBudynkamiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="AdministracjaBudynkamiDataSet.xss">
       <DependentUpon>AdministracjaBudynkamiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AdministracjaBudynkamiDataSet1.xsc">
-      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="AdministracjaBudynkamiDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AdministracjaBudynkamiDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AdministracjaBudynkamiDataSet1.xss">
-      <DependentUpon>AdministracjaBudynkamiDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
