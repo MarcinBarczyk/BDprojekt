@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 using GlobalVariables;
 
@@ -61,6 +65,14 @@ namespace BD
 
         private void Data_Click(object sender, EventArgs e)
         {
+            // tworzenie pdf
+            Document pdoc = new Document(PageSize.A4, 20f, 20f, 30f, 30f);
+            PdfWriter pWriter = PdfWriter.GetInstance(pdoc, new FileStream("C:\\Users\\matrx\\source\\Repos\\BD\\BD\\BD\\obj\\Release\\zyski.pdf", FileMode.Create));
+            pdoc.Open();
+
+            Paragraph pgraph1 = new Paragraph(" TEST POPRAWNOSCI");
+            pdoc.Add(pgraph1);
+            pdoc.Close();
             //po wybraniu dat pokazuje zyski z tych okresow
         }
 
@@ -235,6 +247,11 @@ namespace BD
         }
 
         private void w_realizacji_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Data_poczatkowa_ValueChanged(object sender, EventArgs e)
         {
 
         }

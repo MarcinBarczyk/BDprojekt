@@ -70,5 +70,15 @@ namespace BD
             zgloszenie.Clear();
 
         }
+
+        private void data_zgloszenia_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kwota_przelew_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

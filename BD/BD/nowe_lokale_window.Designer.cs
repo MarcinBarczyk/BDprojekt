@@ -61,94 +61,99 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 21);
+            this.label1.Location = new System.Drawing.Point(14, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numer lokalu";
             // 
             // nr_lokalu
             // 
-            this.nr_lokalu.Location = new System.Drawing.Point(22, 42);
-            this.nr_lokalu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nr_lokalu.Location = new System.Drawing.Point(16, 34);
+            this.nr_lokalu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nr_lokalu.Name = "nr_lokalu";
-            this.nr_lokalu.Size = new System.Drawing.Size(100, 22);
+            this.nr_lokalu.Size = new System.Drawing.Size(76, 20);
             this.nr_lokalu.TabIndex = 1;
             // 
             // nr_pietra
             // 
-            this.nr_pietra.Location = new System.Drawing.Point(22, 99);
-            this.nr_pietra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nr_pietra.Location = new System.Drawing.Point(16, 80);
+            this.nr_pietra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nr_pietra.Name = "nr_pietra";
-            this.nr_pietra.Size = new System.Drawing.Size(100, 22);
+            this.nr_pietra.Size = new System.Drawing.Size(76, 20);
             this.nr_pietra.TabIndex = 2;
             // 
             // powierzchnia
             // 
-            this.powierzchnia.Location = new System.Drawing.Point(22, 156);
-            this.powierzchnia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.powierzchnia.Location = new System.Drawing.Point(16, 127);
+            this.powierzchnia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.powierzchnia.Name = "powierzchnia";
-            this.powierzchnia.Size = new System.Drawing.Size(100, 22);
+            this.powierzchnia.Size = new System.Drawing.Size(76, 20);
             this.powierzchnia.TabIndex = 3;
             // 
             // liczba_pokoi
             // 
-            this.liczba_pokoi.Location = new System.Drawing.Point(22, 222);
-            this.liczba_pokoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.liczba_pokoi.Location = new System.Drawing.Point(16, 180);
+            this.liczba_pokoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.liczba_pokoi.Name = "liczba_pokoi";
-            this.liczba_pokoi.Size = new System.Drawing.Size(100, 22);
+            this.liczba_pokoi.Size = new System.Drawing.Size(76, 20);
             this.liczba_pokoi.TabIndex = 4;
             // 
             // cena_m2
             // 
-            this.cena_m2.Location = new System.Drawing.Point(22, 286);
-            this.cena_m2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cena_m2.Location = new System.Drawing.Point(16, 232);
+            this.cena_m2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cena_m2.Name = "cena_m2";
-            this.cena_m2.Size = new System.Drawing.Size(100, 22);
+            this.cena_m2.Size = new System.Drawing.Size(76, 20);
             this.cena_m2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 80);
+            this.label2.Location = new System.Drawing.Point(15, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Numer piętra";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 136);
+            this.label3.Location = new System.Drawing.Point(16, 110);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 17);
+            this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Powierzchnia [m2]";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 203);
+            this.label4.Location = new System.Drawing.Point(15, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Liczba pokoi";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 267);
+            this.label5.Location = new System.Drawing.Point(14, 217);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 17);
+            this.label5.Size = new System.Drawing.Size(116, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Cena za m2 na miesiąc";
             // 
             // dodaj_lokal
             // 
-            this.dodaj_lokal.Location = new System.Drawing.Point(22, 398);
-            this.dodaj_lokal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dodaj_lokal.Location = new System.Drawing.Point(16, 323);
+            this.dodaj_lokal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dodaj_lokal.Name = "dodaj_lokal";
-            this.dodaj_lokal.Size = new System.Drawing.Size(203, 41);
+            this.dodaj_lokal.Size = new System.Drawing.Size(152, 33);
             this.dodaj_lokal.TabIndex = 12;
             this.dodaj_lokal.Text = "Dodaj";
             this.dodaj_lokal.UseVisualStyleBackColor = true;
@@ -172,11 +177,12 @@
             this.liczbapokoiDataGridViewTextBoxColumn,
             this.cenazam2DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lokalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(184, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(138, 34);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(384, 327);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 266);
             this.dataGridView1.TabIndex = 13;
             // 
             // idbudynkuDataGridViewTextBoxColumn
@@ -251,9 +257,9 @@
             // 
             // nowe_lokale_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 450);
+            this.ClientSize = new System.Drawing.Size(517, 376);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dodaj_lokal);
             this.Controls.Add(this.label5);
@@ -266,7 +272,7 @@
             this.Controls.Add(this.nr_pietra);
             this.Controls.Add(this.nr_lokalu);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "nowe_lokale_window";
             this.Text = "Nowy lokal";
             this.Load += new System.EventHandler(this.nowe_lokale_window_Load);
