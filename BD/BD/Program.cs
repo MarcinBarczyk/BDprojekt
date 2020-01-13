@@ -9,8 +9,7 @@ namespace GlobalVariables
     static class GlobalVar
     {
         //public static string con_str = "Data Source=RUDY\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True;";
-        //public static string con_str = "Data Source=DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
-        public static string con_str = "Data Source=IHYPERBEAST\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=administracjabudynkami";
+        public static string con_str = "Data Source= DESKTOP-CL91JDT\\SQLEXPRESS;Initial Catalog=AdministracjaBudynkami;Integrated Security=True";
     }
 }
 

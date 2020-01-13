@@ -134,16 +134,18 @@ namespace BD
 
         private void admin_window_Load(object sender, EventArgs e)
         {
+            int liczba_wynajmow=0;
+            string miesiac =null;
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet1.budynek' . Możesz go przenieść lub usunąć.
-            this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet.budynek);
+            //this.budynekTableAdapter.Fill(this.administracjaBudynkamiDataSet.budynek);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'administracjaBudynkamiDataSet.zgłoszenie' . Możesz go przenieść lub usunąć.
             this.zgłoszenieTableAdapter.Fill(this.administracjaBudynkamiDataSet.zgłoszenie);
 
+
+            //-------------aktualizacja terminów płatności na podstawie aktualnej daty----------------------//
             string curMont = DateTime.Now.Month.ToString();
             string curYear = DateTime.Now.Year.ToString();
             string Date = curYear + "-" + curMont + "-" + "10" + " " + "00:00:00.000";
-
-            
 
             String SQL = "UPDATE wynajem SET termin_płatności=@termin";
             SqlConnection con = new SqlConnection(connectionString);
@@ -152,8 +154,57 @@ namespace BD
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+            //----------------------------------------------------------------------------------------------//
 
 
+            //--------------------------pobieranie liczby wynajmów(przyda się poźniej-----------------------//
+            SQL = "SELECT DISTINCT count(id_wynajmu) FROM wynajem";
+            con = new SqlConnection(connectionString);
+            cmd = new SqlCommand(SQL, con);
+            con.Open();
+            SqlDataReader r = null;
+            r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                liczba_wynajmow = Convert.ToInt32(r[0]);
+            }
+            
+            con.Close();
+            //----------------------------------------------------------------------------------------------//
+
+            //-------------------------------pobieranie miesiaca z wynajmu----------------------------------//
+            SQL = "SELECT DISTINCT MONTH(termin_płatności) FROM wynajem ";
+            con = new SqlConnection(connectionString);
+            cmd = new SqlCommand(SQL, con);
+            con.Open();
+            r = null;
+            r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                miesiac = Convert.ToString(r[0]);
+            }
+            con.Close();
+            //----------------------------------------------------------------------------------------------//
+            //pobranie kwoty dla danego wynajmu
+            //----------jesli miesiace sa rozne to dodaje kolejne zobowiazania do tabeli--------------------//
+            if (curMont != miesiac)
+            {
+                for(int i=0; i<=liczba_wynajmow; i++)
+                {
+                    SQL = "INSERT INTO zobowiązania (id_wynajmu, typ_zobowiązania, zaksięgowanie, data_saldo) VALUES (@id_wyn, @typ, @zak, @data)"; //możliwe że trzeba będzie kwotę jakoś pobierać z kosztu miesięcznego
+                    con = new SqlConnection(connectionString);
+                    con.Open();
+                    cmd = new SqlCommand(SQL, con);
+                    cmd.Parameters.AddWithValue("@id_wyn", i+1);
+                    cmd.Parameters.AddWithValue("@data", Date);
+                    cmd.Parameters.AddWithValue("@typ", "Czynsz");
+                    cmd.Parameters.AddWithValue("@zak", "Nie");
+                    cmd.ExecuteScalar();
+                    con.Close();
+                }
+            }
+
+            //----------------------------------------------------------------------------------------------//
         }
 
         private void potwierdzenie_realizacji_Click(object sender, EventArgs e)

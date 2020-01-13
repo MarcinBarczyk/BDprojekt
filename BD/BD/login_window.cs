@@ -19,7 +19,7 @@ namespace BD
         
     public partial class Form1 : Form
     {
-        public static int id_user; //do innego okna id użytkownika
+        public static string id_user; //do innego okna id użytkownika
 
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
@@ -51,6 +51,19 @@ namespace BD
             string hasło = textBox_haslo.Text;
             bool logged = false;
             bool using_done = false;
+            
+            
+            String SQL = "SELECT id_użytkownika FROM zaloguj WHERE login='" + my_login + "'";
+            SqlConnection con = new SqlConnection(GlobalVar.con_str);
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            SqlDataReader r = null;
+            con.Open();
+            r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                id_user = r[0].ToString();
+            }
+            con.Close();
 
             con.Open();
             com.Connection = con;
@@ -60,9 +73,11 @@ namespace BD
             {
                 while (rdr.Read())
                 {
+                   
                     string db_hash_pass = rdr[0].ToString();
                     string db_user_type = rdr[1].ToString();
-                  
+                    
+
                     //----------------------------hash hasła---------------------------------------//
                     using (SHA256 sha256Hash = SHA256.Create())
                     {
@@ -131,15 +146,17 @@ namespace BD
                             MessageBox.Show("Podano błędne dane logowania", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         using_done = true;
                     }
+                  
                 }
             }
-
+            // com.CommandText = "SELECT id_użytkownika FROM zaloguj WHERE login='" + my_login + "'";
+            //id_user = rdr[0].ToString();
             con.Close();
             //Podniesienie flagi logowania powoduje wyłączenie okna login_vindow; pusty pola: login, hasło lub niewykonanie
             // się klauzuli using da błąd o złych danych
             if (logged == true)
             {  
-                Visible = false;
+                Visible = true; //do prób //ogólnie powinno być false
             }
             else if((String.IsNullOrEmpty(my_login)) || (String.IsNullOrEmpty(hasło)) && (using_done == false))
             {

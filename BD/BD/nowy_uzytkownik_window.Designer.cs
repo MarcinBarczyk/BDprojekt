@@ -60,6 +60,7 @@
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.użytkownikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.użytkownikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).BeginInit();
@@ -272,6 +273,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(485, 56);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(468, 174);
             this.dataGridView2.TabIndex = 40;
@@ -280,36 +282,46 @@
             // 
             this.idużytkownikaDataGridViewTextBoxColumn.DataPropertyName = "id_użytkownika";
             this.idużytkownikaDataGridViewTextBoxColumn.HeaderText = "id_użytkownika";
+            this.idużytkownikaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idużytkownikaDataGridViewTextBoxColumn.Name = "idużytkownikaDataGridViewTextBoxColumn";
             this.idużytkownikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idużytkownikaDataGridViewTextBoxColumn.Width = 125;
             // 
             // idnajemcaDataGridViewTextBoxColumn
             // 
             this.idnajemcaDataGridViewTextBoxColumn.DataPropertyName = "id_najemca";
             this.idnajemcaDataGridViewTextBoxColumn.HeaderText = "id_najemca";
+            this.idnajemcaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idnajemcaDataGridViewTextBoxColumn.Name = "idnajemcaDataGridViewTextBoxColumn";
             this.idnajemcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idnajemcaDataGridViewTextBoxColumn.Width = 125;
             // 
             // typużytkownikaDataGridViewTextBoxColumn
             // 
             this.typużytkownikaDataGridViewTextBoxColumn.DataPropertyName = "typ_użytkownika";
             this.typużytkownikaDataGridViewTextBoxColumn.HeaderText = "typ_użytkownika";
+            this.typużytkownikaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.typużytkownikaDataGridViewTextBoxColumn.Name = "typużytkownikaDataGridViewTextBoxColumn";
             this.typużytkownikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typużytkownikaDataGridViewTextBoxColumn.Width = 125;
             // 
             // imięDataGridViewTextBoxColumn
             // 
             this.imięDataGridViewTextBoxColumn.DataPropertyName = "imię";
             this.imięDataGridViewTextBoxColumn.HeaderText = "imię";
+            this.imięDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.imięDataGridViewTextBoxColumn.Name = "imięDataGridViewTextBoxColumn";
             this.imięDataGridViewTextBoxColumn.ReadOnly = true;
+            this.imięDataGridViewTextBoxColumn.Width = 125;
             // 
             // nazwiskoDataGridViewTextBoxColumn
             // 
             this.nazwiskoDataGridViewTextBoxColumn.DataPropertyName = "nazwisko";
             this.nazwiskoDataGridViewTextBoxColumn.HeaderText = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
             this.nazwiskoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nazwiskoDataGridViewTextBoxColumn.Width = 125;
             // 
             // użytkownikBindingSource1
             // 
@@ -325,11 +337,22 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "Istniejący uzytkownicy:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(241, 122);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Min. 7 znaków";
+            // 
             // nowy_uzytkownik_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 519);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.id_użytkownika);
@@ -397,5 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imięDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource użytkownikBindingSource1;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -64,67 +64,66 @@
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
+            this.zgłoszenieBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // remonty_dla_admina
             // 
             this.remonty_dla_admina.FormattingEnabled = true;
-            this.remonty_dla_admina.Location = new System.Drawing.Point(9, 266);
-            this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.remonty_dla_admina.Location = new System.Drawing.Point(12, 328);
+            this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.remonty_dla_admina.Name = "remonty_dla_admina";
-            this.remonty_dla_admina.Size = new System.Drawing.Size(266, 49);
+            this.remonty_dla_admina.Size = new System.Drawing.Size(353, 72);
             this.remonty_dla_admina.TabIndex = 4;
             this.remonty_dla_admina.SelectedIndexChanged += new System.EventHandler(this.W_realizacji_SelectedIndexChanged);
             // 
             // Data_poczatkowa
             // 
-            this.Data_poczatkowa.Location = new System.Drawing.Point(523, 307);
-            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data_poczatkowa.Location = new System.Drawing.Point(697, 378);
+            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Data_poczatkowa.Name = "Data_poczatkowa";
-            this.Data_poczatkowa.Size = new System.Drawing.Size(233, 20);
+            this.Data_poczatkowa.Size = new System.Drawing.Size(309, 22);
             this.Data_poczatkowa.TabIndex = 6;
-            this.Data_poczatkowa.ValueChanged += new System.EventHandler(this.Data_poczatkowa_ValueChanged);
             // 
             // Data_koncowa
             // 
-            this.Data_koncowa.Location = new System.Drawing.Point(523, 368);
-            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data_koncowa.Location = new System.Drawing.Point(697, 453);
+            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Data_koncowa.Name = "Data_koncowa";
-            this.Data_koncowa.Size = new System.Drawing.Size(233, 20);
+            this.Data_koncowa.Size = new System.Drawing.Size(309, 22);
             this.Data_koncowa.TabIndex = 7;
             // 
             // Data_p
             // 
             this.Data_p.AutoSize = true;
-            this.Data_p.Location = new System.Drawing.Point(523, 291);
-            this.Data_p.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Data_p.Location = new System.Drawing.Point(697, 358);
             this.Data_p.Name = "Data_p";
-            this.Data_p.Size = new System.Drawing.Size(156, 13);
+            this.Data_p.Size = new System.Drawing.Size(206, 17);
             this.Data_p.TabIndex = 8;
             this.Data_p.Text = "Wybierz datę początku zakresu";
             // 
             // Data_k
             // 
             this.Data_k.AutoSize = true;
-            this.Data_k.Location = new System.Drawing.Point(521, 351);
-            this.Data_k.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Data_k.Location = new System.Drawing.Point(695, 432);
             this.Data_k.Name = "Data_k";
-            this.Data_k.Size = new System.Drawing.Size(142, 13);
+            this.Data_k.Size = new System.Drawing.Size(187, 17);
             this.Data_k.TabIndex = 9;
             this.Data_k.Text = "Wybierz datę końca zakresu";
             // 
             // Data
             // 
-            this.Data.Location = new System.Drawing.Point(523, 407);
-            this.Data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Data.Location = new System.Drawing.Point(697, 501);
+            this.Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(68, 28);
+            this.Data.Size = new System.Drawing.Size(91, 34);
             this.Data.TabIndex = 10;
             this.Data.Text = "Potwierdź";
             this.Data.UseVisualStyleBackColor = true;
@@ -132,10 +131,10 @@
             // 
             // do_realizacji
             // 
-            this.do_realizacji.Location = new System.Drawing.Point(297, 266);
-            this.do_realizacji.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.do_realizacji.Location = new System.Drawing.Point(396, 328);
+            this.do_realizacji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.do_realizacji.Name = "do_realizacji";
-            this.do_realizacji.Size = new System.Drawing.Size(86, 58);
+            this.do_realizacji.Size = new System.Drawing.Size(115, 72);
             this.do_realizacji.TabIndex = 11;
             this.do_realizacji.Text = "Dodaj do realizacji";
             this.do_realizacji.UseVisualStyleBackColor = true;
@@ -143,9 +142,10 @@
             // 
             // dodawanie
             // 
-            this.dodawanie.Location = new System.Drawing.Point(616, 98);
+            this.dodawanie.Location = new System.Drawing.Point(822, 120);
+            this.dodawanie.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie.Name = "dodawanie";
-            this.dodawanie.Size = new System.Drawing.Size(138, 46);
+            this.dodawanie.Size = new System.Drawing.Size(184, 57);
             this.dodawanie.TabIndex = 14;
             this.dodawanie.Text = "Dodaj";
             this.dodawanie.UseVisualStyleBackColor = true;
@@ -154,35 +154,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 89);
+            this.label1.Location = new System.Drawing.Point(7, 110);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 13);
+            this.label1.Size = new System.Drawing.Size(142, 17);
             this.label1.TabIndex = 15;
             this.label1.Text = "Wszystkie zgłoszenia";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 247);
+            this.label2.Location = new System.Drawing.Point(9, 304);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.Size = new System.Drawing.Size(129, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Zgłoszone remonty";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 355);
+            this.label3.Location = new System.Drawing.Point(7, 437);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 13);
+            this.label3.Size = new System.Drawing.Size(182, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Remonty w trakcie realizacji";
             // 
             // potwierdzenie_realizacji
             // 
-            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(297, 378);
+            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(396, 465);
+            this.potwierdzenie_realizacji.Margin = new System.Windows.Forms.Padding(4);
             this.potwierdzenie_realizacji.Name = "potwierdzenie_realizacji";
-            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(86, 57);
+            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(115, 70);
             this.potwierdzenie_realizacji.TabIndex = 21;
             this.potwierdzenie_realizacji.Text = "Potwierdź zrealizowanie";
             this.potwierdzenie_realizacji.UseVisualStyleBackColor = true;
@@ -191,9 +195,10 @@
             // dodawanie_uzytkownika
             // 
             this.dodawanie_uzytkownika.AutoSize = true;
-            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(616, 6);
+            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(822, 8);
+            this.dodawanie_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_uzytkownika.Name = "dodawanie_uzytkownika";
-            this.dodawanie_uzytkownika.Size = new System.Drawing.Size(115, 17);
+            this.dodawanie_uzytkownika.Size = new System.Drawing.Size(146, 21);
             this.dodawanie_uzytkownika.TabIndex = 22;
             this.dodawanie_uzytkownika.TabStop = true;
             this.dodawanie_uzytkownika.Text = "Dodaj użytkownika";
@@ -203,9 +208,10 @@
             // dodawanie_budynku
             // 
             this.dodawanie_budynku.AutoSize = true;
-            this.dodawanie_budynku.Location = new System.Drawing.Point(616, 52);
+            this.dodawanie_budynku.Location = new System.Drawing.Point(822, 64);
+            this.dodawanie_budynku.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_budynku.Name = "dodawanie_budynku";
-            this.dodawanie_budynku.Size = new System.Drawing.Size(97, 17);
+            this.dodawanie_budynku.Size = new System.Drawing.Size(124, 21);
             this.dodawanie_budynku.TabIndex = 23;
             this.dodawanie_budynku.TabStop = true;
             this.dodawanie_budynku.Text = "Dodaj budynek";
@@ -214,9 +220,10 @@
             // dodawanie_umowy
             // 
             this.dodawanie_umowy.AutoSize = true;
-            this.dodawanie_umowy.Location = new System.Drawing.Point(616, 29);
+            this.dodawanie_umowy.Location = new System.Drawing.Point(822, 36);
+            this.dodawanie_umowy.Margin = new System.Windows.Forms.Padding(4);
             this.dodawanie_umowy.Name = "dodawanie_umowy";
-            this.dodawanie_umowy.Size = new System.Drawing.Size(135, 17);
+            this.dodawanie_umowy.Size = new System.Drawing.Size(171, 21);
             this.dodawanie_umowy.TabIndex = 24;
             this.dodawanie_umowy.TabStop = true;
             this.dodawanie_umowy.Text = "Dodaj umowę/najemcę";
@@ -226,10 +233,10 @@
             // dodawanie_lokali
             // 
             this.dodawanie_lokali.AutoSize = true;
-            this.dodawanie_lokali.Location = new System.Drawing.Point(616, 76);
-            this.dodawanie_lokali.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dodawanie_lokali.Location = new System.Drawing.Point(822, 93);
+            this.dodawanie_lokali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dodawanie_lokali.Name = "dodawanie_lokali";
-            this.dodawanie_lokali.Size = new System.Drawing.Size(78, 17);
+            this.dodawanie_lokali.Size = new System.Drawing.Size(99, 21);
             this.dodawanie_lokali.TabIndex = 25;
             this.dodawanie_lokali.TabStop = true;
             this.dodawanie_lokali.Text = "Dodaj lokal";
@@ -247,11 +254,12 @@
             this.idbudynkuDataGridViewTextBoxColumn,
             this.idlokaluDataGridViewTextBoxColumn,
             this.idużytkownikaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.zgłoszenieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 106);
+            this.dataGridView1.DataSource = this.zgłoszenieBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 131);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 137);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 169);
             this.dataGridView1.TabIndex = 26;
             // 
             // idzgłoszeniaDataGridViewTextBoxColumn
@@ -323,19 +331,18 @@
             // lista_budynkow
             // 
             this.lista_budynkow.FormattingEnabled = true;
-            this.lista_budynkow.Location = new System.Drawing.Point(8, 24);
-            this.lista_budynkow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lista_budynkow.ItemHeight = 16;
+            this.lista_budynkow.Location = new System.Drawing.Point(10, 30);
             this.lista_budynkow.Name = "lista_budynkow";
-            this.lista_budynkow.Size = new System.Drawing.Size(97, 56);
+            this.lista_budynkow.Size = new System.Drawing.Size(128, 68);
             this.lista_budynkow.TabIndex = 27;
             this.lista_budynkow.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // wyswietl_budynki
             // 
-            this.wyswietl_budynki.Location = new System.Drawing.Point(136, 27);
-            this.wyswietl_budynki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wyswietl_budynki.Location = new System.Drawing.Point(181, 33);
             this.wyswietl_budynki.Name = "wyswietl_budynki";
-            this.wyswietl_budynki.Size = new System.Drawing.Size(100, 55);
+            this.wyswietl_budynki.Size = new System.Drawing.Size(134, 68);
             this.wyswietl_budynki.TabIndex = 28;
             this.wyswietl_budynki.Text = "Wyświetl identyfokatory budynków";
             this.wyswietl_budynki.UseVisualStyleBackColor = true;
@@ -344,20 +351,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 8);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(12, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 13);
+            this.label4.Size = new System.Drawing.Size(143, 17);
             this.label4.TabIndex = 29;
             this.label4.Text = "Identyfikator budynku";
             // 
             // w_realizacji
             // 
             this.w_realizacji.FormattingEnabled = true;
-            this.w_realizacji.Location = new System.Drawing.Point(8, 378);
-            this.w_realizacji.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.w_realizacji.ItemHeight = 16;
+            this.w_realizacji.Location = new System.Drawing.Point(11, 465);
             this.w_realizacji.Name = "w_realizacji";
-            this.w_realizacji.Size = new System.Drawing.Size(266, 56);
+            this.w_realizacji.Size = new System.Drawing.Size(354, 68);
             this.w_realizacji.TabIndex = 30;
             this.w_realizacji.SelectedIndexChanged += new System.EventHandler(this.w_realizacji_SelectedIndexChanged_1);
             // 
@@ -384,11 +390,16 @@
             this.administracjaBudynkamiDataSet2.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // zgłoszenieBindingSource1
+            // 
+            this.zgłoszenieBindingSource1.DataMember = "zgłoszenie";
+            this.zgłoszenieBindingSource1.DataSource = this.administracjaBudynkamiDataSet;
+            // 
             // admin_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 446);
+            this.ClientSize = new System.Drawing.Size(1035, 549);
             this.Controls.Add(this.w_realizacji);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wyswietl_budynki);
@@ -410,7 +421,7 @@
             this.Controls.Add(this.Data_koncowa);
             this.Controls.Add(this.Data_poczatkowa);
             this.Controls.Add(this.remonty_dla_admina);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "admin_window";
             this.Text = "Administrator";
             this.Load += new System.EventHandler(this.admin_window_Load);
@@ -420,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +473,6 @@
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox w_realizacji;
+        private System.Windows.Forms.BindingSource zgłoszenieBindingSource1;
     }
 }
