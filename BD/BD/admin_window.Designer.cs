@@ -64,12 +64,14 @@
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
+            this.zgłoszenieBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // remonty_dla_admina
@@ -252,7 +254,7 @@
             this.idbudynkuDataGridViewTextBoxColumn,
             this.idlokaluDataGridViewTextBoxColumn,
             this.idużytkownikaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.zgłoszenieBindingSource;
+            this.dataGridView1.DataSource = this.zgłoszenieBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(11, 131);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -388,6 +390,11 @@
             this.administracjaBudynkamiDataSet2.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // zgłoszenieBindingSource1
+            // 
+            this.zgłoszenieBindingSource1.DataMember = "zgłoszenie";
+            this.zgłoszenieBindingSource1.DataSource = this.administracjaBudynkamiDataSet;
+            // 
             // admin_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,5 +473,6 @@
         private AdministracjaBudynkamiDataSet administracjaBudynkamiDataSet2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox w_realizacji;
+        private System.Windows.Forms.BindingSource zgłoszenieBindingSource1;
     }
 }

@@ -36,8 +36,6 @@
             this.data_przelew = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tytul_przelew = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.potwierdzenie_platnosci = new System.Windows.Forms.Button();
             this.data_zgloszenia = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -87,7 +85,7 @@
             // kwota_przelew
             // 
             this.kwota_przelew.Location = new System.Drawing.Point(593, 62);
-            this.kwota_przelew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kwota_przelew.Margin = new System.Windows.Forms.Padding(4);
             this.kwota_przelew.Name = "kwota_przelew";
             this.kwota_przelew.Size = new System.Drawing.Size(135, 22);
             this.kwota_przelew.TabIndex = 6;
@@ -95,7 +93,7 @@
             // data_przelew
             // 
             this.data_przelew.Location = new System.Drawing.Point(593, 118);
-            this.data_przelew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.data_przelew.Margin = new System.Windows.Forms.Padding(4);
             this.data_przelew.Name = "data_przelew";
             this.data_przelew.Size = new System.Drawing.Size(135, 22);
             this.data_przelew.TabIndex = 7;
@@ -120,33 +118,16 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Data przelewu";
             // 
-            // tytul_przelew
-            // 
-            this.tytul_przelew.Location = new System.Drawing.Point(593, 171);
-            this.tytul_przelew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tytul_przelew.Name = "tytul_przelew";
-            this.tytul_przelew.Size = new System.Drawing.Size(135, 22);
-            this.tytul_przelew.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(486, 171);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 17);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Tytuł przelewu";
-            // 
             // potwierdzenie_platnosci
             // 
-            this.potwierdzenie_platnosci.Location = new System.Drawing.Point(593, 224);
-            this.potwierdzenie_platnosci.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.potwierdzenie_platnosci.Location = new System.Drawing.Point(593, 188);
+            this.potwierdzenie_platnosci.Margin = new System.Windows.Forms.Padding(4);
             this.potwierdzenie_platnosci.Name = "potwierdzenie_platnosci";
             this.potwierdzenie_platnosci.Size = new System.Drawing.Size(136, 37);
             this.potwierdzenie_platnosci.TabIndex = 12;
             this.potwierdzenie_platnosci.Text = "Potwierdź";
             this.potwierdzenie_platnosci.UseVisualStyleBackColor = true;
+            this.potwierdzenie_platnosci.Click += new System.EventHandler(this.potwierdzenie_platnosci_Click);
             // 
             // data_zgloszenia
             // 
@@ -202,8 +183,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.data_zgloszenia);
             this.Controls.Add(this.potwierdzenie_platnosci);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.tytul_przelew);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.data_przelew);
@@ -231,8 +210,6 @@
         private System.Windows.Forms.DateTimePicker data_przelew;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tytul_przelew;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button potwierdzenie_platnosci;
         private System.Windows.Forms.DateTimePicker data_zgloszenia;
         private System.Windows.Forms.Label label7;
