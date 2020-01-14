@@ -117,4 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="_userHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="do_konserwacji.HelpString" xml:space="preserve">
+    <value>Lista elementow wyposarzenia lokalu ktore mozna poddac konserwacji. Aby zaplanowac konserwacje nalezy wybrac interesujace nas elementy, wybrac date rozpoczecia oraz nacisnac przycisk "Dodaj do realizacji".</value>
+  </data>
+  <data name="label1.HelpString" xml:space="preserve">
+    <value>Lista elementow wyposarzenia lokalu ktore mozna poddac konserwacji. Aby zaplanowac konserwacje nalezy wybrac interesujace nas elementy, wybrac date rozpoczecia oraz nacisnac przycisk "Dodaj do realizacji".</value>
+  </data>
+  <data name="w_konserwacji.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="label2.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="data_wykonania.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="label3.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="potwierdz_konserwacje.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="label6.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
+  <data name="osoba_odpowiedzialna.HelpString" xml:space="preserve">
+    <value>Formularz zakonczenia konserwacji. Aby zakonczyc wybrane zlecenie nalezy ustawic date jego wykonania (w przeciwnym wypadku data zostanie pozostawiona domyslna), wpisac osobe ktora ja wykonala oraz nacisnac "Potwierdz wykonanie".</value>
+  </data>
 </root>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nowy_uzytkownik_window));
             this.użytkownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
             this.użytkownikTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.użytkownikTableAdapter();
@@ -61,6 +62,7 @@
             this.użytkownikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this._userHelp = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.użytkownikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.najemcaBindingSource)).BeginInit();
@@ -94,59 +96,80 @@
             // 
             // id_użytkownika
             // 
-            this.id_użytkownika.Location = new System.Drawing.Point(244, 155);
+            this._userHelp.SetHelpString(this.id_użytkownika, resources.GetString("id_użytkownika.HelpString"));
+            this.id_użytkownika.Location = new System.Drawing.Point(183, 126);
+            this.id_użytkownika.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_użytkownika.Name = "id_użytkownika";
-            this.id_użytkownika.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.id_użytkownika, true);
+            this.id_użytkownika.Size = new System.Drawing.Size(123, 20);
             this.id_użytkownika.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(48, 155);
+            this._userHelp.SetHelpString(this.label7, resources.GetString("label7.HelpString"));
+            this.label7.Location = new System.Drawing.Point(36, 126);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 17);
+            this._userHelp.SetShowHelp(this.label7, true);
+            this.label7.Size = new System.Drawing.Size(127, 13);
             this.label7.TabIndex = 38;
             this.label7.Text = "Identyfikator użytkownika";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(482, 23);
+            this._userHelp.SetHelpString(this.label5, "Listy uzytkownikow istniejacych juz w bazie.");
+            this.label5.Location = new System.Drawing.Point(362, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 17);
+            this._userHelp.SetShowHelp(this.label5, true);
+            this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 35;
             this.label5.Text = "Użytkownicy:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 315);
+            this._userHelp.SetHelpString(this.label4, resources.GetString("label4.HelpString"));
+            this.label4.Location = new System.Drawing.Point(36, 256);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this._userHelp.SetShowHelp(this.label4, true);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 34;
             this.label4.Text = "Nazwisko";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 288);
+            this._userHelp.SetHelpString(this.label3, resources.GetString("label3.HelpString"));
+            this.label3.Location = new System.Drawing.Point(36, 234);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 17);
+            this._userHelp.SetShowHelp(this.label3, true);
+            this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 33;
             this.label3.Text = "Imię";
             // 
             // imię
             // 
-            this.imię.Location = new System.Drawing.Point(244, 288);
+            this._userHelp.SetHelpString(this.imię, resources.GetString("imię.HelpString"));
+            this.imię.Location = new System.Drawing.Point(183, 234);
+            this.imię.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.imię.Name = "imię";
-            this.imię.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.imię, true);
+            this.imię.Size = new System.Drawing.Size(123, 20);
             this.imię.TabIndex = 32;
             // 
             // nazwisko
             // 
-            this.nazwisko.Location = new System.Drawing.Point(244, 315);
+            this._userHelp.SetHelpString(this.nazwisko, resources.GetString("nazwisko.HelpString"));
+            this.nazwisko.Location = new System.Drawing.Point(183, 256);
+            this.nazwisko.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nazwisko.Name = "nazwisko";
-            this.nazwisko.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.nazwisko, true);
+            this.nazwisko.Size = new System.Drawing.Size(123, 20);
             this.nazwisko.TabIndex = 31;
             // 
             // dataGridView1
@@ -154,57 +177,61 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(485, 288);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dataGridView1, "Listy uzytkownikow istniejacych juz w bazie.");
+            this.dataGridView1.Location = new System.Drawing.Point(364, 234);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 203);
+            this._userHelp.SetShowHelp(this.dataGridView1, true);
+            this.dataGridView1.Size = new System.Drawing.Size(351, 165);
             this.dataGridView1.TabIndex = 30;
             // 
             // typy_uzytkownika
             // 
             this.typy_uzytkownika.FormattingEnabled = true;
-            this.typy_uzytkownika.Location = new System.Drawing.Point(244, 212);
-            this.typy_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.typy_uzytkownika, resources.GetString("typy_uzytkownika.HelpString"));
+            this.typy_uzytkownika.Location = new System.Drawing.Point(183, 172);
             this.typy_uzytkownika.Name = "typy_uzytkownika";
-            this.typy_uzytkownika.Size = new System.Drawing.Size(163, 72);
+            this._userHelp.SetShowHelp(this.typy_uzytkownika, true);
+            this.typy_uzytkownika.Size = new System.Drawing.Size(123, 49);
             this.typy_uzytkownika.TabIndex = 29;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 213);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label2, resources.GetString("label2.HelpString"));
+            this.label2.Location = new System.Drawing.Point(36, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this._userHelp.SetShowHelp(this.label2, true);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 28;
             this.label2.Text = "Typ użytkownika";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 182);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label1, resources.GetString("label1.HelpString"));
+            this.label1.Location = new System.Drawing.Point(36, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 17);
+            this._userHelp.SetShowHelp(this.label1, true);
+            this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "Identyfikator najemcy";
             // 
             // id_najemcy
             // 
-            this.id_najemcy.Location = new System.Drawing.Point(244, 184);
-            this.id_najemcy.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.id_najemcy, resources.GetString("id_najemcy.HelpString"));
+            this.id_najemcy.Location = new System.Drawing.Point(183, 150);
             this.id_najemcy.Name = "id_najemcy";
-            this.id_najemcy.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.id_najemcy, true);
+            this.id_najemcy.Size = new System.Drawing.Size(123, 20);
             this.id_najemcy.TabIndex = 26;
             // 
             // add_user
             // 
-            this.add_user.Location = new System.Drawing.Point(190, 422);
-            this.add_user.Margin = new System.Windows.Forms.Padding(4);
+            this.add_user.Location = new System.Drawing.Point(142, 343);
             this.add_user.Name = "add_user";
-            this.add_user.Size = new System.Drawing.Size(163, 46);
+            this.add_user.Size = new System.Drawing.Size(122, 37);
             this.add_user.TabIndex = 32;
             this.add_user.Text = "Dodaj";
             this.add_user.UseVisualStyleBackColor = true;
@@ -213,48 +240,55 @@
             // pass_add
             // 
             this.pass_add.AutoSize = true;
-            this.pass_add.Location = new System.Drawing.Point(48, 96);
-            this.pass_add.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.pass_add, "Pola do wpisania danych niezbetnych do logowania (tj. login ktory generowany jest" +
+        " autowatycznie przez system, haslo muszace spelniac wymogana liczbe znakow).");
+            this.pass_add.Location = new System.Drawing.Point(36, 78);
             this.pass_add.Name = "pass_add";
-            this.pass_add.Size = new System.Drawing.Size(44, 17);
+            this._userHelp.SetShowHelp(this.pass_add, true);
+            this.pass_add.Size = new System.Drawing.Size(36, 13);
             this.pass_add.TabIndex = 24;
             this.pass_add.Text = "Hasło";
             // 
             // login_add
             // 
             this.login_add.AutoSize = true;
-            this.login_add.Location = new System.Drawing.Point(48, 69);
-            this.login_add.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.login_add, "Pola do wpisania danych niezbetnych do logowania (tj. login ktory generowany jest" +
+        " autowatycznie przez system, haslo muszace spelniac wymogana liczbe znakow).");
+            this.login_add.Location = new System.Drawing.Point(36, 56);
             this.login_add.Name = "login_add";
-            this.login_add.Size = new System.Drawing.Size(180, 17);
+            this._userHelp.SetShowHelp(this.login_add, true);
+            this.login_add.Size = new System.Drawing.Size(134, 13);
             this.login_add.TabIndex = 23;
             this.login_add.Text = "Login (gen. automatycznie)";
             // 
             // dane
             // 
             this.dane.AutoSize = true;
-            this.dane.Location = new System.Drawing.Point(187, 23);
-            this.dane.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dane.Location = new System.Drawing.Point(140, 19);
             this.dane.Name = "dane";
-            this.dane.Size = new System.Drawing.Size(109, 17);
+            this.dane.Size = new System.Drawing.Size(84, 13);
             this.dane.TabIndex = 22;
             this.dane.Text = "Dane logowania";
             // 
             // hasło_text
             // 
-            this.hasło_text.Location = new System.Drawing.Point(244, 96);
-            this.hasło_text.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.hasło_text, "Pola do wpisania danych niezbetnych do logowania (tj. login ktory generowany jest" +
+        " autowatycznie przez system, haslo muszace spelniac wymogana liczbe znakow).");
+            this.hasło_text.Location = new System.Drawing.Point(183, 78);
             this.hasło_text.Name = "hasło_text";
-            this.hasło_text.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.hasło_text, true);
+            this.hasło_text.Size = new System.Drawing.Size(123, 20);
             this.hasło_text.TabIndex = 21;
             this.hasło_text.TextChanged += new System.EventHandler(this.hasło_text_TextChanged);
             // 
             // login_text
             // 
-            this.login_text.Location = new System.Drawing.Point(244, 69);
-            this.login_text.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.login_text, "Pola do wpisania danych niezbetnych do logowania (tj. login ktory generowany jest" +
+        " autowatycznie przez system, haslo muszace spelniac wymogana liczbe znakow).");
+            this.login_text.Location = new System.Drawing.Point(183, 56);
             this.login_text.Name = "login_text";
-            this.login_text.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.login_text, true);
+            this.login_text.Size = new System.Drawing.Size(123, 20);
             this.login_text.TabIndex = 20;
             this.login_text.TextChanged += new System.EventHandler(this.login_text_TextChanged);
             // 
@@ -270,12 +304,15 @@
             this.imięDataGridViewTextBoxColumn,
             this.nazwiskoDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.użytkownikBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(485, 56);
+            this._userHelp.SetHelpString(this.dataGridView2, "Listy uzytkownikow istniejacych juz w bazie.");
+            this.dataGridView2.Location = new System.Drawing.Point(364, 46);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(468, 174);
+            this._userHelp.SetShowHelp(this.dataGridView2, true);
+            this.dataGridView2.Size = new System.Drawing.Size(351, 141);
             this.dataGridView2.TabIndex = 40;
             // 
             // idużytkownikaDataGridViewTextBoxColumn
@@ -331,9 +368,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(485, 251);
+            this._userHelp.SetHelpString(this.label6, "Listy uzytkownikow istniejacych juz w bazie.");
+            this.label6.Location = new System.Drawing.Point(364, 204);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 17);
+            this._userHelp.SetShowHelp(this.label6, true);
+            this.label6.Size = new System.Drawing.Size(115, 13);
             this.label6.TabIndex = 41;
             this.label6.Text = "Istniejący uzytkownicy:";
             // 
@@ -341,17 +381,21 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(241, 122);
+            this._userHelp.SetHelpString(this.label8, "Pola do wpisania danych niezbetnych do logowania (tj. login ktory generowany jest" +
+        " autowatycznie przez system, haslo muszace spelniac wymogana liczbe znakow).");
+            this.label8.Location = new System.Drawing.Point(181, 99);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
+            this._userHelp.SetShowHelp(this.label8, true);
+            this.label8.Size = new System.Drawing.Size(54, 9);
             this.label8.TabIndex = 42;
             this.label8.Text = "Min. 7 znaków";
             // 
             // nowy_uzytkownik_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 519);
+            this.ClientSize = new System.Drawing.Size(736, 422);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView2);
@@ -373,7 +417,9 @@
             this.Controls.Add(this.dane);
             this.Controls.Add(this.hasło_text);
             this.Controls.Add(this.login_text);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "nowy_uzytkownik_window";
             this.Text = "add_user_window";
             this.Load += new System.EventHandler(this.nowy_uzytkownik_window_Load);
@@ -421,5 +467,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource użytkownikBindingSource1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.HelpProvider _userHelp;
     }
 }

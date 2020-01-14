@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nowe_budynki_window));
             this.miejscowosc = new System.Windows.Forms.TextBox();
             this.ulica = new System.Windows.Forms.TextBox();
             this.liczba_pieter = new System.Windows.Forms.TextBox();
@@ -49,6 +50,7 @@
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
             this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
+            this._userHelp = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
@@ -56,97 +58,120 @@
             // 
             // miejscowosc
             // 
-            this.miejscowosc.Location = new System.Drawing.Point(615, 116);
-            this.miejscowosc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.miejscowosc, resources.GetString("miejscowosc.HelpString"));
+            this.miejscowosc.Location = new System.Drawing.Point(461, 94);
+            this.miejscowosc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.miejscowosc.Name = "miejscowosc";
-            this.miejscowosc.Size = new System.Drawing.Size(196, 22);
+            this._userHelp.SetShowHelp(this.miejscowosc, true);
+            this.miejscowosc.Size = new System.Drawing.Size(148, 20);
             this.miejscowosc.TabIndex = 0;
             // 
             // ulica
             // 
-            this.ulica.Location = new System.Drawing.Point(616, 173);
-            this.ulica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.ulica, resources.GetString("ulica.HelpString"));
+            this.ulica.Location = new System.Drawing.Point(462, 141);
+            this.ulica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ulica.Name = "ulica";
-            this.ulica.Size = new System.Drawing.Size(196, 22);
+            this._userHelp.SetShowHelp(this.ulica, true);
+            this.ulica.Size = new System.Drawing.Size(148, 20);
             this.ulica.TabIndex = 1;
             // 
             // liczba_pieter
             // 
-            this.liczba_pieter.Location = new System.Drawing.Point(615, 300);
-            this.liczba_pieter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.liczba_pieter, resources.GetString("liczba_pieter.HelpString"));
+            this.liczba_pieter.Location = new System.Drawing.Point(461, 244);
+            this.liczba_pieter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.liczba_pieter.Name = "liczba_pieter";
-            this.liczba_pieter.Size = new System.Drawing.Size(100, 22);
+            this._userHelp.SetShowHelp(this.liczba_pieter, true);
+            this.liczba_pieter.Size = new System.Drawing.Size(76, 20);
             this.liczba_pieter.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(612, 97);
+            this._userHelp.SetHelpString(this.label1, resources.GetString("label1.HelpString"));
+            this.label1.Location = new System.Drawing.Point(459, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this._userHelp.SetShowHelp(this.label1, true);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Miejscowość";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(612, 154);
+            this._userHelp.SetHelpString(this.label2, resources.GetString("label2.HelpString"));
+            this.label2.Location = new System.Drawing.Point(459, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
+            this._userHelp.SetShowHelp(this.label2, true);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ulica";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(612, 281);
+            this._userHelp.SetHelpString(this.label3, resources.GetString("label3.HelpString"));
+            this.label3.Location = new System.Drawing.Point(459, 228);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
+            this._userHelp.SetShowHelp(this.label3, true);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Liczba pięter";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(612, 214);
+            this._userHelp.SetHelpString(this.label4, resources.GetString("label4.HelpString"));
+            this.label4.Location = new System.Drawing.Point(459, 174);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 17);
+            this._userHelp.SetShowHelp(this.label4, true);
+            this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Numer budynku";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // nr_budynku
             // 
-            this.nr_budynku.Location = new System.Drawing.Point(615, 233);
-            this.nr_budynku.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.nr_budynku, resources.GetString("nr_budynku.HelpString"));
+            this.nr_budynku.Location = new System.Drawing.Point(461, 189);
+            this.nr_budynku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nr_budynku.Name = "nr_budynku";
-            this.nr_budynku.Size = new System.Drawing.Size(196, 22);
+            this._userHelp.SetShowHelp(this.nr_budynku, true);
+            this.nr_budynku.Size = new System.Drawing.Size(148, 20);
             this.nr_budynku.TabIndex = 7;
             // 
             // nazwa
             // 
-            this.nazwa.Location = new System.Drawing.Point(615, 48);
-            this.nazwa.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.nazwa, resources.GetString("nazwa.HelpString"));
+            this.nazwa.Location = new System.Drawing.Point(461, 39);
             this.nazwa.Name = "nazwa";
-            this.nazwa.Size = new System.Drawing.Size(197, 22);
+            this._userHelp.SetShowHelp(this.nazwa, true);
+            this.nazwa.Size = new System.Drawing.Size(149, 20);
             this.nazwa.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(612, 27);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label5, resources.GetString("label5.HelpString"));
+            this.label5.Location = new System.Drawing.Point(459, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 17);
+            this._userHelp.SetShowHelp(this.label5, true);
+            this.label5.Size = new System.Drawing.Size(109, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Identyfikator budynku";
             // 
             // dodaj_budynek
             // 
-            this.dodaj_budynek.Location = new System.Drawing.Point(617, 364);
-            this.dodaj_budynek.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dodaj_budynek, resources.GetString("dodaj_budynek.HelpString"));
+            this.dodaj_budynek.Location = new System.Drawing.Point(463, 296);
             this.dodaj_budynek.Name = "dodaj_budynek";
-            this.dodaj_budynek.Size = new System.Drawing.Size(196, 37);
+            this._userHelp.SetShowHelp(this.dodaj_budynek, true);
+            this.dodaj_budynek.Size = new System.Drawing.Size(147, 30);
             this.dodaj_budynek.TabIndex = 10;
             this.dodaj_budynek.Text = "Dodaj";
             this.dodaj_budynek.UseVisualStyleBackColor = true;
@@ -165,12 +190,15 @@
             this.nrbudynkuDataGridViewTextBoxColumn,
             this.liczbapięterDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.budynekBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 27);
+            this._userHelp.SetHelpString(this.dataGridView1, "Lista przedstawiajaca budynki istniejace juz w bazie.");
+            this.dataGridView1.Location = new System.Drawing.Point(9, 22);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 374);
+            this._userHelp.SetShowHelp(this.dataGridView1, true);
+            this.dataGridView1.Size = new System.Drawing.Size(408, 304);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -235,9 +263,9 @@
             // 
             // nowe_budynki_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 450);
+            this.ClientSize = new System.Drawing.Size(687, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dodaj_budynek);
             this.Controls.Add(this.label5);
@@ -250,7 +278,10 @@
             this.Controls.Add(this.liczba_pieter);
             this.Controls.Add(this.ulica);
             this.Controls.Add(this.miejscowosc);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "nowe_budynki_window";
             this.Text = "Budynki";
             this.Load += new System.EventHandler(this.nowe_budynki_window_Load);
@@ -284,5 +315,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ulicaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrbudynkuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn liczbapięterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider _userHelp;
     }
 }

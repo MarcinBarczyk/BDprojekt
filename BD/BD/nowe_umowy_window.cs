@@ -47,20 +47,37 @@ namespace BD
         private void potwierdz_lokal_Click(object sender, EventArgs e)
         {
             //-------------------pobieranie wartości mieszkania z lokalu----------------------------//
-            lokal = id_lokalu_do_wynajecia.Text;
-            String SQL = "SELECT (powierzchnia*cena_za_m2) FROM lokal WHERE id_lokalu=@lokal";
-            SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(SQL, con);
-            cmd.Parameters.AddWithValue("@lokal", lokal);
-            SqlDataReader r = null;
-            con.Open();
-            r = cmd.ExecuteReader();
-            while (r.Read())
+            if (id_lokalu_do_wynajecia.Text.Length == 0)
+                MessageBox.Show("Pole id budynku mie moze być puste!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
             {
-                label10.Text = Convert.ToString(r[0]) + " zł";
+                lokal = id_lokalu_do_wynajecia.Text;
+                String SQL = "SELECT (powierzchnia*cena_za_m2) FROM lokal WHERE id_lokalu=@lokal";
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(SQL, con);
+                cmd.Parameters.AddWithValue("@lokal", lokal);
+                SqlDataReader r = null;
+
+                try
+                {
+                    con.Open();
+                }
+                catch
+                {
+                    DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                    if (_result == DialogResult.OK)
+                        Environment.Exit(0);
+                }
+
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    label10.Text = Convert.ToString(r[0]) + " zł";
+                }
+                con.Close();
+                //--------------------------------------------------------------------------------------//
             }
-            con.Close();
-            //--------------------------------------------------------------------------------------//
         }
 
         private void label16_Click(object sender, EventArgs e)
@@ -76,16 +93,38 @@ namespace BD
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.Parameters.AddWithValue("@id_lok",lokal);
-            cmd.Parameters.AddWithValue("@cena",czynsz_msc.Text );
-            cmd.Parameters.AddWithValue("@zawarcie", SqlDbType.DateTime).Value=  data_zawarcia_umowy.Value.Date;
-            cmd.Parameters.AddWithValue("@platnosc", SqlDbType.DateTime).Value = termin_platnosci.Value.Date;
-            cmd.Parameters.AddWithValue("@pocz_zam", SqlDbType.DateTime).Value = data_zamieszkania.Value.Date;
-            cmd.Parameters.AddWithValue("@kon_umowy",SqlDbType.DateTime).Value = data_konca_umowy.Value.Date;
-            cmd.Parameters.AddWithValue("@kon_zam",  SqlDbType.DateTime).Value = data_konca_zamieszkania.Value.Date;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            //--------------------------------------------------------------------------------------//
+
+            if (czynsz_msc.Text.Length == 0)
+                MessageBox.Show("Pole id budynku mie moze być puste!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                cmd.Parameters.AddWithValue("@cena", czynsz_msc.Text);
+                cmd.Parameters.AddWithValue("@zawarcie", SqlDbType.DateTime).Value = data_zawarcia_umowy.Value.Date;
+                cmd.Parameters.AddWithValue("@platnosc", SqlDbType.DateTime).Value = termin_platnosci.Value.Date;
+                cmd.Parameters.AddWithValue("@pocz_zam", SqlDbType.DateTime).Value = data_zamieszkania.Value.Date;
+                cmd.Parameters.AddWithValue("@kon_umowy", SqlDbType.DateTime).Value = data_konca_umowy.Value.Date;
+                cmd.Parameters.AddWithValue("@kon_zam", SqlDbType.DateTime).Value = data_konca_zamieszkania.Value.Date;
+
+                try
+                {
+                    con.Open();
+                }
+                catch
+                {
+                    DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                    if (_result == DialogResult.OK)
+                        Environment.Exit(0);
+                }
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Nowy wynajem został poprawnie dodany.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Nie udało sie dodać nowego rekordu!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                con.Close();
+                //--------------------------------------------------------------------------------------//
+            }
 
             //--------------------czyszczenie wartości i update tabeli------------------------------//
             czynsz_msc.Clear();
@@ -102,7 +141,19 @@ namespace BD
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
             SqlDataReader r = null;
-            con.Open();
+
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+
             r = cmd.ExecuteReader();
             while (r.Read())
             {
@@ -116,7 +167,19 @@ namespace BD
             SQL = "SELECT COUNT(id_wynajmu) FROM wynajem";
             con = new SqlConnection(connectionString);
             cmd = new SqlCommand(SQL, con);
-            con.Open();
+
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+
             count_wynajem = (Int32)cmd.ExecuteScalar();
             SQL = "SELECT COUNT(id_najemca) FROM najemca";
             cmd = new SqlCommand(SQL, con);
@@ -141,8 +204,24 @@ namespace BD
                 cmd.Parameters.AddWithValue("@pesel", pesel_najemca.Text);
                 cmd.Parameters.AddWithValue("@nr_dok", nr_dokumentu_najemca.Text);
                 cmd.Parameters.AddWithValue("@typ", typ);
-                con.Open();
-                cmd.ExecuteNonQuery();
+
+                try
+                {
+                    con.Open();
+                }
+                catch
+                {
+                    DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                    if (_result == DialogResult.OK)
+                        Environment.Exit(0);
+                }
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Nowy najemca został poprawnie dodany.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Nie udało sie dodać nowego rekordu!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                 con.Close();
             }
             else

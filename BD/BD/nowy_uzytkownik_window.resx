@@ -132,6 +132,39 @@
   <metadata name="najemcaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>962, 17</value>
   </metadata>
+  <metadata name="_userHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 60</value>
+  </metadata>
+  <data name="id_użytkownika.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="label7.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="label4.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="label3.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="imię.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="nazwisko.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="typy_uzytkownika.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="label2.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="label1.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
+  <data name="id_najemcy.HelpString" xml:space="preserve">
+    <value>Pola uzupelniajace pozostale informacje dotyczace uzytkownika (tj. identyfikator urzytkownika oraz najemcy, typ urzytkownika, imie, nazwisko). Wypelnienie tych pol jest niezbedne do zakonczenia procesu rejestracji.</value>
+  </data>
   <metadata name="użytkownikBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 60</value>
   </metadata>

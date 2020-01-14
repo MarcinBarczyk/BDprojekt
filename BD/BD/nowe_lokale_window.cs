@@ -39,15 +39,44 @@ namespace BD
             String SQL = "INSERT INTO lokal (id_budynku, id_lokalu, nr_lokalu, nr_piętra, powierzchnia, liczba_pokoi, cena_za_m2) VALUES (@id_b, @id_l, @nr_l, @nr_p, @pow, @l_pok, @cena)";
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
+
             cmd.Parameters.AddWithValue("@id_b", admin_window.id_bud);
             cmd.Parameters.AddWithValue("@id_l", id_lok);
             cmd.Parameters.AddWithValue("@nr_l", (Convert.ToInt32(nr_lokalu.Text)));
+
+            if (nr_pietra.Text.Length == 0)
+                nr_pietra.Text = "0";
             cmd.Parameters.AddWithValue("@nr_p", (Convert.ToInt32(nr_pietra.Text)));
+
+            if (powierzchnia.Text.Length == 0)
+                powierzchnia.Text = "0";
             cmd.Parameters.AddWithValue("@pow", (Convert.ToInt32(powierzchnia.Text)));
+
+            if (liczba_pokoi.Text.Length == 0)
+                liczba_pokoi.Text = "0";
             cmd.Parameters.AddWithValue("@l_pok", (Convert.ToInt32(liczba_pokoi.Text)));
+
+            if (cena_m2.Text.Length == 0)
+                cena_m2.Text = "0";
             cmd.Parameters.AddWithValue("@cena", (Convert.ToInt32(cena_m2.Text)));
-            con.Open();
-            cmd.ExecuteNonQuery();
+
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+            
+            if(cmd.ExecuteNonQuery() > 0)
+                MessageBox.Show("Nowy budynek został poprawnie dodany.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Nie udało sie dodać nowego rekordu!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
             con.Close();
             //dodać do wszytskich dodwań poprawność insertu, żeby pokazywało messagebox po poprawnym wykonaniu działania
             //--------------------------------------------------------------------------------------//

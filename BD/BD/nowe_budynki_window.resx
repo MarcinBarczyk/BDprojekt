@@ -117,14 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="_userHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>679, 17</value>
+  </metadata>
+  <data name="miejscowosc.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="ulica.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="liczba_pieter.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="label1.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="label2.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="label3.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="label4.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="nr_budynku.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="nazwa.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="label5.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
+  <data name="dodaj_budynek.HelpString" xml:space="preserve">
+    <value>Formularz dodawania nowego budynku do bazy. Nalezy wprowadzic potrzebne dane (tj. identyfikator budynku, miejscowosc, ulica, numer budynku, liczba pieter) w przeciwnym wypadku zostana one uzupelnione domyslnymi wartosciami.</value>
+  </data>
   <metadata name="budynekBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>293, 17</value>
-  </metadata>
-  <metadata name="budynekBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>293, 17</value>
-  </metadata>
-  <metadata name="administracjaBudynkamiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="administracjaBudynkamiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

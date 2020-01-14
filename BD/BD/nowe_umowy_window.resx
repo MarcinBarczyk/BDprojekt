@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="_userHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>190, 60</value>
+  </metadata>
+  <data name="data_zawarcia_umowy.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label1.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="dodaj_wynajem.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label2.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
   <metadata name="lokalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>293, 17</value>
-  </metadata>
-  <metadata name="lokalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>293, 17</value>
-  </metadata>
-  <metadata name="administracjaBudynkamiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="administracjaBudynkamiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -132,18 +141,45 @@
   <metadata name="lokalTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>480, 17</value>
   </metadata>
-  <metadata name="najemcaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>660, 17</value>
-  </metadata>
+  <data name="label10.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label11.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="data_zamieszkania.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label12.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="data_konca_umowy.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label13.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="data_konca_zamieszkania.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
   <metadata name="najemcaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>660, 17</value>
   </metadata>
   <metadata name="najemcaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>872, 17</value>
   </metadata>
-  <metadata name="wynajemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1077, 17</value>
-  </metadata>
+  <data name="label16.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="czynsz_msc.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="label17.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
+  <data name="termin_platnosci.HelpString" xml:space="preserve">
+    <value>W tej czesci zawierania umowy wynajmu nalezy podac wymagane informacje (tj. czynsz miesieczny, data zawarcia umowy, termin platnosci, data zameldowania, data wymeldowania, data zakonczenia umowy). Wprowadzenie wszystkich danych jest wymagana aby przejsc dalej. Aby zatwierdzic wprowadzone dane nacisnij "Dodaj wynajem".</value>
+  </data>
   <metadata name="wynajemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1077, 17</value>
   </metadata>
@@ -151,6 +187,6 @@
     <value>17, 60</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>33</value>
+    <value>102</value>
   </metadata>
 </root>

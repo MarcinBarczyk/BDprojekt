@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nowe_umowy_window));
             this.data_zawarcia_umowy = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.wynajemTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.wynajemTableAdapter();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this._userHelp = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
@@ -108,122 +110,179 @@
             // 
             // data_zawarcia_umowy
             // 
-            this.data_zawarcia_umowy.Location = new System.Drawing.Point(15, 195);
-            this.data_zawarcia_umowy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.data_zawarcia_umowy, resources.GetString("data_zawarcia_umowy.HelpString"));
+            this.data_zawarcia_umowy.Location = new System.Drawing.Point(11, 158);
+            this.data_zawarcia_umowy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_zawarcia_umowy.Name = "data_zawarcia_umowy";
-            this.data_zawarcia_umowy.Size = new System.Drawing.Size(306, 22);
+            this._userHelp.SetShowHelp(this.data_zawarcia_umowy, true);
+            this.data_zawarcia_umowy.Size = new System.Drawing.Size(230, 20);
             this.data_zawarcia_umowy.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 176);
+            this._userHelp.SetHelpString(this.label1, resources.GetString("label1.HelpString"));
+            this.label1.Location = new System.Drawing.Point(9, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 17);
+            this._userHelp.SetShowHelp(this.label1, true);
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Data zawarcia umowy";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(469, 50);
+            this._userHelp.SetHelpString(this.label3, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label3.Location = new System.Drawing.Point(352, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this._userHelp.SetShowHelp(this.label3, true);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Najemca";
             // 
             // imie_najemca
             // 
-            this.imie_najemca.Location = new System.Drawing.Point(473, 91);
-            this.imie_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.imie_najemca, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.imie_najemca.Location = new System.Drawing.Point(355, 74);
+            this.imie_najemca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.imie_najemca.Name = "imie_najemca";
-            this.imie_najemca.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.imie_najemca, true);
+            this.imie_najemca.Size = new System.Drawing.Size(123, 20);
             this.imie_najemca.TabIndex = 5;
             // 
             // nazwisko_najemca
             // 
-            this.nazwisko_najemca.Location = new System.Drawing.Point(473, 135);
-            this.nazwisko_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.nazwisko_najemca, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.nazwisko_najemca.Location = new System.Drawing.Point(355, 110);
+            this.nazwisko_najemca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nazwisko_najemca.Name = "nazwisko_najemca";
-            this.nazwisko_najemca.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.nazwisko_najemca, true);
+            this.nazwisko_najemca.Size = new System.Drawing.Size(123, 20);
             this.nazwisko_najemca.TabIndex = 6;
             // 
             // pesel_najemca
             // 
-            this.pesel_najemca.Location = new System.Drawing.Point(473, 178);
-            this.pesel_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.pesel_najemca, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.pesel_najemca.Location = new System.Drawing.Point(355, 145);
+            this.pesel_najemca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pesel_najemca.Name = "pesel_najemca";
-            this.pesel_najemca.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.pesel_najemca, true);
+            this.pesel_najemca.Size = new System.Drawing.Size(123, 20);
             this.pesel_najemca.TabIndex = 7;
             // 
             // nr_dokumentu_najemca
             // 
-            this.nr_dokumentu_najemca.Location = new System.Drawing.Point(473, 226);
-            this.nr_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.nr_dokumentu_najemca, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.nr_dokumentu_najemca.Location = new System.Drawing.Point(355, 184);
+            this.nr_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nr_dokumentu_najemca.Name = "nr_dokumentu_najemca";
-            this.nr_dokumentu_najemca.Size = new System.Drawing.Size(163, 22);
+            this._userHelp.SetShowHelp(this.nr_dokumentu_najemca, true);
+            this.nr_dokumentu_najemca.Size = new System.Drawing.Size(123, 20);
             this.nr_dokumentu_najemca.TabIndex = 8;
             // 
             // typ_dokumentu_najemca
             // 
             this.typ_dokumentu_najemca.FormattingEnabled = true;
-            this.typ_dokumentu_najemca.Location = new System.Drawing.Point(473, 266);
-            this.typ_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.typ_dokumentu_najemca, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.typ_dokumentu_najemca.Location = new System.Drawing.Point(355, 216);
+            this.typ_dokumentu_najemca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.typ_dokumentu_najemca.Name = "typ_dokumentu_najemca";
-            this.typ_dokumentu_najemca.Size = new System.Drawing.Size(208, 72);
+            this._userHelp.SetShowHelp(this.typ_dokumentu_najemca, true);
+            this.typ_dokumentu_najemca.Size = new System.Drawing.Size(157, 49);
             this.typ_dokumentu_najemca.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 94);
+            this._userHelp.SetHelpString(this.label4, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label4.Location = new System.Drawing.Point(325, 76);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
+            this._userHelp.SetShowHelp(this.label4, true);
+            this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Imię";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(399, 138);
+            this._userHelp.SetHelpString(this.label5, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label5.Location = new System.Drawing.Point(299, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 17);
+            this._userHelp.SetShowHelp(this.label5, true);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Nazwisko";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(414, 181);
+            this._userHelp.SetHelpString(this.label6, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label6.Location = new System.Drawing.Point(310, 147);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this._userHelp.SetShowHelp(this.label6, true);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "PESEL";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(342, 228);
+            this._userHelp.SetHelpString(this.label7, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label7.Location = new System.Drawing.Point(256, 185);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 17);
+            this._userHelp.SetShowHelp(this.label7, true);
+            this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Numer dokumentu";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(361, 275);
+            this._userHelp.SetHelpString(this.label8, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.label8.Location = new System.Drawing.Point(271, 223);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 17);
+            this._userHelp.SetShowHelp(this.label8, true);
+            this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 14;
             this.label8.Text = "Typ dokumentu";
             // 
             // dodaj_wynajem
             // 
-            this.dodaj_wynajem.Location = new System.Drawing.Point(15, 491);
-            this.dodaj_wynajem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.dodaj_wynajem, resources.GetString("dodaj_wynajem.HelpString"));
+            this.dodaj_wynajem.Location = new System.Drawing.Point(11, 399);
+            this.dodaj_wynajem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dodaj_wynajem.Name = "dodaj_wynajem";
-            this.dodaj_wynajem.Size = new System.Drawing.Size(141, 46);
+            this._userHelp.SetShowHelp(this.dodaj_wynajem, true);
+            this.dodaj_wynajem.Size = new System.Drawing.Size(106, 37);
             this.dodaj_wynajem.TabIndex = 15;
             this.dodaj_wynajem.Text = "Dodaj wynajem";
             this.dodaj_wynajem.UseVisualStyleBackColor = true;
@@ -232,18 +291,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 75);
+            this._userHelp.SetHelpString(this.label2, resources.GetString("label2.HelpString"));
+            this.label2.Location = new System.Drawing.Point(9, 61);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 17);
+            this._userHelp.SetShowHelp(this.label2, true);
+            this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cena za mieszkanie";
             // 
             // cena_miesiac
             // 
             this.cena_miesiac.AutoSize = true;
-            this.cena_miesiac.Location = new System.Drawing.Point(55, 47);
+            this._userHelp.SetHelpString(this.cena_miesiac, "Pole wyboru lokalu do wynajeci. Aby sprawdzic czy dany lokal jest wolny nalezy wc" +
+        "isnac przycisk \"Potwierdz\".");
+            this.cena_miesiac.Location = new System.Drawing.Point(41, 38);
+            this.cena_miesiac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cena_miesiac.Name = "cena_miesiac";
-            this.cena_miesiac.Size = new System.Drawing.Size(0, 17);
+            this._userHelp.SetShowHelp(this.cena_miesiac, true);
+            this.cena_miesiac.Size = new System.Drawing.Size(0, 13);
             this.cena_miesiac.TabIndex = 16;
             // 
             // dataGridView1
@@ -262,12 +328,15 @@
             this.liczbapokoiDataGridViewTextBoxColumn,
             this.cenazam2DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lokalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(697, 197);
+            this._userHelp.SetHelpString(this.dataGridView1, "Lista przedstawiajaca dane lokali istniejacych juz w bazie.");
+            this.dataGridView1.Location = new System.Drawing.Point(523, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(515, 141);
+            this._userHelp.SetShowHelp(this.dataGridView1, true);
+            this.dataGridView1.Size = new System.Drawing.Size(386, 115);
             this.dataGridView1.TabIndex = 17;
             // 
             // idbudynkuDataGridViewTextBoxColumn
@@ -349,75 +418,104 @@
             // 
             // id_lokalu_do_wynajecia
             // 
-            this.id_lokalu_do_wynajecia.Location = new System.Drawing.Point(15, 47);
+            this._userHelp.SetHelpString(this.id_lokalu_do_wynajecia, "Pole wyboru lokalu do wynajeci. Aby sprawdzic czy dany lokal jest wolny nalezy wc" +
+        "isnac przycisk \"Potwierdz\".");
+            this.id_lokalu_do_wynajecia.Location = new System.Drawing.Point(11, 38);
+            this.id_lokalu_do_wynajecia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_lokalu_do_wynajecia.Name = "id_lokalu_do_wynajecia";
-            this.id_lokalu_do_wynajecia.Size = new System.Drawing.Size(208, 22);
+            this._userHelp.SetShowHelp(this.id_lokalu_do_wynajecia, true);
+            this.id_lokalu_do_wynajecia.Size = new System.Drawing.Size(157, 20);
             this.id_lokalu_do_wynajecia.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 27);
+            this._userHelp.SetHelpString(this.label9, "Pole wyboru lokalu do wynajeci. Aby sprawdzic czy dany lokal jest wolny nalezy wc" +
+        "isnac przycisk \"Potwierdz\".");
+            this.label9.Location = new System.Drawing.Point(9, 22);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 17);
+            this._userHelp.SetShowHelp(this.label9, true);
+            this.label9.Size = new System.Drawing.Size(161, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Identyfikator lokalu do wynajęcia";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 104);
+            this._userHelp.SetHelpString(this.label10, resources.GetString("label10.HelpString"));
+            this.label10.Location = new System.Drawing.Point(9, 84);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 17);
+            this._userHelp.SetShowHelp(this.label10, true);
+            this.label10.Size = new System.Drawing.Size(16, 13);
             this.label10.TabIndex = 20;
             this.label10.Text = "...";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 296);
+            this._userHelp.SetHelpString(this.label11, resources.GetString("label11.HelpString"));
+            this.label11.Location = new System.Drawing.Point(9, 240);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 17);
+            this._userHelp.SetShowHelp(this.label11, true);
+            this.label11.Size = new System.Drawing.Size(96, 13);
             this.label11.TabIndex = 21;
             this.label11.Text = "Data zamieszkania";
             // 
             // data_zamieszkania
             // 
-            this.data_zamieszkania.Location = new System.Drawing.Point(15, 316);
+            this._userHelp.SetHelpString(this.data_zamieszkania, resources.GetString("data_zamieszkania.HelpString"));
+            this.data_zamieszkania.Location = new System.Drawing.Point(11, 257);
+            this.data_zamieszkania.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_zamieszkania.Name = "data_zamieszkania";
-            this.data_zamieszkania.Size = new System.Drawing.Size(306, 22);
+            this._userHelp.SetShowHelp(this.data_zamieszkania, true);
+            this.data_zamieszkania.Size = new System.Drawing.Size(230, 20);
             this.data_zamieszkania.TabIndex = 22;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 356);
+            this._userHelp.SetHelpString(this.label12, resources.GetString("label12.HelpString"));
+            this.label12.Location = new System.Drawing.Point(9, 289);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 17);
+            this._userHelp.SetShowHelp(this.label12, true);
+            this.label12.Size = new System.Drawing.Size(99, 13);
             this.label12.TabIndex = 23;
             this.label12.Text = "Data końca umowy";
             // 
             // data_konca_umowy
             // 
-            this.data_konca_umowy.Location = new System.Drawing.Point(15, 376);
+            this._userHelp.SetHelpString(this.data_konca_umowy, resources.GetString("data_konca_umowy.HelpString"));
+            this.data_konca_umowy.Location = new System.Drawing.Point(11, 306);
+            this.data_konca_umowy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_konca_umowy.Name = "data_konca_umowy";
-            this.data_konca_umowy.Size = new System.Drawing.Size(306, 22);
+            this._userHelp.SetShowHelp(this.data_konca_umowy, true);
+            this.data_konca_umowy.Size = new System.Drawing.Size(230, 20);
             this.data_konca_umowy.TabIndex = 24;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 414);
+            this._userHelp.SetHelpString(this.label13, resources.GetString("label13.HelpString"));
+            this.label13.Location = new System.Drawing.Point(9, 336);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(169, 17);
+            this._userHelp.SetShowHelp(this.label13, true);
+            this.label13.Size = new System.Drawing.Size(129, 13);
             this.label13.TabIndex = 25;
             this.label13.Text = "Data końca zamieszkania";
             // 
             // data_konca_zamieszkania
             // 
-            this.data_konca_zamieszkania.Location = new System.Drawing.Point(15, 434);
+            this._userHelp.SetHelpString(this.data_konca_zamieszkania, resources.GetString("data_konca_zamieszkania.HelpString"));
+            this.data_konca_zamieszkania.Location = new System.Drawing.Point(11, 353);
+            this.data_konca_zamieszkania.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_konca_zamieszkania.Name = "data_konca_zamieszkania";
-            this.data_konca_zamieszkania.Size = new System.Drawing.Size(306, 22);
+            this._userHelp.SetShowHelp(this.data_konca_zamieszkania, true);
+            this.data_konca_zamieszkania.Size = new System.Drawing.Size(230, 20);
             this.data_konca_zamieszkania.TabIndex = 26;
             // 
             // dataGridView2
@@ -436,12 +534,15 @@
             this.nrdokumentuDataGridViewTextBoxColumn,
             this.typdokumentuDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.najemcaBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(697, 26);
+            this._userHelp.SetHelpString(this.dataGridView2, "Lista przedstawiajaca dane najemcow istaniejacych juz w bazie.");
+            this.dataGridView2.Location = new System.Drawing.Point(523, 21);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(515, 137);
+            this._userHelp.SetShowHelp(this.dataGridView2, true);
+            this.dataGridView2.Size = new System.Drawing.Size(386, 111);
             this.dataGridView2.TabIndex = 27;
             // 
             // idwynajmuDataGridViewTextBoxColumn
@@ -518,9 +619,13 @@
             // 
             // potwierdz_lokal
             // 
-            this.potwierdz_lokal.Location = new System.Drawing.Point(246, 47);
+            this._userHelp.SetHelpString(this.potwierdz_lokal, "Pole wyboru lokalu do wynajeci. Aby sprawdzic czy dany lokal jest wolny nalezy wc" +
+        "isnac przycisk \"Potwierdz\".");
+            this.potwierdz_lokal.Location = new System.Drawing.Point(184, 38);
+            this.potwierdz_lokal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.potwierdz_lokal.Name = "potwierdz_lokal";
-            this.potwierdz_lokal.Size = new System.Drawing.Size(98, 23);
+            this._userHelp.SetShowHelp(this.potwierdz_lokal, true);
+            this.potwierdz_lokal.Size = new System.Drawing.Size(74, 19);
             this.potwierdz_lokal.TabIndex = 28;
             this.potwierdz_lokal.Text = "Potwierdź";
             this.potwierdz_lokal.UseVisualStyleBackColor = true;
@@ -528,9 +633,14 @@
             // 
             // dodaj_najemce
             // 
-            this.dodaj_najemce.Location = new System.Drawing.Point(473, 389);
+            this._userHelp.SetHelpString(this.dodaj_najemce, "W tej czesci nalezy podac wymagane informacje dotyczace najemcy (formularz nie ze" +
+        "zwala na dodawanie istniejacych juz najemcow). Aby zapisać dane po ich wprowadze" +
+        "niu nacisnij przycisk \"Dodaj najemce\".");
+            this.dodaj_najemce.Location = new System.Drawing.Point(355, 316);
+            this.dodaj_najemce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dodaj_najemce.Name = "dodaj_najemce";
-            this.dodaj_najemce.Size = new System.Drawing.Size(141, 46);
+            this._userHelp.SetShowHelp(this.dodaj_najemce, true);
+            this.dodaj_najemce.Size = new System.Drawing.Size(106, 37);
             this.dodaj_najemce.TabIndex = 29;
             this.dodaj_najemce.Text = "Dodaj najemcę";
             this.dodaj_najemce.UseVisualStyleBackColor = true;
@@ -539,60 +649,75 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(694, 6);
+            this.label14.Location = new System.Drawing.Point(520, 5);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 17);
+            this.label14.Size = new System.Drawing.Size(48, 13);
             this.label14.TabIndex = 30;
             this.label14.Text = "Najemcy";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(694, 176);
+            this.label15.Location = new System.Drawing.Point(520, 143);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 17);
+            this.label15.Size = new System.Drawing.Size(39, 13);
             this.label15.TabIndex = 31;
             this.label15.Text = "Lokale";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 121);
+            this._userHelp.SetHelpString(this.label16, resources.GetString("label16.HelpString"));
+            this.label16.Location = new System.Drawing.Point(9, 98);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(126, 17);
+            this._userHelp.SetShowHelp(this.label16, true);
+            this.label16.Size = new System.Drawing.Size(94, 13);
             this.label16.TabIndex = 32;
             this.label16.Text = "Czynsz miesięczny";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // czynsz_msc
             // 
-            this.czynsz_msc.Location = new System.Drawing.Point(15, 141);
+            this._userHelp.SetHelpString(this.czynsz_msc, resources.GetString("czynsz_msc.HelpString"));
+            this.czynsz_msc.Location = new System.Drawing.Point(11, 115);
+            this.czynsz_msc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.czynsz_msc.Name = "czynsz_msc";
-            this.czynsz_msc.Size = new System.Drawing.Size(208, 22);
+            this._userHelp.SetShowHelp(this.czynsz_msc, true);
+            this.czynsz_msc.Size = new System.Drawing.Size(157, 20);
             this.czynsz_msc.TabIndex = 33;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 233);
+            this._userHelp.SetHelpString(this.label17, resources.GetString("label17.HelpString"));
+            this.label17.Location = new System.Drawing.Point(9, 189);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(112, 17);
+            this._userHelp.SetShowHelp(this.label17, true);
+            this.label17.Size = new System.Drawing.Size(86, 13);
             this.label17.TabIndex = 34;
             this.label17.Text = "Termin płatności";
             // 
             // termin_platnosci
             // 
-            this.termin_platnosci.Location = new System.Drawing.Point(15, 260);
+            this._userHelp.SetHelpString(this.termin_platnosci, resources.GetString("termin_platnosci.HelpString"));
+            this.termin_platnosci.Location = new System.Drawing.Point(11, 211);
+            this.termin_platnosci.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.termin_platnosci.Name = "termin_platnosci";
-            this.termin_platnosci.Size = new System.Drawing.Size(306, 22);
+            this._userHelp.SetShowHelp(this.termin_platnosci, true);
+            this.termin_platnosci.Size = new System.Drawing.Size(230, 20);
             this.termin_platnosci.TabIndex = 35;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(694, 356);
+            this.label18.Location = new System.Drawing.Point(520, 289);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 17);
+            this.label18.Size = new System.Drawing.Size(51, 13);
             this.label18.TabIndex = 36;
             this.label18.Text = "Wynajem";
             // 
@@ -610,11 +735,14 @@
             this.datakońcaumowyDataGridViewTextBoxColumn,
             this.datakońcazamieszkaniaDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.wynajemBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(697, 395);
+            this._userHelp.SetHelpString(this.dataGridView3, "Lista zawartych juz umow najmu.");
+            this.dataGridView3.Location = new System.Drawing.Point(523, 321);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(515, 157);
+            this._userHelp.SetShowHelp(this.dataGridView3, true);
+            this.dataGridView3.Size = new System.Drawing.Size(386, 128);
             this.dataGridView3.TabIndex = 37;
             // 
             // idlokaluDataGridViewTextBoxColumn1
@@ -694,26 +822,28 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(149, 6);
+            this.label19.Location = new System.Drawing.Point(112, 5);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(16, 17);
+            this.label19.Size = new System.Drawing.Size(13, 13);
             this.label19.TabIndex = 38;
             this.label19.Text = "1";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(546, 6);
+            this.label20.Location = new System.Drawing.Point(410, 5);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 17);
+            this.label20.Size = new System.Drawing.Size(13, 13);
             this.label20.TabIndex = 39;
             this.label20.Text = "2";
             // 
             // nowe_umowy_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 564);
+            this.ClientSize = new System.Drawing.Size(930, 480);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.dataGridView3);
@@ -753,7 +883,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data_zawarcia_umowy);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "nowe_umowy_window";
             this.Text = "Umowy";
             this.Load += new System.EventHandler(this.nowe_umowy_window_Load);
@@ -839,5 +972,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datakońcazamieszkaniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.HelpProvider _userHelp;
     }
 }

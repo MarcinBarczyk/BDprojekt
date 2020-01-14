@@ -57,7 +57,20 @@ namespace BD
             SqlConnection con = new SqlConnection(GlobalVar.con_str);
             SqlCommand cmd = new SqlCommand(SQL, con);
             SqlDataReader r = null;
-            con.Open();
+
+            //Kontrola błedu przy nieudanym połączeniu sie z bazą
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Błąd serwera! Nie udało sie nawiązać połączenia z baza danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+
             r = cmd.ExecuteReader();
             while (r.Read())
             {
@@ -65,7 +78,18 @@ namespace BD
             }
             con.Close();
 
-            con.Open();
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Błąd serwera! Nie udało sie nawiązać połączenia z baza danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+
             com.Connection = con;
             com.CommandText = "select z.hasło, u.typ_użytkownika from zaloguj z join użytkownik u on z.id_użytkownika = u.id_użytkownika where z.login='" + my_login + "'";
 

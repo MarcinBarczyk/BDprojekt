@@ -53,8 +53,9 @@
             this.idbudynkuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idlokaluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idużytkownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zgłoszenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zgłoszenieBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.administracjaBudynkamiDataSet = new BD.AdministracjaBudynkamiDataSet();
+            this.zgłoszenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lista_budynkow = new System.Windows.Forms.ListBox();
             this.wyswietl_budynki = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,66 +65,91 @@
             this.budynekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.budynekTableAdapter = new BD.AdministracjaBudynkamiDataSetTableAdapters.budynekTableAdapter();
             this.administracjaBudynkamiDataSet2 = new BD.AdministracjaBudynkamiDataSet();
-            this.zgłoszenieBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._userHelp = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // remonty_dla_admina
             // 
             this.remonty_dla_admina.FormattingEnabled = true;
-            this.remonty_dla_admina.Location = new System.Drawing.Point(12, 328);
-            this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.remonty_dla_admina, "Opcja dodania nowych zlecen do realizacji. Nalezy zaznaczyc interesujace nas zlec" +
+        "enia a nastepnie nacisnac przycisk \"Dodaj do realizacji\".");
+            this.remonty_dla_admina.Location = new System.Drawing.Point(9, 266);
+            this.remonty_dla_admina.Margin = new System.Windows.Forms.Padding(2);
             this.remonty_dla_admina.Name = "remonty_dla_admina";
-            this.remonty_dla_admina.Size = new System.Drawing.Size(353, 72);
+            this._userHelp.SetShowHelp(this.remonty_dla_admina, true);
+            this.remonty_dla_admina.Size = new System.Drawing.Size(266, 49);
             this.remonty_dla_admina.TabIndex = 4;
             this.remonty_dla_admina.SelectedIndexChanged += new System.EventHandler(this.W_realizacji_SelectedIndexChanged);
             // 
             // Data_poczatkowa
             // 
-            this.Data_poczatkowa.Location = new System.Drawing.Point(697, 378);
-            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.Data_poczatkowa, "Opcja ustawienia zakresu czasowego z jakiego chcemy wyswietlic zgloszenia. Nalezy" +
+        " wybrac interesujace nas daty poczatku oraz konca zakresu i nacisnac przycisk \"P" +
+        "otwierdz\".");
+            this.Data_poczatkowa.Location = new System.Drawing.Point(523, 307);
+            this.Data_poczatkowa.Margin = new System.Windows.Forms.Padding(2);
             this.Data_poczatkowa.Name = "Data_poczatkowa";
-            this.Data_poczatkowa.Size = new System.Drawing.Size(309, 22);
+            this._userHelp.SetShowHelp(this.Data_poczatkowa, true);
+            this.Data_poczatkowa.Size = new System.Drawing.Size(233, 20);
             this.Data_poczatkowa.TabIndex = 6;
             // 
             // Data_koncowa
             // 
-            this.Data_koncowa.Location = new System.Drawing.Point(697, 453);
-            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.Data_koncowa, "Opcja ustawienia zakresu czasowego z jakiego chcemy wyswietlic zgloszenia. Nalezy" +
+        " wybrac interesujace nas daty poczatku oraz konca zakresu i nacisnac przycisk \"P" +
+        "otwierdz\".");
+            this.Data_koncowa.Location = new System.Drawing.Point(523, 368);
+            this.Data_koncowa.Margin = new System.Windows.Forms.Padding(2);
             this.Data_koncowa.Name = "Data_koncowa";
-            this.Data_koncowa.Size = new System.Drawing.Size(309, 22);
+            this._userHelp.SetShowHelp(this.Data_koncowa, true);
+            this.Data_koncowa.Size = new System.Drawing.Size(233, 20);
             this.Data_koncowa.TabIndex = 7;
             // 
             // Data_p
             // 
             this.Data_p.AutoSize = true;
-            this.Data_p.Location = new System.Drawing.Point(697, 358);
+            this._userHelp.SetHelpString(this.Data_p, "Opcja ustawienia zakresu czasowego z jakiego chcemy wyswietlic zgloszenia. Nalezy" +
+        " wybrac interesujace nas daty poczatku oraz konca zakresu i nacisnac przycisk \"P" +
+        "otwierdz\".");
+            this.Data_p.Location = new System.Drawing.Point(523, 291);
+            this.Data_p.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Data_p.Name = "Data_p";
-            this.Data_p.Size = new System.Drawing.Size(206, 17);
+            this._userHelp.SetShowHelp(this.Data_p, true);
+            this.Data_p.Size = new System.Drawing.Size(156, 13);
             this.Data_p.TabIndex = 8;
             this.Data_p.Text = "Wybierz datę początku zakresu";
             // 
             // Data_k
             // 
             this.Data_k.AutoSize = true;
-            this.Data_k.Location = new System.Drawing.Point(695, 432);
+            this._userHelp.SetHelpString(this.Data_k, "Opcja ustawienia zakresu czasowego z jakiego chcemy wyswietlic zgloszenia. Nalezy" +
+        " wybrac interesujace nas daty poczatku oraz konca zakresu i nacisnac przycisk \"P" +
+        "otwierdz\".");
+            this.Data_k.Location = new System.Drawing.Point(521, 351);
+            this.Data_k.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Data_k.Name = "Data_k";
-            this.Data_k.Size = new System.Drawing.Size(187, 17);
+            this._userHelp.SetShowHelp(this.Data_k, true);
+            this.Data_k.Size = new System.Drawing.Size(142, 13);
             this.Data_k.TabIndex = 9;
             this.Data_k.Text = "Wybierz datę końca zakresu";
             // 
             // Data
             // 
-            this.Data.Location = new System.Drawing.Point(697, 501);
-            this.Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.Data, "Opcja ustawienia zakresu czasowego z jakiego chcemy wyswietlic zgloszenia. Nalezy" +
+        " wybrac interesujace nas daty poczatku oraz konca zakresu i nacisnac przycisk \"P" +
+        "otwierdz\".");
+            this.Data.Location = new System.Drawing.Point(523, 407);
+            this.Data.Margin = new System.Windows.Forms.Padding(2);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(91, 34);
+            this._userHelp.SetShowHelp(this.Data, true);
+            this.Data.Size = new System.Drawing.Size(68, 28);
             this.Data.TabIndex = 10;
             this.Data.Text = "Potwierdź";
             this.Data.UseVisualStyleBackColor = true;
@@ -131,10 +157,13 @@
             // 
             // do_realizacji
             // 
-            this.do_realizacji.Location = new System.Drawing.Point(396, 328);
-            this.do_realizacji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.do_realizacji, "Opcja dodania nowych zlecen do realizacji. Nalezy zaznaczyc interesujace nas zlec" +
+        "enia a nastepnie nacisnac przycisk \"Dodaj do realizacji\".");
+            this.do_realizacji.Location = new System.Drawing.Point(297, 266);
+            this.do_realizacji.Margin = new System.Windows.Forms.Padding(2);
             this.do_realizacji.Name = "do_realizacji";
-            this.do_realizacji.Size = new System.Drawing.Size(115, 72);
+            this._userHelp.SetShowHelp(this.do_realizacji, true);
+            this.do_realizacji.Size = new System.Drawing.Size(86, 58);
             this.do_realizacji.TabIndex = 11;
             this.do_realizacji.Text = "Dodaj do realizacji";
             this.do_realizacji.UseVisualStyleBackColor = true;
@@ -142,10 +171,12 @@
             // 
             // dodawanie
             // 
-            this.dodawanie.Location = new System.Drawing.Point(822, 120);
-            this.dodawanie.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dodawanie, "Pole przekierowania do odpowiednich formularzy dodawania nowych rekordow.  Aby do" +
+        "dac rekord nalerzy zaznaczyc odpowiednia opcje oraz nacisnac przycisk \"Dodaj\".");
+            this.dodawanie.Location = new System.Drawing.Point(616, 98);
             this.dodawanie.Name = "dodawanie";
-            this.dodawanie.Size = new System.Drawing.Size(184, 57);
+            this._userHelp.SetShowHelp(this.dodawanie, true);
+            this.dodawanie.Size = new System.Drawing.Size(138, 46);
             this.dodawanie.TabIndex = 14;
             this.dodawanie.Text = "Dodaj";
             this.dodawanie.UseVisualStyleBackColor = true;
@@ -154,39 +185,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label1, "Szczegolowe informacje dotyczace zgloszen danego lokalu.");
+            this.label1.Location = new System.Drawing.Point(5, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 17);
+            this._userHelp.SetShowHelp(this.label1, true);
+            this.label1.Size = new System.Drawing.Size(109, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "Wszystkie zgłoszenia";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 304);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label2, "Opcja dodania nowych zlecen do realizacji. Nalezy zaznaczyc interesujace nas zlec" +
+        "enia a nastepnie nacisnac przycisk \"Dodaj do realizacji\".");
+            this.label2.Location = new System.Drawing.Point(7, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 17);
+            this._userHelp.SetShowHelp(this.label2, true);
+            this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Zgłoszone remonty";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 437);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._userHelp.SetHelpString(this.label3, "Lista przedstawiajaca zlecenia w trakcie realizacji. Aby zakonczyc dane zlecenie " +
+        "nalezy je wybrac a nastepnie nacisnac przycisk \"Potwierdz zrealizowanie\".");
+            this.label3.Location = new System.Drawing.Point(5, 355);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 17);
+            this._userHelp.SetShowHelp(this.label3, true);
+            this.label3.Size = new System.Drawing.Size(138, 13);
             this.label3.TabIndex = 20;
             this.label3.Text = "Remonty w trakcie realizacji";
             // 
             // potwierdzenie_realizacji
             // 
-            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(396, 465);
-            this.potwierdzenie_realizacji.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.potwierdzenie_realizacji, "Lista przedstawiajaca zlecenia w trakcie realizacji. Aby zakonczyc dane zlecenie " +
+        "nalezy je wybrac a nastepnie nacisnac przycisk \"Potwierdz zrealizowanie\".");
+            this.potwierdzenie_realizacji.Location = new System.Drawing.Point(297, 378);
             this.potwierdzenie_realizacji.Name = "potwierdzenie_realizacji";
-            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(115, 70);
+            this._userHelp.SetShowHelp(this.potwierdzenie_realizacji, true);
+            this.potwierdzenie_realizacji.Size = new System.Drawing.Size(86, 57);
             this.potwierdzenie_realizacji.TabIndex = 21;
             this.potwierdzenie_realizacji.Text = "Potwierdź zrealizowanie";
             this.potwierdzenie_realizacji.UseVisualStyleBackColor = true;
@@ -195,10 +233,12 @@
             // dodawanie_uzytkownika
             // 
             this.dodawanie_uzytkownika.AutoSize = true;
-            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(822, 8);
-            this.dodawanie_uzytkownika.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dodawanie_uzytkownika, "Pole przekierowania do odpowiednich formularzy dodawania nowych rekordow.  Aby do" +
+        "dac rekord nalerzy zaznaczyc odpowiednia opcje oraz nacisnac przycisk \"Dodaj\".");
+            this.dodawanie_uzytkownika.Location = new System.Drawing.Point(616, 6);
             this.dodawanie_uzytkownika.Name = "dodawanie_uzytkownika";
-            this.dodawanie_uzytkownika.Size = new System.Drawing.Size(146, 21);
+            this._userHelp.SetShowHelp(this.dodawanie_uzytkownika, true);
+            this.dodawanie_uzytkownika.Size = new System.Drawing.Size(115, 17);
             this.dodawanie_uzytkownika.TabIndex = 22;
             this.dodawanie_uzytkownika.TabStop = true;
             this.dodawanie_uzytkownika.Text = "Dodaj użytkownika";
@@ -208,10 +248,12 @@
             // dodawanie_budynku
             // 
             this.dodawanie_budynku.AutoSize = true;
-            this.dodawanie_budynku.Location = new System.Drawing.Point(822, 64);
-            this.dodawanie_budynku.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dodawanie_budynku, "Pole przekierowania do odpowiednich formularzy dodawania nowych rekordow.  Aby do" +
+        "dac rekord nalerzy zaznaczyc odpowiednia opcje oraz nacisnac przycisk \"Dodaj\".");
+            this.dodawanie_budynku.Location = new System.Drawing.Point(616, 52);
             this.dodawanie_budynku.Name = "dodawanie_budynku";
-            this.dodawanie_budynku.Size = new System.Drawing.Size(124, 21);
+            this._userHelp.SetShowHelp(this.dodawanie_budynku, true);
+            this.dodawanie_budynku.Size = new System.Drawing.Size(97, 17);
             this.dodawanie_budynku.TabIndex = 23;
             this.dodawanie_budynku.TabStop = true;
             this.dodawanie_budynku.Text = "Dodaj budynek";
@@ -220,10 +262,12 @@
             // dodawanie_umowy
             // 
             this.dodawanie_umowy.AutoSize = true;
-            this.dodawanie_umowy.Location = new System.Drawing.Point(822, 36);
-            this.dodawanie_umowy.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dodawanie_umowy, "Pole przekierowania do odpowiednich formularzy dodawania nowych rekordow.  Aby do" +
+        "dac rekord nalerzy zaznaczyc odpowiednia opcje oraz nacisnac przycisk \"Dodaj\".");
+            this.dodawanie_umowy.Location = new System.Drawing.Point(616, 29);
             this.dodawanie_umowy.Name = "dodawanie_umowy";
-            this.dodawanie_umowy.Size = new System.Drawing.Size(171, 21);
+            this._userHelp.SetShowHelp(this.dodawanie_umowy, true);
+            this.dodawanie_umowy.Size = new System.Drawing.Size(135, 17);
             this.dodawanie_umowy.TabIndex = 24;
             this.dodawanie_umowy.TabStop = true;
             this.dodawanie_umowy.Text = "Dodaj umowę/najemcę";
@@ -233,10 +277,13 @@
             // dodawanie_lokali
             // 
             this.dodawanie_lokali.AutoSize = true;
-            this.dodawanie_lokali.Location = new System.Drawing.Point(822, 93);
-            this.dodawanie_lokali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._userHelp.SetHelpString(this.dodawanie_lokali, "Pole przekierowania do odpowiednich formularzy dodawania nowych rekordow.  Aby do" +
+        "dac rekord nalerzy zaznaczyc odpowiednia opcje oraz nacisnac przycisk \"Dodaj\".");
+            this.dodawanie_lokali.Location = new System.Drawing.Point(616, 76);
+            this.dodawanie_lokali.Margin = new System.Windows.Forms.Padding(2);
             this.dodawanie_lokali.Name = "dodawanie_lokali";
-            this.dodawanie_lokali.Size = new System.Drawing.Size(99, 21);
+            this._userHelp.SetShowHelp(this.dodawanie_lokali, true);
+            this.dodawanie_lokali.Size = new System.Drawing.Size(78, 17);
             this.dodawanie_lokali.TabIndex = 25;
             this.dodawanie_lokali.TabStop = true;
             this.dodawanie_lokali.Text = "Dodaj lokal";
@@ -255,11 +302,12 @@
             this.idlokaluDataGridViewTextBoxColumn,
             this.idużytkownikaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zgłoszenieBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 131);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this._userHelp.SetHelpString(this.dataGridView1, "Szczegolowe informacje dotyczace zgloszen danego lokalu.");
+            this.dataGridView1.Location = new System.Drawing.Point(8, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 169);
+            this._userHelp.SetShowHelp(this.dataGridView1, true);
+            this.dataGridView1.Size = new System.Drawing.Size(581, 137);
             this.dataGridView1.TabIndex = 26;
             // 
             // idzgłoszeniaDataGridViewTextBoxColumn
@@ -318,31 +366,43 @@
             this.idużytkownikaDataGridViewTextBoxColumn.Name = "idużytkownikaDataGridViewTextBoxColumn";
             this.idużytkownikaDataGridViewTextBoxColumn.Width = 125;
             // 
-            // zgłoszenieBindingSource
+            // zgłoszenieBindingSource1
             // 
-            this.zgłoszenieBindingSource.DataMember = "zgłoszenie";
-            this.zgłoszenieBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            this.zgłoszenieBindingSource1.DataMember = "zgłoszenie";
+            this.zgłoszenieBindingSource1.DataSource = this.administracjaBudynkamiDataSet;
             // 
             // administracjaBudynkamiDataSet
             // 
             this.administracjaBudynkamiDataSet.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // zgłoszenieBindingSource
+            // 
+            this.zgłoszenieBindingSource.DataMember = "zgłoszenie";
+            this.zgłoszenieBindingSource.DataSource = this.administracjaBudynkamiDataSet;
+            // 
             // lista_budynkow
             // 
             this.lista_budynkow.FormattingEnabled = true;
-            this.lista_budynkow.ItemHeight = 16;
-            this.lista_budynkow.Location = new System.Drawing.Point(10, 30);
+            this._userHelp.SetHelpString(this.lista_budynkow, "Lista lokali wystepujacych w danym budynku. Po wybraniu interesujacego nas budynk" +
+        "u wyswietlane zostana zwiazane z nim zgloszenia.");
+            this.lista_budynkow.Location = new System.Drawing.Point(8, 24);
+            this.lista_budynkow.Margin = new System.Windows.Forms.Padding(2);
             this.lista_budynkow.Name = "lista_budynkow";
-            this.lista_budynkow.Size = new System.Drawing.Size(128, 68);
+            this._userHelp.SetShowHelp(this.lista_budynkow, true);
+            this.lista_budynkow.Size = new System.Drawing.Size(97, 56);
             this.lista_budynkow.TabIndex = 27;
             this.lista_budynkow.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // wyswietl_budynki
             // 
-            this.wyswietl_budynki.Location = new System.Drawing.Point(181, 33);
+            this._userHelp.SetHelpString(this.wyswietl_budynki, "Lista lokali wystepujacych w danym budynku. Po wybraniu interesujacego nas budynk" +
+        "u wyswietlane zostana zwiazane z nim zgloszenia.");
+            this.wyswietl_budynki.Location = new System.Drawing.Point(136, 27);
+            this.wyswietl_budynki.Margin = new System.Windows.Forms.Padding(2);
             this.wyswietl_budynki.Name = "wyswietl_budynki";
-            this.wyswietl_budynki.Size = new System.Drawing.Size(134, 68);
+            this._userHelp.SetShowHelp(this.wyswietl_budynki, true);
+            this.wyswietl_budynki.Size = new System.Drawing.Size(100, 55);
             this.wyswietl_budynki.TabIndex = 28;
             this.wyswietl_budynki.Text = "Wyświetl identyfokatory budynków";
             this.wyswietl_budynki.UseVisualStyleBackColor = true;
@@ -351,19 +411,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 10);
+            this._userHelp.SetHelpString(this.label4, "Lista lokali wystepujacych w danym budynku. Po wybraniu interesujacego nas budynk" +
+        "u wyswietlane zostana zwiazane z nim zgloszenia.");
+            this.label4.Location = new System.Drawing.Point(9, 8);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 17);
+            this._userHelp.SetShowHelp(this.label4, true);
+            this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 29;
             this.label4.Text = "Identyfikator budynku";
             // 
             // w_realizacji
             // 
             this.w_realizacji.FormattingEnabled = true;
-            this.w_realizacji.ItemHeight = 16;
-            this.w_realizacji.Location = new System.Drawing.Point(11, 465);
+            this._userHelp.SetHelpString(this.w_realizacji, "Lista przedstawiajaca zlecenia w trakcie realizacji. Aby zakonczyc dane zlecenie " +
+        "nalezy je wybrac a nastepnie nacisnac przycisk \"Potwierdz zrealizowanie\".");
+            this.w_realizacji.Location = new System.Drawing.Point(8, 378);
+            this.w_realizacji.Margin = new System.Windows.Forms.Padding(2);
             this.w_realizacji.Name = "w_realizacji";
-            this.w_realizacji.Size = new System.Drawing.Size(354, 68);
+            this._userHelp.SetShowHelp(this.w_realizacji, true);
+            this.w_realizacji.Size = new System.Drawing.Size(266, 56);
             this.w_realizacji.TabIndex = 30;
             this.w_realizacji.SelectedIndexChanged += new System.EventHandler(this.w_realizacji_SelectedIndexChanged_1);
             // 
@@ -390,16 +457,11 @@
             this.administracjaBudynkamiDataSet2.DataSetName = "AdministracjaBudynkamiDataSet";
             this.administracjaBudynkamiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // zgłoszenieBindingSource1
-            // 
-            this.zgłoszenieBindingSource1.DataMember = "zgłoszenie";
-            this.zgłoszenieBindingSource1.DataSource = this.administracjaBudynkamiDataSet;
-            // 
             // admin_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 549);
+            this.ClientSize = new System.Drawing.Size(776, 446);
             this.Controls.Add(this.w_realizacji);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wyswietl_budynki);
@@ -421,17 +483,20 @@
             this.Controls.Add(this.Data_koncowa);
             this.Controls.Add(this.Data_poczatkowa);
             this.Controls.Add(this.remonty_dla_admina);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "admin_window";
             this.Text = "Administrator";
             this.Load += new System.EventHandler(this.admin_window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budynekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administracjaBudynkamiDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zgłoszenieBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +539,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox w_realizacji;
         private System.Windows.Forms.BindingSource zgłoszenieBindingSource1;
+        private System.Windows.Forms.HelpProvider _userHelp;
     }
 }

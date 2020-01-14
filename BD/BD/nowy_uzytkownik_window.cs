@@ -34,7 +34,6 @@ namespace BD
 
         private void add_user_Click(object sender, EventArgs e)
         {
-            
             //Generowanie loginu użytkownika
             string string_imie = imię.Text;
             string string_nazwisko = nazwisko.Text;
@@ -152,7 +151,19 @@ namespace BD
             // Ten wiersz kodu wczytuje dane do tabeli dataGridView1
             SqlDataAdapter ada = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            con.Open();
+
+            try
+            {
+                con.Open();
+            }
+            catch
+            {
+                DialogResult _result = MessageBox.Show("Bład serwera! Nie udało się nawiązać połączenia z bazą danych!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                if (_result == DialogResult.OK)
+                    Environment.Exit(0);
+            }
+
             com3.Connection = con;
             com3.CommandText = "SELECT u.id_użytkownika, u.id_najemca, u.typ_użytkownika, u.imię, u.nazwisko, z.login FROM dbo.użytkownik u join dbo.zaloguj z on u.id_użytkownika = z.id_użytkownika";
             ada.SelectCommand = com3;
